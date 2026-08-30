@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Folder Include="Models\" />
+      <Folder Include="Pages\Admin\" />
+      <Folder Include="Pages\Cart\" />
+      <Folder Include="Pages\Checkout\" />
+      <Folder Include="Pages\Home\" />
+      <Folder Include="Pages\Login\" />
+      <Folder Include="Pages\Menu\" />
+      <Folder Include="Pages\Orders\" />
+      <Folder Include="Pages\PizzaDetails\" />
+      <Folder Include="Pages\Register\" />
+      <Folder Include="Services\" />
+    </ItemGroup>
+
+</Project>
