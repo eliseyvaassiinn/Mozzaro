@@ -1,0 +1,199 @@
+# CrustCode
+
+## Mozzaro
+
+**Тип системы:** Web-based Online Pizza Ordering Platform  
+**Версия:** 2.0 
+**Статус:** Черновик для просмотра  
+**Дата:** 31 августа 2026  
+**Команда:** CrustCode  
+
+---
+
+## ⚙️ Backend
+* * *
+
+    `Mozzaro.sln
+    │
+    ├── Mozzaro.Domain/
+    │   │
+    │   ├── Entities/
+    │   │   ├── User.cs                  # пользователь
+    │   │   ├── Pizza.cs                 # пицца
+    │   │   ├── Category.cs              # категория
+    │   │   ├── Ingredient.cs            # ингредиент
+    │   │   ├── PizzaIngredient.cs       # связь пиццы и ингредиента
+    │   │   ├── Cart.cs                  # корзина
+    │   │   ├── CartItem.cs              # товар в корзине
+    │   │   ├── Order.cs                 # заказ
+    │   │   └── OrderItem.cs             # товар в заказе
+    │   │
+    │   ├── Enums/
+    │   │   ├── UserRole.cs              # роль пользователя
+    │   │   └── OrderStatus.cs            # статус заказа
+    │   │
+    │   └── ValueObjects/                # объекты-значения
+    │
+    │
+    ├── Mozzaro.Application/
+    │   │
+    │   ├── Behaviors/                   # общие действия
+    │   │
+    │   ├── DTOs/                        # данные для API
+    │   │   ├── Auth/
+    │   │   ├── Pizzas/
+    │   │   ├── Categories/
+    │   │   ├── Ingredients/
+    │   │   ├── Cart/
+    │   │   └── Orders/
+    │   │
+    │   ├── Features/                    # основная логика
+    │   │   ├── Auth/                    # регистрация и вход
+    │   │   ├── Pizzas/                  # работа с пиццами
+    │   │   ├── Categories/              # работа с категориями
+    │   │   ├── Ingredients/             # работа с ингредиентами
+    │   │   ├── Cart/                    # работа с корзиной
+    │   │   └── Orders/                  # работа с заказами
+    │   │
+    │   ├── Interfaces/                  # интерфейсы
+    │   │   ├── Repositories/
+    │   │   ├── IUnitOfWork.cs
+    │   │   ├── IJwtTokenService.cs
+    │   │   └── ICurrentUserService.cs
+    │   │
+    │   └── Validators/                  # проверка данных
+    │
+    │
+    ├── Mozzaro.Infrastructure/
+    │   │
+    │   ├── Persistence/                 # работа с БД
+    │   │   ├── Configurations/           # настройки сущностей
+    │   │   └── Migrations/               # миграции БД
+    │   │
+    │   ├── Queries/                     # запросы к БД
+    │   │
+    │   ├── Repositories/                # доступ к данным
+    │   │
+    │   └── Services/                    # технические сервисы
+    │
+    │
+    └── Mozzaro.API/
+        │
+        ├── Controllers/                 # API контроллеры
+        │   ├── AuthController.cs
+        │   ├── PizzasController.cs
+        │   ├── CategoriesController.cs
+        │   ├── IngredientsController.cs
+        │   ├── CartController.cs
+        │   └── OrdersController.cs
+        │
+        ├── Extensions/                  # расширения
+        │
+        ├── Hubs/                        # SignalR
+        │   └── OrderStatusHub.cs
+        │
+        ├── Middleware/                  # обработка запросов
+        │
+        ├── Program.cs                   # запуск API
+        ├── appsettings.json             # настройки
+        └── appsettings.Development.json
+    `
+
+
+## 🖥️ Frontend
+* * *
+
+    `Mozzaro.Client/
+    │
+    ├── Components/                      # компоненты интерфейса
+    │   ├── Layout/
+    │   └── Shared/
+    │
+    ├── Pages/                           # страницы приложения
+    │   ├── Admin/                       # панель администратора
+    │   ├── Cart/                        # корзина
+    │   ├── Checkout/                    # оформление заказа
+    │   ├── Home/                        # главная страница
+    │   ├── Login/                       # вход
+    │   ├── Menu/                        # меню
+    │   ├── Orders/                      # заказы
+    │   ├── PizzaDetails/                # информация о пицце
+    │   └── Register/                    # регистрация
+    │
+    ├── Models/                          # модели клиента
+    │
+    ├── Services/                        # работа с API
+    │   ├── ApiClient.cs
+    │   ├── AuthService.cs
+    │   ├── PizzaService.cs
+    │   ├── CartService.cs
+    │   └── OrderService.cs
+    │
+    ├── wwwroot/                         # статические файлы
+    │   ├── css/
+    │   ├── images/
+    │   └── js/
+    │
+    ├── Program.cs                       # запуск клиента
+    ├── appsettings.json                 # настройки
+    └── appsettings.Development.json
+    `
+
+
+## 🗄️ Database
+* * *
+
+    `Mozzaro Database — SQLite
+    │
+    ├── Users                           # пользователи
+    │   ├── Id
+    │   ├── Name
+    │   ├── Email
+    │   └── PasswordHash
+    │
+    ├── Categories                      # категории пицц
+    │   ├── Id
+    │   └── Name
+    │
+    ├── Pizzas                          # пиццы
+    │   ├── Id
+    │   ├── Name
+    │   ├── Description
+    │   ├── Price
+    │   ├── ImageUrl
+    │   ├── IsAvailable
+    │   └── CategoryId
+    │
+    ├── Ingredients                     # ингредиенты
+    │   ├── Id
+    │   └── Name
+    │
+    ├── PizzaIngredients                 # связь пицц и ингредиентов
+    │   ├── PizzaId
+    │   └── IngredientId
+    │
+    ├── Carts                            # корзины пользователей
+    │   ├── Id
+    │   └── UserId
+    │
+    ├── CartItems                        # товары в корзине
+    │   ├── Id
+    │   ├── CartId
+    │   ├── PizzaId
+    │   └── Quantity
+    │
+    ├── Orders                           # заказы
+    │   ├── Id
+    │   ├── UserId
+    │   ├── Status
+    │   ├── TotalPrice
+    │   ├── CreatedAt
+    │   └── DeliveryAddress
+    │
+    └── OrderItems                       # товары в заказе
+        ├── Id
+        ├── OrderId
+        ├── PizzaId
+        ├── Quantity
+        └── Price
+    `
