@@ -1,29 +1,43 @@
+using Microsoft.EntityFrameworkCore;
+using Mozzaro.Application.Interfaces.Repositories;
+using Mozzaro.Application.Interfaces.Services;
+using Mozzaro.Infrastructure.Persistence;
+using Mozzaro.Infrastructure.Repositories;
+using Mozzaro.Infrastructure.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-builder.Services.AddControllersWithViews();
+builder.Services.AddControllers();
+
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
+builder.Services.AddDbContext<MozzaroDbContext>(options =>
+    options.UseNpgsql(
+        builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+builder.Services.AddScoped<IPizzaService, PizzaService>();
+builder.Services.AddScoped<ICategoryService, CategoryService>();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (!app.Environment.IsDevelopment())
+if (app.Environment.IsDevelopment())
 {
-    app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
+else
+{
+    app.UseExceptionHandler("/error");
     app.UseHsts();
 }
 
 app.UseHttpsRedirection();
-app.UseRouting();
 
 app.UseAuthorization();
 
-app.MapStaticAssets();
-
-app.MapControllerRoute(
-        name: "default",
-        pattern: "{controller=Home}/{action=Index}/{id?}")
-    .WithStaticAssets();
-
+app.MapControllers();
 
 app.Run();
