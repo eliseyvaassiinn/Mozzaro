@@ -1,0 +1,162 @@
+@page "/pizza/{id:int}"
+
+@using Microsoft.AspNetCore.Components
+@using Microsoft.AspNetCore.Components.Web
+@using static Microsoft.AspNetCore.Components.Web.RenderMode
+@using Mozzaro.Domain.Entities
+@using Mozzaro.Client.Services
+
+@rendermode InteractiveServer
+
+
+@inject PizzaApiService PizzaApiService
+@inject CartService CartService
+
+<PageTitle>Пицца — Mozzaro</PageTitle>
+
+<div class="pizza-details-page">
+
+    @if (isLoading)
+    {
+        <div class="pizza-details-loading">
+            Загружаем пиццу...
+        </div>
+    }
+    else if (pizza == null)
+    {
+        <div class="pizza-details-empty">
+
+            <h1>
+                Пицца не найдена
+            </h1>
+
+            <p>
+                Возможно, эта пицца больше недоступна.
+            </p>
+
+            <a href="/menu"
+               class="back-button">
+                Вернуться в меню
+            </a>
+
+        </div>
+    }
+    else
+    {
+        <div class="pizza-details">
+
+            <div class="pizza-details-image">
+
+                @if (!string.IsNullOrWhiteSpace(pizza.ImageUrl))
+                {
+                    <div class="pizza-photo">
+
+                        <img src="@pizza.ImageUrl"
+                             alt="@pizza.Name" />
+
+                    </div>
+                }
+                else
+                {
+                    <div class="pizza-photo pizza-placeholder">
+                        🍕
+                    </div>
+                }
+
+            </div>
+
+
+            <div class="pizza-details-content">
+
+                <span class="pizza-details-label">
+                    MOZZARO
+                </span>
+
+                <h1>
+                    @pizza.Name
+                </h1>
+
+                <p class="pizza-details-description">
+                    @(string.IsNullOrWhiteSpace(pizza.Description)
+                        ? "Вкусная пицца Mozzaro."
+                        : pizza.Description)
+                </p>
+
+                <div class="pizza-details-price">
+                    @pizza.Price.ToString("0.00") €
+                </div>
+
+                <div class="pizza-details-status">
+
+                    @if (pizza.IsAvailable)
+                    {
+                        <span class="available">
+                            В наличии
+                        </span>
+                    }
+                    else
+                    {
+                        <span class="unavailable">
+                            Нет в наличии
+                        </span>
+                    }
+
+                </div>
+
+                <div class="pizza-details-actions">
+
+                    @if (pizza.IsAvailable)
+                    {
+                        <button class="add-to-cart-button"
+                                @onclick="AddToCart">
+                            В корзину
+                        </button>
+                    }
+
+                    <a href="/menu"
+                       class="back-link">
+                        ← Вернуться в меню
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+    }
+
+</div>
+
+
+@code {
+
+    [Parameter]
+    public int id { get; set; }
+
+    private Pizza? pizza;
+
+    private bool isLoading = true;
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            pizza = await PizzaApiService.GetPizzaByIdAsync(id);
+        }
+        finally
+        {
+            isLoading = false;
+        }
+    }
+
+
+    private void AddToCart()
+    {
+        if (pizza != null)
+        {
+            CartService.Add(pizza);
+        }
+    }
+
+}

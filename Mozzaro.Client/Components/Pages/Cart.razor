@@ -1,0 +1,257 @@
+@page "/cart"
+
+@using Microsoft.AspNetCore.Components
+@using Microsoft.AspNetCore.Components.Web
+@using static Microsoft.AspNetCore.Components.Web.RenderMode
+@using Mozzaro.Client.Services
+
+@rendermode InteractiveServer
+
+@inject CartService CartService
+
+<PageTitle>Корзина — Mozzaro</PageTitle>
+
+<div class="cart-page">
+
+    <div class="cart-header">
+
+        <div>
+
+            <span class="cart-label">
+                MOZZARO
+            </span>
+
+            <h1>
+                Ваша корзина
+            </h1>
+
+            <p>
+                Проверьте выбранные пиццы перед оформлением заказа.
+            </p>
+
+        </div>
+
+        @if (CartService.TotalItems > 0)
+        {
+            <div class="cart-count">
+
+                @CartService.TotalItems
+
+                @(CartService.TotalItems == 1
+                    ? "товар"
+                    : "товара")
+
+            </div>
+        }
+
+    </div>
+
+
+    @if (CartService.Items.Count == 0)
+    {
+        <section class="empty-cart">
+
+            <div class="empty-cart-icon">
+                🍕
+            </div>
+
+            <h2>
+                Корзина пуста
+            </h2>
+
+            <p>
+                Добавьте пиццу из нашего меню,
+                и она появится здесь.
+            </p>
+
+            <a href="/menu"
+               class="empty-cart-button">
+                Перейти в меню →
+            </a>
+
+        </section>
+    }
+    else
+    {
+        <div class="cart-layout">
+
+            <section class="cart-items">
+
+                @foreach (var item in CartService.Items)
+                {
+                    <article class="cart-item">
+
+                        <div class="cart-item-image">
+
+                            @if (!string.IsNullOrWhiteSpace(item.Pizza.ImageUrl))
+                            {
+                                <img src="@item.Pizza.ImageUrl"
+                                     alt="@item.Pizza.Name" />
+                            }
+                            else
+                            {
+                                <span>
+                                    🍕
+                                </span>
+                            }
+
+                        </div>
+
+
+                        <div class="cart-item-info">
+
+                            <span class="cart-item-category">
+                                MOZZARO
+                            </span>
+
+                            <h2>
+                                @item.Pizza.Name
+                            </h2>
+
+                            <p>
+                                @item.Pizza.Price.ToString("0.00") € за шт.
+                            </p>
+
+                        </div>
+
+
+                        <div class="cart-item-quantity">
+
+                            <button @onclick="() => Decrease(item.Pizza.Id)">
+                                −
+                            </button>
+
+                            <strong>
+                                @item.Quantity
+                            </strong>
+
+                            <button @onclick="() => Increase(item.Pizza.Id)">
+                                +
+                            </button>
+
+                        </div>
+
+
+                        <div class="cart-item-total">
+
+                            @((item.Pizza.Price * item.Quantity)
+                                .ToString("0.00")) €
+
+                        </div>
+
+
+                        <button class="remove-item"
+                                @onclick="() => Remove(item.Pizza.Id)">
+                            ×
+                        </button>
+
+                    </article>
+                }
+
+            </section>
+
+
+            <aside class="cart-summary">
+
+                <div class="summary-label">
+                    ИТОГО
+                </div>
+
+                <h2>
+                    @CartService.TotalPrice.ToString("0.00") €
+                </h2>
+
+
+                <div class="summary-line">
+
+                    <span>
+                        Товаров
+                    </span>
+
+                    <strong>
+                        @CartService.TotalItems
+                    </strong>
+
+                </div>
+
+
+                <div class="summary-line">
+
+                    <span>
+                        Доставка
+                    </span>
+
+                    <strong>
+                        Бесплатно
+                    </strong>
+
+                </div>
+
+
+                <div class="summary-divider"></div>
+
+
+                <div class="summary-total">
+
+                    <span>
+                        К оплате
+                    </span>
+
+                    <strong>
+                        @CartService.TotalPrice.ToString("0.00") €
+                    </strong>
+
+                </div>
+
+
+                <a href="/checkout"
+                   class="checkout-button">
+                    Оформить заказ →
+                </a>
+
+
+                <button class="clear-cart-button"
+                        @onclick="ClearCart">
+                    Очистить корзину
+                </button>
+
+
+                <a href="/menu"
+                   class="continue-shopping">
+                    ← Продолжить покупки
+                </a>
+
+            </aside>
+
+        </div>
+    }
+
+</div>
+
+
+@code {
+
+    private void Increase(int pizzaId)
+    {
+        CartService.Increase(pizzaId);
+    }
+
+
+    private void Decrease(int pizzaId)
+    {
+        CartService.Decrease(pizzaId);
+    }
+
+
+    private void Remove(int pizzaId)
+    {
+        CartService.Remove(pizzaId);
+    }
+
+
+    private void ClearCart()
+    {
+        CartService.Clear();
+    }
+
+}

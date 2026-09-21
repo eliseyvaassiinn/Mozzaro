@@ -1,29 +1,100 @@
-﻿<div class="top-row ps-3 navbar navbar-dark">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="">Mozzaro.Client</a>
+﻿<div class="mozzaro-sidebar">
+
+    <div class="mozzaro-brand">
+
+        <a href="/" class="mozzaro-logo-link">
+            <img src="/images/logo.png"
+                 alt="Mozzaro Pizzeria"
+                 class="mozzaro-logo" />
+        </a>
+
     </div>
-</div>
 
-<input type="checkbox" title="Navigation menu" class="navbar-toggler"/>
 
-<div class="nav-scrollable" onclick="document.querySelector('.navbar-toggler').click()">
-    <nav class="nav flex-column">
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Home
-            </NavLink>
-        </div>
+    <nav class="mozzaro-navigation">
 
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="counter">
-                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Counter
-            </NavLink>
-        </div>
+        <NavLink class="mozzaro-nav-link"
+                 href=""
+                 Match="NavLinkMatch.All">
 
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="weather">
-                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Weather
-            </NavLink>
-        </div>
+            <span class="nav-icon">⌂</span>
+
+            <span>Главная</span>
+
+        </NavLink>
+
+
+        <NavLink class="mozzaro-nav-link"
+                 href="menu">
+
+            <span class="nav-icon">◉</span>
+
+            <span>Меню</span>
+
+        </NavLink>
+
+
+        <NavLink class="mozzaro-nav-link"
+                 href="cart">
+
+            <span class="nav-icon">🛒</span>
+
+            <span>Корзина</span>
+
+        </NavLink>
+
+
+        <NavLink class="mozzaro-nav-link"
+                 href="orders">
+
+            <span class="nav-icon">▤</span>
+
+            <span>Мои заказы</span>
+
+        </NavLink>
+
+
+        <NavLink class="mozzaro-nav-link"
+                 href="login">
+
+            <span class="nav-icon">♙</span>
+
+            <span>Войти</span>
+
+        </NavLink>
+
     </nav>
+
+
+    <div class="mozzaro-sidebar-footer">
+
+        <div class="footer-line"></div>
+
+        <span class="footer-label">
+            ITALIAN TASTE
+        </span>
+
+        <span class="footer-label">
+            EVERYDAY
+        </span>
+
+        <div class="italian-colors">
+            <span class="green"></span>
+            <span class="white"></span>
+            <span class="red"></span>
+        </div>
+
+        <div class="sidebar-message">
+            <span class="message-icon">🍴</span>
+
+            <span>
+                Хорошая пицца<br />
+                делает день лучше
+            </span>
+
+            <span class="heart">♥</span>
+        </div>
+
+    </div>
+
 </div>

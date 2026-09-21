@@ -1,0 +1,828 @@
+.pizza-details-page {
+    min-height: calc(100vh - 1px);
+
+    padding: 55px 50px;
+
+    background:
+            radial-gradient(
+                    circle at 85% 15%,
+                    rgba(220, 38, 38, 0.08),
+                    transparent 28%
+            ),
+            radial-gradient(
+                    circle at 10% 85%,
+                    rgba(22, 101, 52, 0.08),
+                    transparent 30%
+            ),
+            #f8fafc;
+
+    overflow: hidden;
+}
+
+
+/* основная карточка */
+
+.pizza-details {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(400px, 1fr)
+        minmax(400px, 0.9fr);
+
+    max-width: 1180px;
+
+    min-height: 620px;
+
+    margin: 0 auto;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(17, 24, 39, 0.06);
+
+    border-radius: 32px;
+
+    background: rgba(255, 255, 255, 0.94);
+
+    box-shadow:
+            0 25px 70px rgba(17, 24, 39, 0.12),
+            0 5px 20px rgba(17, 24, 39, 0.05);
+
+    animation: detailsAppear 0.7s ease-out;
+}
+
+
+/* красно-зелёная линия */
+
+.pizza-details::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 5px;
+
+    background:
+            linear-gradient(
+                    90deg,
+                    #dc2626 0%,
+                    #dc2626 48%,
+                    #166534 52%,
+                    #166534 100%
+            );
+
+    z-index: 20;
+}
+
+
+/* левая часть */
+
+.pizza-details-image {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 620px;
+
+    overflow: hidden;
+
+    background:
+            radial-gradient(
+                    circle at center,
+                    rgba(255, 255, 255, 0.95) 0%,
+                    rgba(254, 242, 242, 0.9) 45%,
+                    rgba(220, 38, 38, 0.12) 100%
+            );
+}
+
+
+/* внешний декоративный круг */
+
+.pizza-details-image::before {
+    content: "";
+
+    position: absolute;
+
+    width: 450px;
+    height: 450px;
+
+    border: 2px solid rgba(220, 38, 38, 0.12);
+
+    border-radius: 50%;
+
+    animation:
+            rotateCircle 18s linear infinite;
+}
+
+
+/* второй декоративный круг */
+
+.pizza-details-image::after {
+    content: "";
+
+    position: absolute;
+
+    width: 530px;
+    height: 530px;
+
+    border: 1px dashed rgba(22, 101, 52, 0.14);
+
+    border-radius: 50%;
+
+    animation:
+            rotateCircleReverse 25s linear infinite;
+}
+
+
+/* круг с фотографией */
+
+.pizza-photo {
+    position: relative;
+
+    z-index: 5;
+
+    width: 430px;
+    height: 430px;
+
+    flex-shrink: 0;
+
+    overflow: hidden;
+
+    border-radius: 50%;
+
+    background: #ead7c6;
+
+    box-shadow:
+            0 25px 35px rgba(0, 0, 0, 0.18);
+
+    animation:
+            pizzaFloat 4s ease-in-out infinite;
+
+    transition:
+            transform 0.4s ease,
+            box-shadow 0.4s ease;
+}
+
+
+/* сама фотография */
+
+.pizza-photo img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    border: none;
+
+    border-radius: 0;
+
+    margin: 0;
+    padding: 0;
+
+    transition:
+            transform 0.5s ease;
+}
+
+
+/* эффект наведения */
+
+.pizza-photo:hover {
+    transform: scale(1.025);
+
+    box-shadow:
+            0 32px 45px rgba(0, 0, 0, 0.22);
+}
+
+
+.pizza-photo:hover img {
+    transform: scale(1.03);
+}
+
+
+/* запасной вариант */
+
+.pizza-placeholder {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 150px;
+}
+
+
+/* правая часть */
+
+.pizza-details-content {
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    padding: 70px 65px;
+}
+
+
+/* label */
+
+.pizza-details-label {
+    display: inline-flex;
+
+    width: fit-content;
+
+    margin-bottom: 16px;
+
+    color: #dc2626;
+
+    font-size: 13px;
+
+    font-weight: 900;
+
+    letter-spacing: 3px;
+
+    animation:
+            slideUp 0.6s ease-out 0.1s both;
+}
+
+
+/* название */
+
+.pizza-details-content h1 {
+    margin: 0 0 20px;
+
+    color: #111827;
+
+    font-size: clamp(42px, 5vw, 64px);
+
+    font-weight: 900;
+
+    line-height: 0.95;
+
+    letter-spacing: -2px;
+
+    animation:
+            slideUp 0.6s ease-out 0.2s both;
+}
+
+
+/* описание */
+
+.pizza-details-description {
+    max-width: 500px;
+
+    margin: 0 0 30px;
+
+    color: #6b7280;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    animation:
+            slideUp 0.6s ease-out 0.3s both;
+}
+
+
+/* цена */
+
+.pizza-details-price {
+    display: inline-flex;
+
+    align-items: center;
+
+    width: fit-content;
+
+    margin-bottom: 18px;
+
+    color: #166534;
+
+    font-size: 36px;
+
+    font-weight: 900;
+
+    letter-spacing: -1px;
+
+    animation:
+            slideUp 0.6s ease-out 0.4s both;
+}
+
+
+.pizza-details-price::before {
+    content: "";
+
+    width: 8px;
+    height: 8px;
+
+    margin-right: 12px;
+
+    border-radius: 50%;
+
+    background: #166534;
+
+    box-shadow:
+            0 0 0 6px rgba(22, 101, 52, 0.1);
+}
+
+
+/* статус */
+
+.pizza-details-status {
+    margin-bottom: 35px;
+
+    animation:
+            slideUp 0.6s ease-out 0.45s both;
+}
+
+
+.available,
+.unavailable {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 9px 14px;
+
+    border-radius: 30px;
+
+    font-size: 13px;
+
+    font-weight: 800;
+}
+
+
+.available {
+    color: #166534;
+
+    background: #dcfce7;
+}
+
+
+.available::before {
+    content: "";
+
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #16a34a;
+
+    box-shadow:
+            0 0 0 4px rgba(22, 163, 74, 0.12);
+}
+
+
+.unavailable {
+    color: #991b1b;
+
+    background: #fee2e2;
+}
+
+
+/* кнопки */
+
+.pizza-details-actions {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    animation:
+            slideUp 0.6s ease-out 0.5s both;
+}
+
+
+.add-to-cart-button {
+    position: relative;
+
+    overflow: hidden;
+
+    border: none;
+
+    border-radius: 13px;
+
+    padding: 16px 28px;
+
+    color: white;
+
+    background: #dc2626;
+
+    font-size: 15px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    box-shadow:
+            0 10px 22px rgba(220, 38, 38, 0.25);
+
+    transition:
+            transform 0.2s ease,
+            box-shadow 0.2s ease,
+            background 0.2s ease;
+}
+
+
+.add-to-cart-button::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -120%;
+
+    width: 80%;
+    height: 100%;
+
+    background:
+            linear-gradient(
+                    90deg,
+                    transparent,
+                    rgba(255, 255, 255, 0.35),
+                    transparent
+            );
+
+    transform: skewX(-20deg);
+
+    transition:
+            left 0.6s ease;
+}
+
+
+.add-to-cart-button:hover {
+    transform: translateY(-3px);
+
+    background: #b91c1c;
+
+    box-shadow:
+            0 15px 28px rgba(220, 38, 38, 0.32);
+}
+
+
+.add-to-cart-button:hover::before {
+    left: 140%;
+}
+
+
+.add-to-cart-button:active {
+    transform: translateY(0);
+}
+
+
+/* назад */
+
+.back-link {
+    color: #166534;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition:
+            color 0.2s ease,
+            transform 0.2s ease;
+}
+
+
+.back-link:hover {
+    color: #14532d;
+
+    transform: translateX(-4px);
+}
+
+
+/* загрузка */
+
+.pizza-details-loading {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 500px;
+
+    color: #6b7280;
+
+    font-size: 17px;
+
+    font-weight: 600;
+}
+
+
+.pizza-details-loading::after {
+    content: "";
+
+    width: 20px;
+    height: 20px;
+
+    margin-left: 12px;
+
+    border: 3px solid #dc2626;
+
+    border-top-color: transparent;
+
+    border-radius: 50%;
+
+    animation:
+            spinner 0.8s linear infinite;
+}
+
+
+/* пицца не найдена */
+
+.pizza-details-empty {
+    max-width: 650px;
+
+    margin: 100px auto;
+
+    padding: 60px;
+
+    text-align: center;
+
+    border-radius: 28px;
+
+    background: white;
+
+    box-shadow:
+            0 20px 60px rgba(17, 24, 39, 0.1);
+
+    animation:
+            detailsAppear 0.6s ease-out;
+}
+
+
+.pizza-details-empty h1 {
+    margin-bottom: 12px;
+
+    color: #111827;
+
+    font-size: 38px;
+}
+
+
+.pizza-details-empty p {
+    margin-bottom: 30px;
+
+    color: #6b7280;
+}
+
+
+.back-button {
+    display: inline-block;
+
+    border-radius: 11px;
+
+    padding: 13px 22px;
+
+    color: white;
+
+    background: #166534;
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition:
+            transform 0.2s ease,
+            background 0.2s ease;
+}
+
+
+.back-button:hover {
+    transform: translateY(-2px);
+
+    background: #14532d;
+}
+
+
+/* анимации */
+
+@keyframes detailsAppear {
+
+    from {
+        opacity: 0;
+
+        transform:
+                translateY(25px)
+                scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+                translateY(0)
+                scale(1);
+    }
+}
+
+
+@keyframes slideUp {
+
+    from {
+        opacity: 0;
+
+        transform:
+                translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+                translateY(0);
+    }
+}
+
+
+@keyframes pizzaFloat {
+
+    0%,
+    100% {
+        transform:
+                translateY(0)
+                rotate(-1deg);
+    }
+
+    50% {
+        transform:
+                translateY(-10px)
+                rotate(1deg);
+    }
+}
+
+
+@keyframes rotateCircle {
+
+    from {
+        transform:
+                rotate(0deg);
+    }
+
+    to {
+        transform:
+                rotate(360deg);
+    }
+}
+
+
+@keyframes rotateCircleReverse {
+
+    from {
+        transform:
+                rotate(360deg);
+    }
+
+    to {
+        transform:
+                rotate(0deg);
+    }
+}
+
+
+@keyframes spinner {
+
+    to {
+        transform:
+                rotate(360deg);
+    }
+}
+
+
+/* планшет */
+
+@media (max-width: 1000px) {
+
+    .pizza-details-page {
+        padding: 35px 25px;
+    }
+
+
+    .pizza-details {
+        grid-template-columns: 1fr;
+
+        max-width: 700px;
+    }
+
+
+    .pizza-details-image {
+        min-height: 480px;
+    }
+
+
+    .pizza-details-image::before {
+        width: 370px;
+        height: 370px;
+    }
+
+
+    .pizza-details-image::after {
+        width: 440px;
+        height: 440px;
+    }
+
+
+    .pizza-photo {
+        width: 370px;
+        height: 370px;
+    }
+
+
+    .pizza-details-content {
+        padding: 50px;
+    }
+}
+
+
+/* телефон */
+
+@media (max-width: 600px) {
+
+    .pizza-details-page {
+        padding: 20px 12px;
+    }
+
+
+    .pizza-details {
+        border-radius: 22px;
+    }
+
+
+    .pizza-details-image {
+        min-height: 330px;
+    }
+
+
+    .pizza-details-image::before {
+        width: 270px;
+        height: 270px;
+    }
+
+
+    .pizza-details-image::after {
+        width: 320px;
+        height: 320px;
+    }
+
+
+    .pizza-photo {
+        width: 250px;
+        height: 250px;
+    }
+
+
+    .pizza-details-content {
+        padding: 35px 25px 40px;
+    }
+
+
+    .pizza-details-content h1 {
+        font-size: 42px;
+    }
+
+
+    .pizza-details-description {
+        font-size: 16px;
+    }
+
+
+    .pizza-details-price {
+        font-size: 30px;
+    }
+
+
+    .pizza-details-actions {
+        align-items: stretch;
+
+        flex-direction: column;
+    }
+
+
+    .add-to-cart-button {
+        width: 100%;
+    }
+
+
+    .back-link {
+        text-align: center;
+    }
+}

@@ -18,6 +18,11 @@
       <Folder Include="Pages\PizzaDetails\" />
       <Folder Include="Pages\Register\" />
       <Folder Include="Services\" />
+      <Folder Include="wwwroot\Images\Pizzas\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Mozzaro.Domain\Mozzaro.Domain.csproj" />
     </ItemGroup>
 
 </Project>

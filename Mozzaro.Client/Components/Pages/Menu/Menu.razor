@@ -1,0 +1,452 @@
+@page "/menu"
+@rendermode InteractiveServer
+
+@using Mozzaro.Domain.Entities
+@using Mozzaro.Client.Services
+@inject PizzaApiService PizzaApiService
+@inject CartService CartService
+
+<PageTitle>Меню — Mozzaro</PageTitle>
+
+<div class="menu-page">
+
+    @if (ShowCartNotification)
+    {
+        <div class="cart-notification">
+
+            <div class="cart-notification-icon">
+                ✓
+            </div>
+
+            <div class="cart-notification-content">
+
+                <strong>
+                    Добавлено в корзину
+                </strong>
+
+                <span>
+                    @AddedPizzaName
+                </span>
+
+            </div>
+
+            <a href="/cart"
+               class="cart-notification-link">
+                Корзина →
+            </a>
+
+            <button class="cart-notification-close"
+                    @onclick="HideCartNotification">
+                ×
+            </button>
+
+        </div>
+    }
+
+
+    <section class="menu-hero">
+
+        <div class="menu-hero-content">
+
+            <span class="menu-label">
+                MOZZARO
+            </span>
+
+            <h1>
+                Выберите свою<br />
+                <span>идеальную пиццу.</span>
+            </h1>
+
+            <p>
+                Свежие ингредиенты, тонкое тесто и настоящий вкус
+                итальянской пиццы.
+            </p>
+
+        </div>
+
+        <div class="menu-hero-badge">
+
+            <strong>
+                @FilteredPizzas.Count()
+            </strong>
+
+            <span>
+                пицц в меню
+            </span>
+
+        </div>
+
+    </section>
+
+
+    <section class="catalog-controls">
+
+        <div class="search-box">
+
+            <span class="search-icon">
+                🔎
+            </span>
+
+            <input @bind="SearchText"
+                   @bind:event="oninput"
+                   placeholder="Найти пиццу..." />
+
+            @if (!string.IsNullOrWhiteSpace(SearchText))
+            {
+                <button class="clear-search"
+                        @onclick="ClearSearch">
+                    ×
+                </button>
+            }
+
+        </div>
+
+
+        <div class="category-filters">
+
+            <button class="category-button @(SelectedCategoryId == null ? "active" : "")"
+                    @onclick="ShowAll">
+                Все
+            </button>
+
+            @foreach (var category in Categories)
+            {
+                <button class="category-button @(SelectedCategoryId == category.Id ? "active" : "")"
+                        @onclick="() => SelectCategory(category.Id)">
+                    @category.Name
+                </button>
+            }
+
+        </div>
+
+
+        <div class="catalog-bottom">
+
+            <span class="results-count">
+                Найдено: <strong>@FilteredPizzas.Count()</strong>
+            </span>
+
+            <select @bind="SortOption"
+                    class="sort-select">
+
+                <option value="default">
+                    По умолчанию
+                </option>
+
+                <option value="price-asc">
+                    Сначала дешевле
+                </option>
+
+                <option value="price-desc">
+                    Сначала дороже
+                </option>
+
+                <option value="name">
+                    По названию
+                </option>
+
+            </select>
+
+        </div>
+
+    </section>
+
+
+    @if (IsLoading)
+    {
+        <div class="catalog-state">
+
+            <div class="loading-spinner"></div>
+
+            <p>
+                Загружаем меню...
+            </p>
+
+        </div>
+    }
+    else if (FilteredPizzas.Count() == 0)
+    {
+        <div class="catalog-state empty-state">
+
+            <div class="empty-icon">
+                🍕
+            </div>
+
+            <h2>
+                Ничего не найдено
+            </h2>
+
+            <p>
+                Попробуйте изменить запрос или выбрать другую категорию.
+            </p>
+
+            <button @onclick="ResetFilters"
+                    class="reset-button">
+                Сбросить фильтры
+            </button>
+
+        </div>
+    }
+    else
+    {
+        <section class="pizza-grid">
+
+            @foreach (var pizza in FilteredPizzas)
+            {
+                <article class="pizza-card">
+
+                    <a href="@($"/pizza/{pizza.Id}")"
+                       class="pizza-image-link">
+
+                        <div class="pizza-image">
+
+                            @if (!string.IsNullOrWhiteSpace(pizza.ImageUrl))
+                            {
+                                <img src="@pizza.ImageUrl"
+                                     alt="@pizza.Name" />
+                            }
+                            else
+                            {
+                                <span class="pizza-placeholder">
+                                    🍕
+                                </span>
+                            }
+
+                            @if (pizza.IsAvailable)
+                            {
+                                <span class="pizza-badge">
+                                    В НАЛИЧИИ
+                                </span>
+                            }
+
+                        </div>
+
+                    </a>
+
+
+                    <div class="pizza-content">
+
+                        <div class="pizza-category">
+                            @GetCategoryName(pizza.CategoryId)
+                        </div>
+
+                        <h2>
+                            @pizza.Name
+                        </h2>
+
+                        <p class="pizza-description">
+                            @(string.IsNullOrWhiteSpace(pizza.Description)
+                                ? "Вкусная пицца Mozzaro."
+                                : pizza.Description)
+                        </p>
+
+
+                        <div class="pizza-footer">
+
+                            <div class="pizza-price">
+                                @pizza.Price.ToString("0.00") €
+                            </div>
+
+                            <div class="pizza-actions">
+
+                                <a href="@($"/pizza/{pizza.Id}")"
+                                   class="details-button">
+                                    Подробнее
+                                </a>
+
+                                <button class="cart-button"
+                                        disabled="@(!pizza.IsAvailable)"
+                                        @onclick="() => AddToCart(pizza)">
+                                    +
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+            }
+
+        </section>
+    }
+
+</div>
+
+
+@code {
+
+    private List<Pizza> Pizzas = new();
+
+    private List<Category> Categories = new();
+
+    private string SearchText = string.Empty;
+
+    private int? SelectedCategoryId;
+
+    private string SortOption = "default";
+
+    private bool IsLoading = true;
+
+    private bool ShowCartNotification;
+
+    private string AddedPizzaName = string.Empty;
+
+    private CancellationTokenSource? NotificationCancellation;
+
+
+    private IEnumerable<Pizza> FilteredPizzas
+    {
+        get
+        {
+            IEnumerable<Pizza> result = Pizzas;
+
+            if (!string.IsNullOrWhiteSpace(SearchText))
+            {
+                result = result.Where(p =>
+                    p.Name.Contains(
+                        SearchText,
+                        StringComparison.OrdinalIgnoreCase)
+                    ||
+                    (p.Description != null &&
+                     p.Description.Contains(
+                         SearchText,
+                         StringComparison.OrdinalIgnoreCase)));
+            }
+
+            if (SelectedCategoryId.HasValue)
+            {
+                result = result.Where(p =>
+                    p.CategoryId == SelectedCategoryId.Value);
+            }
+
+            result = SortOption switch
+            {
+                "price-asc" =>
+                    result.OrderBy(p => p.Price),
+
+                "price-desc" =>
+                    result.OrderByDescending(p => p.Price),
+
+                "name" =>
+                    result.OrderBy(p => p.Name),
+
+                _ =>
+                    result.OrderBy(p => p.Id)
+            };
+
+            return result;
+        }
+    }
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            var pizzasTask =
+                PizzaApiService.GetPizzasAsync();
+
+            var categoriesTask =
+                PizzaApiService.GetCategoriesAsync();
+
+            await Task.WhenAll(
+                pizzasTask,
+                categoriesTask);
+
+            Pizzas = await pizzasTask;
+
+            Categories = await categoriesTask;
+        }
+        finally
+        {
+            IsLoading = false;
+        }
+    }
+
+
+    private void SelectCategory(int categoryId)
+    {
+        SelectedCategoryId = categoryId;
+    }
+
+
+    private void ShowAll()
+    {
+        SelectedCategoryId = null;
+    }
+
+
+    private void ClearSearch()
+    {
+        SearchText = string.Empty;
+    }
+
+
+    private void ResetFilters()
+    {
+        SearchText = string.Empty;
+
+        SelectedCategoryId = null;
+
+        SortOption = "default";
+    }
+
+
+    private string GetCategoryName(int categoryId)
+    {
+        return Categories
+                   .FirstOrDefault(x => x.Id == categoryId)
+                   ?.Name
+               ?? "Пицца";
+    }
+
+
+    private async Task AddToCart(Pizza pizza)
+    {
+        CartService.Add(pizza);
+
+        AddedPizzaName = pizza.Name;
+
+        ShowCartNotification = true;
+
+        NotificationCancellation?.Cancel();
+
+        var cancellation =
+            new CancellationTokenSource();
+
+        NotificationCancellation = cancellation;
+
+        try
+        {
+            await Task.Delay(
+                3500,
+                cancellation.Token);
+
+            ShowCartNotification = false;
+
+            await InvokeAsync(StateHasChanged);
+        }
+        catch (TaskCanceledException)
+        {
+        }
+    }
+
+
+    private void HideCartNotification()
+    {
+        NotificationCancellation?.Cancel();
+
+        ShowCartNotification = false;
+    }
+
+
+    public void Dispose()
+    {
+        NotificationCancellation?.Cancel();
+
+        NotificationCancellation?.Dispose();
+    }
+
+}
