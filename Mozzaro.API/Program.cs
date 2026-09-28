@@ -19,15 +19,19 @@ builder.Services.AddDbContext<MozzaroDbContext>(options =>
 
 builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+
 builder.Services.AddScoped<IPizzaService, PizzaService>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<IOrderService, OrderService>();
+builder.Services.AddScoped<IUserService, UserService>();
 
 var app = builder.Build();
 
 using (var scope = app.Services.CreateScope())
 {
-    var dbContext = scope.ServiceProvider.GetRequiredService<MozzaroDbContext>();
+    var dbContext = scope.ServiceProvider
+        .GetRequiredService<MozzaroDbContext>();
+
     await DbSeeder.SeedAsync(dbContext);
 }
 

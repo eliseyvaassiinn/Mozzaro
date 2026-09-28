@@ -1,4 +1,10 @@
-﻿<div class="mozzaro-sidebar">
+﻿@rendermode InteractiveServer
+@using Mozzaro.Client.Services
+
+@inject UserSessionService UserSession
+@inject NavigationManager Navigation
+
+<div class="mozzaro-sidebar">
 
     <div class="mozzaro-brand">
 
@@ -10,7 +16,6 @@
 
     </div>
 
-
     <nav class="mozzaro-navigation">
 
         <NavLink class="mozzaro-nav-link"
@@ -18,53 +23,87 @@
                  Match="NavLinkMatch.All">
 
             <span class="nav-icon">⌂</span>
-
             <span>Главная</span>
 
         </NavLink>
-
 
         <NavLink class="mozzaro-nav-link"
                  href="menu">
 
             <span class="nav-icon">◉</span>
-
             <span>Меню</span>
 
         </NavLink>
-
 
         <NavLink class="mozzaro-nav-link"
                  href="cart">
 
             <span class="nav-icon">🛒</span>
-
             <span>Корзина</span>
 
         </NavLink>
 
+        @if (UserSession.IsAuthenticated)
+        {
+            <NavLink class="mozzaro-nav-link"
+                     href="orders">
 
-        <NavLink class="mozzaro-nav-link"
-                 href="orders">
+                <span class="nav-icon">▤</span>
+                <span>Мои заказы</span>
 
-            <span class="nav-icon">▤</span>
+            </NavLink>
 
-            <span>Мои заказы</span>
+            <div class="mozzaro-user-section">
 
-        </NavLink>
+                <div class="mozzaro-user">
 
+                    <span class="nav-icon">♙</span>
 
-        <NavLink class="mozzaro-nav-link"
-                 href="login">
+                    <div class="user-info">
 
-            <span class="nav-icon">♙</span>
+                        <span class="user-label">
+                            вы вошли как
+                        </span>
 
-            <span>Войти</span>
+                        <span class="user-name">
+                            @UserSession.UserName
+                        </span>
 
-        </NavLink>
+                    </div>
+
+                </div>
+
+                <button type="button"
+                        class="mozzaro-logout-button"
+                        @onclick="Logout">
+
+                    <span class="nav-icon">↪</span>
+                    <span>Выйти</span>
+
+                </button>
+
+            </div>
+        }
+        else
+        {
+            <NavLink class="mozzaro-nav-link"
+                     href="login">
+
+                <span class="nav-icon">♙</span>
+                <span>Войти</span>
+
+            </NavLink>
+
+            <NavLink class="mozzaro-nav-link"
+                     href="register">
+
+                <span class="nav-icon">＋</span>
+                <span>Регистрация</span>
+
+            </NavLink>
+        }
 
     </nav>
-
 
     <div class="mozzaro-sidebar-footer">
 
@@ -79,12 +118,15 @@
         </span>
 
         <div class="italian-colors">
+
             <span class="green"></span>
             <span class="white"></span>
             <span class="red"></span>
+
         </div>
 
         <div class="sidebar-message">
+
             <span class="message-icon">🍴</span>
 
             <span>
@@ -93,8 +135,36 @@
             </span>
 
             <span class="heart">♥</span>
+
         </div>
 
     </div>
 
 </div>
+
+@implements IDisposable
+
+@code {
+
+    protected override void OnInitialized()
+    {
+        UserSession.OnChange += OnUserSessionChanged;
+    }
+
+    private void OnUserSessionChanged()
+    {
+        InvokeAsync(StateHasChanged);
+    }
+
+    private void Logout()
+    {
+        UserSession.Logout();
+
+        Navigation.NavigateTo("/");
+    }
+
+    public void Dispose()
+    {
+        UserSession.OnChange -= OnUserSessionChanged;
+    }
+}

@@ -8,7 +8,6 @@
 
 @rendermode InteractiveServer
 
-
 @inject PizzaApiService PizzaApiService
 @inject CartService CartService
 
@@ -64,7 +63,6 @@
                 }
 
             </div>
-
 
             <div class="pizza-details-content">
 
@@ -127,6 +125,36 @@
 
 </div>
 
+@if (showCartNotification)
+{
+    <div class="cart-toast">
+
+        <div class="cart-toast-icon">
+            ✓
+        </div>
+
+        <div class="cart-toast-content">
+            <strong>
+                Добавлено в корзину
+            </strong>
+
+            <span>
+                @notificationPizzaName
+            </span>
+        </div>
+
+        <a href="/cart"
+           class="cart-toast-button">
+            Корзина →
+        </a>
+
+        <button class="cart-toast-close"
+                @onclick="HideNotification">
+            ×
+        </button>
+
+    </div>
+}
 
 @code {
 
@@ -136,6 +164,12 @@
     private Pizza? pizza;
 
     private bool isLoading = true;
+
+    private bool showCartNotification;
+
+    private string notificationPizzaName = string.Empty;
+
+    private CancellationTokenSource? notificationCts;
 
 
     protected override async Task OnInitializedAsync()
@@ -151,12 +185,47 @@
     }
 
 
-    private void AddToCart()
+    private async Task AddToCart()
     {
-        if (pizza != null)
+        if (pizza == null)
+            return;
+
+        CartService.Add(pizza);
+
+        notificationPizzaName = pizza.Name;
+        showCartNotification = true;
+
+        notificationCts?.Cancel();
+        notificationCts?.Dispose();
+
+        notificationCts = new CancellationTokenSource();
+
+        try
         {
-            CartService.Add(pizza);
+            await Task.Delay(3500, notificationCts.Token);
+
+            showCartNotification = false;
+
+            await InvokeAsync(StateHasChanged);
         }
+        catch (TaskCanceledException)
+        {
+        }
+    }
+
+
+    private void HideNotification()
+    {
+        notificationCts?.Cancel();
+
+        showCartNotification = false;
+    }
+
+
+    public void Dispose()
+    {
+        notificationCts?.Cancel();
+        notificationCts?.Dispose();
     }
 
 }

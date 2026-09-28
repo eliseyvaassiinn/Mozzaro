@@ -826,3 +826,107 @@
         text-align: center;
     }
 }
+
+.cart-toast {
+    position: fixed;
+    top: 22px;
+    right: 40px;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    min-width: 300px;
+    padding: 14px 16px;
+
+    background: white;
+    border-radius: 16px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+
+    animation: toast-slide-in 0.25s ease;
+}
+
+.cart-toast-icon {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    background: #16803c;
+    color: white;
+
+    border-radius: 50%;
+
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.cart-toast-content {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+
+    flex: 1;
+}
+
+.cart-toast-content strong {
+    font-size: 14px;
+    color: #202020;
+}
+
+.cart-toast-content span {
+    font-size: 12px;
+    color: #777;
+}
+
+.cart-toast-button {
+    padding: 8px 13px;
+
+    background: #d9232e;
+    color: white;
+
+    border-radius: 8px;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+.cart-toast-button:hover {
+    background: #b91d27;
+}
+
+.cart-toast-close {
+    border: none;
+    background: transparent;
+
+    color: #999;
+
+    font-size: 20px;
+    line-height: 1;
+
+    cursor: pointer;
+}
+
+.cart-toast-close:hover {
+    color: #333;
+}
+
+@keyframes toast-slide-in {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

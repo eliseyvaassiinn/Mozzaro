@@ -11,7 +11,16 @@ builder.Services.AddHttpClient<PizzaApiService>(client =>
     client.BaseAddress = new Uri("http://localhost:5088/");
 });
 
-builder.Services.AddSingleton<CartService>();
+builder.Services.AddScoped<HttpClient>(sp =>
+{
+    return new HttpClient
+    {
+        BaseAddress = new Uri("http://localhost:5088/")
+    };
+});
+
+builder.Services.AddScoped<CartService>();
+builder.Services.AddSingleton<UserSessionService>();
 
 var app = builder.Build();
 

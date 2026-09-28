@@ -34,7 +34,10 @@ public class OrderController : ControllerBase
             request.Items.Select(item =>
                 (item.PizzaId, item.Quantity, item.Price)));
 
-        return Ok(order);
+        return Ok(new
+        {
+            id = order.Id
+        });
     }
 }
 

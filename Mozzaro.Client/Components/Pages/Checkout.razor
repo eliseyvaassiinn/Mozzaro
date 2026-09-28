@@ -34,212 +34,219 @@
 
     @if (CartService.Items.Count == 0)
     {
-        <section class="checkout-empty">
+    <section class="checkout-empty">
 
-            <div class="checkout-empty-icon">
-                🍕
-            </div>
+        <div class="checkout-empty-icon">
+            🍕
+        </div>
 
-            <h2>
-                Корзина пуста
-            </h2>
+        <h2>
+            Корзина пуста
+        </h2>
 
-            <p>
-                Добавьте пиццу перед оформлением заказа.
-            </p>
+        <p>
+            Добавьте пиццу перед оформлением заказа.
+        </p>
 
-            <a href="/menu"
-               class="checkout-back-button">
-                Вернуться в меню →
-            </a>
+        <a href="/menu"
+           class="checkout-back-button">
+            Вернуться в меню →
+        </a>
 
-        </section>
+    </section>
     }
     else if (OrderCreated)
     {
-        <section class="checkout-success">
+    <section class="checkout-success">
 
-            <div class="success-icon">
-                ✓
-            </div>
+        <div class="success-icon">
+            ✓
+        </div>
 
-            <span>
+        <span>
                 MOZZARO
             </span>
 
-            <h2>
-                Заказ успешно оформлен
-            </h2>
+        <h2>
+            Заказ успешно оформлен
+        </h2>
 
-            <p>
-                Ваш заказ №@CreatedOrderId принят и ожидает обработки.
-            </p>
+        <p>
+            Ваш заказ №@CreatedOrderId принят и ожидает обработки.
+        </p>
 
-            <a href="/orders"
-               class="success-button">
-                Мои заказы →
-            </a>
+        <a href="/orders"
+           class="success-button">
+            Мои заказы →
+        </a>
 
-        </section>
+    </section>
     }
     else
     {
-        <div class="checkout-layout">
+    <div class="checkout-layout">
 
-            <section class="checkout-form">
+        <section class="checkout-form">
 
-                <div class="checkout-section-title">
-                    <span>01</span>
-                    <h2>Адрес доставки</h2>
-                </div>
+            @if (!string.IsNullOrWhiteSpace(ErrorMessage))
+            {
+            <div class="checkout-error">
+                @ErrorMessage
+            </div>
+            }
 
-                <div class="form-group">
+            <div class="checkout-section-title">
+                <span>01</span>
+                <h2>Адрес доставки</h2>
+            </div>
 
-                    <label>
-                        Адрес
-                    </label>
+            <div class="form-group">
 
-                    <input @bind="DeliveryAddress"
-                           placeholder="Введите адрес доставки..." />
+                <label>
+                    Адрес
+                </label>
 
-                    @if (ShowAddressError)
-                    {
-                        <span class="form-error">
+                <input @bind="DeliveryAddress"
+                       placeholder="Введите адрес доставки..." />
+
+                @if (ShowAddressError)
+                {
+                <span class="form-error">
                             Укажите адрес доставки.
                         </span>
-                    }
+                }
 
-                </div>
-
-
-                <div class="checkout-section-title order-title">
-                    <span>02</span>
-                    <h2>Ваш заказ</h2>
-                </div>
+            </div>
 
 
-                <div class="checkout-items">
+            <div class="checkout-section-title order-title">
+                <span>02</span>
+                <h2>Ваш заказ</h2>
+            </div>
 
-                    @foreach (var item in CartService.Items)
-                    {
-                        <div class="checkout-item">
 
-                            <div class="checkout-item-image">
+            <div class="checkout-items">
 
-                                @if (!string.IsNullOrWhiteSpace(item.Pizza.ImageUrl))
-                                {
-                                    <img src="@item.Pizza.ImageUrl"
-                                         alt="@item.Pizza.Name" />
-                                }
-                                else
-                                {
-                                    <span>🍕</span>
-                                }
+                @foreach (var item in CartService.Items)
+                {
+                <div class="checkout-item">
 
-                            </div>
+                    <div class="checkout-item-image">
 
-                            <div class="checkout-item-info">
+                        @if (!string.IsNullOrWhiteSpace(item.Pizza.ImageUrl))
+                        {
+                        <img src="@item.Pizza.ImageUrl"
+                             alt="@item.Pizza.Name" />
+                        }
+                        else
+                        {
+                        <span>🍕</span>
+                        }
 
-                                <strong>
-                                    @item.Pizza.Name
-                                </strong>
+                    </div>
 
-                                <span>
+                    <div class="checkout-item-info">
+
+                        <strong>
+                            @item.Pizza.Name
+                        </strong>
+
+                        <span>
                                     @item.Quantity ×
-                                    @item.Pizza.Price.ToString("0.00") €
+                            @item.Pizza.Price.ToString("0.00") €
                                 </span>
 
-                            </div>
+                    </div>
 
-                            <strong class="checkout-item-price">
-                                @((item.Pizza.Price * item.Quantity).ToString("0.00")) €
-                            </strong>
-
-                        </div>
-                    }
+                    <strong class="checkout-item-price">
+                        @((item.Pizza.Price * item.Quantity).ToString("0.00")) €
+                    </strong>
 
                 </div>
+                }
 
-            </section>
+            </div>
+
+        </section>
 
 
-            <aside class="checkout-summary">
+        <aside class="checkout-summary">
 
                 <span class="summary-label">
                     ИТОГО
                 </span>
 
-                <h2>
-                    @CartService.TotalPrice.ToString("0.00") €
-                </h2>
+            <h2>
+                @CartService.TotalPrice.ToString("0.00") €
+            </h2>
 
-                <div class="summary-row">
+            <div class="summary-row">
 
                     <span>
                         Товаров
                     </span>
 
-                    <strong>
-                        @CartService.TotalItems
-                    </strong>
+                <strong>
+                    @CartService.TotalItems
+                </strong>
 
-                </div>
+            </div>
 
-                <div class="summary-row">
+            <div class="summary-row">
 
                     <span>
                         Доставка
                     </span>
 
-                    <strong>
-                        Бесплатно
-                    </strong>
+                <strong>
+                    Бесплатно
+                </strong>
 
-                </div>
+            </div>
 
-                <div class="summary-divider"></div>
+            <div class="summary-divider"></div>
 
-                <div class="summary-total">
+            <div class="summary-total">
 
                     <span>
                         К оплате
                     </span>
 
-                    <strong>
-                        @CartService.TotalPrice.ToString("0.00") €
-                    </strong>
+                <strong>
+                    @CartService.TotalPrice.ToString("0.00") €
+                </strong>
 
-                </div>
+            </div>
 
 
-                <button class="confirm-order-button"
-                        @onclick="CreateOrder"
-                        disabled="@IsCreating">
+            <button class="confirm-order-button"
+                    @onclick="CreateOrder"
+                    disabled="@IsCreating">
 
-                    @if (IsCreating)
-                    {
-                        <span>
+                @if (IsCreating)
+                {
+                <span>
                             Оформляем...
                         </span>
-                    }
-                    else
-                    {
-                        <span>
+                }
+                else
+                {
+                <span>
                             Подтвердить заказ →
                         </span>
-                    }
+                }
 
-                </button>
+            </button>
 
 
-                <a href="/cart"
-                   class="back-to-cart">
-                    ← Вернуться в корзину
-                </a>
+            <a href="/cart"
+               class="back-to-cart">
+                ← Вернуться в корзину
+            </a>
 
-            </aside>
+        </aside>
 
-        </div>
+    </div>
     }
 
 </div>
@@ -247,79 +254,98 @@
 
 @code {
 
-    private string DeliveryAddress = string.Empty;
+private string DeliveryAddress = string.Empty;
 
-    private bool ShowAddressError;
+private string ErrorMessage = string.Empty;
 
-    private bool IsCreating;
+private bool ShowAddressError;
 
-    private bool OrderCreated;
+private bool IsCreating;
 
-    private int CreatedOrderId;
+private bool OrderCreated;
 
-
-    private async Task CreateOrder()
-    {
-        ShowAddressError = false;
-
-        if (string.IsNullOrWhiteSpace(DeliveryAddress))
-        {
-            ShowAddressError = true;
-            return;
-        }
-
-        if (CartService.Items.Count == 0)
-        {
-            return;
-        }
-
-        IsCreating = true;
-
-        try
-        {
-            var request = new
-            {
-                UserId = 1,
-
-                DeliveryAddress = DeliveryAddress,
-
-                Items = CartService.Items.Select(item => new
-                {
-                    PizzaId = item.Pizza.Id,
-                    Quantity = item.Quantity,
-                    Price = item.Pizza.Price
-                }).ToList()
-            };
-
-            var response = await HttpClient.PostAsJsonAsync(
-                "api/Order",
-                request);
-
-            if (response.IsSuccessStatusCode)
-            {
-                var order = await response.Content
-                    .ReadFromJsonAsync<OrderResponse>();
-
-                if (order != null)
-                {
-                    CreatedOrderId = order.id;
-                }
-
-                CartService.Clear();
-
-                OrderCreated = true;
-            }
-        }
-        finally
-        {
-            IsCreating = false;
-        }
-    }
+private int CreatedOrderId;
 
 
-    private class OrderResponse
-    {
-        public int id { get; set; }
-    }
+private async Task CreateOrder()
+{
+ShowAddressError = false;
+ErrorMessage = string.Empty;
+
+if (string.IsNullOrWhiteSpace(DeliveryAddress))
+{
+ShowAddressError = true;
+return;
+}
+
+if (CartService.Items.Count == 0)
+{
+return;
+}
+
+IsCreating = true;
+
+try
+{
+var request = new
+{
+UserId = 1,
+
+DeliveryAddress = DeliveryAddress,
+
+Items = CartService.Items.Select(item => new
+{
+PizzaId = item.Pizza.Id,
+Quantity = item.Quantity,
+Price = item.Pizza.Price
+}).ToList()
+};
+
+var response = await HttpClient.PostAsJsonAsync(
+"api/Order",
+request);
+
+if (response.IsSuccessStatusCode)
+{
+var order = await response.Content
+.ReadFromJsonAsync<OrderResponse>();
+
+if (order != null)
+{
+CreatedOrderId = order.id;
+}
+
+CartService.Clear();
+
+OrderCreated = true;
+}
+else
+{
+var error = await response.Content.ReadAsStringAsync();
+
+ErrorMessage =
+$"Ошибка создания заказа: {response.StatusCode}";
+
+if (!string.IsNullOrWhiteSpace(error))
+{
+ErrorMessage += $"\n{error}";
+}
+}
+}
+catch (Exception ex)
+{
+ErrorMessage = $"Ошибка: {ex.Message}";
+}
+finally
+{
+IsCreating = false;
+}
+}
+
+
+private class OrderResponse
+{
+public int id { get; set; }
+}
 
 }
