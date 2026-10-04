@@ -1,3 +1,4 @@
+using System.Linq.Expressions;
 using Microsoft.EntityFrameworkCore;
 using Mozzaro.Application.Interfaces.Repositories;
 using Mozzaro.Infrastructure.Persistence;
@@ -23,6 +24,12 @@ public class Repository<T> : IRepository<T> where T : class
     public async Task<T?> GetByIdAsync(int id)
     {
         return await _dbSet.FindAsync(id);
+    }
+
+    public async Task<T?> FirstOrDefaultAsync(
+        Expression<Func<T, bool>> predicate)
+    {
+        return await _dbSet.FirstOrDefaultAsync(predicate);
     }
 
     public async Task AddAsync(T entity)

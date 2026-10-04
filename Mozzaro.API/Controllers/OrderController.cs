@@ -18,6 +18,11 @@ public class OrderController : ControllerBase
     public async Task<IActionResult> CreateOrder(
         [FromBody] CreateOrderRequest request)
     {
+        if (request.UserId <= 0)
+        {
+            return BadRequest("Некорректный пользователь.");
+        }
+
         if (string.IsNullOrWhiteSpace(request.DeliveryAddress))
         {
             return BadRequest("Адрес доставки обязателен.");
@@ -39,8 +44,38 @@ public class OrderController : ControllerBase
             id = order.Id
         });
     }
-}
 
+    [HttpGet("user/{userId:int}")]
+    public async Task<IActionResult> GetUserOrders(int userId)
+    {
+        if (userId <= 0)
+        {
+            return BadRequest("Некорректный пользователь.");
+        }
+
+        var orders = await _orderService.GetUserOrdersAsync(userId);
+
+        var result = orders.Select(order => new
+        {
+            id = order.Id,
+            status = order.Status,
+            totalPrice = order.TotalPrice,
+            createdAt = order.CreatedAt,
+            deliveryAddress = order.DeliveryAddress,
+
+            items = order.OrderItems.Select(item => new
+            {
+                pizzaId = item.PizzaId,
+                pizzaName = item.Pizza.Name,
+                imageUrl = item.Pizza.ImageUrl,
+                quantity = item.Quantity,
+                price = item.Price
+            })
+        });
+
+        return Ok(result);
+    }
+}
 
 public class CreateOrderRequest
 {
@@ -50,7 +85,6 @@ public class CreateOrderRequest
 
     public List<CreateOrderItemRequest> Items { get; set; } = new();
 }
-
 
 public class CreateOrderItemRequest
 {

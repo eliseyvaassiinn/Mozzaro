@@ -8,4 +8,6 @@ public interface IOrderService
         int userId,
         string deliveryAddress,
         IEnumerable<(int PizzaId, int Quantity, decimal Price)> items);
+
+    Task<IEnumerable<Order>> GetUserOrdersAsync(int userId);
 }

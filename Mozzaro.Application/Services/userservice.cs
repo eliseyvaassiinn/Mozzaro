@@ -20,11 +20,13 @@ public class UserService : IUserService
         string email,
         string password)
     {
-        var users = await _unitOfWork.Repository<User>().GetAllAsync();
-
         var normalizedEmail = email.Trim().ToLower();
 
-        if (users.Any(x => x.Email == normalizedEmail))
+        var existingUser = await _unitOfWork
+            .Repository<User>()
+            .FirstOrDefaultAsync(x => x.Email == normalizedEmail);
+
+        if (existingUser != null)
         {
             return null;
         }
@@ -46,19 +48,21 @@ public class UserService : IUserService
         string email,
         string password)
     {
-        var users = await _unitOfWork.Repository<User>().GetAllAsync();
-
         var normalizedEmail = email.Trim().ToLower();
         var passwordHash = HashPassword(password);
 
-        return users.FirstOrDefault(x =>
-            x.Email == normalizedEmail &&
-            x.PasswordHash == passwordHash);
+        return await _unitOfWork
+            .Repository<User>()
+            .FirstOrDefaultAsync(x =>
+                x.Email == normalizedEmail &&
+                x.PasswordHash == passwordHash);
     }
 
     public async Task<User?> GetByIdAsync(int id)
     {
-        return await _unitOfWork.Repository<User>().GetByIdAsync(id);
+        return await _unitOfWork
+            .Repository<User>()
+            .GetByIdAsync(id);
     }
 
     private static string HashPassword(string password)

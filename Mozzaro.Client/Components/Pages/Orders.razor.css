@@ -1,0 +1,373 @@
+.orders-page {
+    min-height: calc(100vh - 70px);
+    padding: 48px 56px 70px;
+    background: #f7f7f4;
+    font-family: "Inter", "Segoe UI", Arial, sans-serif;
+}
+
+.orders-header {
+    margin-bottom: 36px;
+}
+
+.orders-label {
+    display: inline-block;
+    margin-bottom: 8px;
+    color: #c83232;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.orders-header h1 {
+    margin: 0;
+    color: #12382b;
+    font-size: 42px;
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+.orders-header p {
+    margin: 12px 0 0;
+    color: #6b746f;
+    font-size: 16px;
+}
+
+/* список заказов */
+
+.orders-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 1000px;
+}
+
+.order-card {
+    overflow: hidden;
+    background: #ffffff;
+    border: 1px solid #e5e7e3;
+    border-radius: 18px;
+    box-shadow: 0 8px 30px rgba(18, 56, 43, 0.07);
+}
+
+/* верхняя часть заказа */
+
+.order-card-header {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    padding: 22px 26px;
+    background: #12382b;
+    color: #ffffff;
+}
+
+.order-number {
+    display: flex;
+    flex-direction: column;
+    min-width: 100px;
+}
+
+.order-number span {
+    margin-bottom: 3px;
+    color: #b8c9c0;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.order-number strong {
+    font-size: 23px;
+    font-weight: 800;
+}
+
+.order-date {
+    color: #d7e0dc;
+    font-size: 14px;
+}
+
+.order-status {
+    margin-left: auto;
+    padding: 8px 14px;
+    border-radius: 20px;
+    background: #d7eadf;
+    color: #12382b;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* адрес */
+
+.order-address {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 20px 26px;
+    border-bottom: 1px solid #eeeeeb;
+    background: #fbfbf9;
+}
+
+.address-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: #f8e4e4;
+    color: #c83232;
+    font-size: 20px;
+}
+
+.order-address > div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.address-label {
+    color: #8a918d;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.address-value {
+    color: #26352f;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* товары */
+
+.order-items {
+    padding: 8px 26px;
+}
+
+.order-item {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 17px 0;
+    border-bottom: 1px solid #eeeeeb;
+}
+
+.order-item:last-child {
+    border-bottom: none;
+}
+
+.pizza-image-wrapper {
+    flex-shrink: 0;
+    width: 76px;
+    height: 76px;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #f0f1ed;
+}
+
+.pizza-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.pizza-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    font-size: 30px;
+}
+
+.pizza-info {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    flex: 1;
+}
+
+.pizza-name {
+    color: #183b2e;
+    font-size: 16px;
+    font-weight: 750;
+}
+
+.pizza-quantity {
+    color: #858d88;
+    font-size: 13px;
+}
+
+.pizza-total {
+    color: #183b2e;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+/* итог */
+
+.order-footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 18px;
+    padding: 21px 26px;
+    background: #f8f9f6;
+    border-top: 1px solid #eeeeeb;
+}
+
+.total-label {
+    color: #747d77;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.total-price {
+    color: #c83232;
+    font-size: 23px;
+    font-weight: 800;
+}
+
+/* состояния */
+
+.orders-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 700px;
+    min-height: 360px;
+    padding: 40px;
+    text-align: center;
+    background: #ffffff;
+    border: 1px solid #e5e7e3;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(18, 56, 43, 0.06);
+}
+
+.state-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    background: #edf3ef;
+    color: #12382b;
+    font-size: 30px;
+}
+
+.orders-state h2 {
+    margin: 0 0 10px;
+    color: #183b2e;
+    font-size: 25px;
+}
+
+.orders-state p {
+    max-width: 500px;
+    margin: 0 0 22px;
+    color: #777f7a;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.menu-button,
+.retry-button {
+    border: none;
+    border-radius: 9px;
+    padding: 12px 22px;
+    color: #ffffff;
+    background: #c83232;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.menu-button:hover,
+.retry-button:hover {
+    background: #a92626;
+    transform: translateY(-1px);
+}
+
+.error-state .state-icon {
+    background: #f8e4e4;
+    color: #c83232;
+}
+
+/* загрузка */
+
+.loading-spinner {
+    width: 38px;
+    height: 38px;
+    margin-bottom: 18px;
+    border: 4px solid #dfe7e2;
+    border-top-color: #c83232;
+    border-radius: 50%;
+    animation: orders-spin 0.8s linear infinite;
+}
+
+@keyframes orders-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* адаптив */
+
+@media (max-width: 900px) {
+    .orders-page {
+        padding: 35px 28px 50px;
+    }
+
+    .orders-header h1 {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 650px) {
+    .orders-page {
+        padding: 28px 18px 40px;
+    }
+
+    .orders-header h1 {
+        font-size: 30px;
+    }
+
+    .order-card-header {
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+
+    .order-status {
+        margin-left: 0;
+    }
+
+    .order-address {
+        padding: 17px 18px;
+    }
+
+    .order-items {
+        padding: 8px 18px;
+    }
+
+    .order-footer {
+        padding: 18px;
+    }
+
+    .pizza-image-wrapper {
+        width: 62px;
+        height: 62px;
+    }
+
+    .pizza-name {
+        font-size: 14px;
+    }
+
+    .pizza-total {
+        font-size: 14px;
+    }
+}

@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mozzaro.Infrastructure", "M
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mozzaro.Client", "Mozzaro.Client\Mozzaro.Client.csproj", "{76202589-27BB-4B2D-8D98-8D6F3B23126A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mozzaro.Tests", "Mozzaro.Tests\Mozzaro.Tests.csproj", "{9814B2B1-E96A-4966-A5FE-310C3A250951}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{76202589-27BB-4B2D-8D98-8D6F3B23126A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{76202589-27BB-4B2D-8D98-8D6F3B23126A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{76202589-27BB-4B2D-8D98-8D6F3B23126A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9814B2B1-E96A-4966-A5FE-310C3A250951}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9814B2B1-E96A-4966-A5FE-310C3A250951}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9814B2B1-E96A-4966-A5FE-310C3A250951}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9814B2B1-E96A-4966-A5FE-310C3A250951}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

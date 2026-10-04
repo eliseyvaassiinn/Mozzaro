@@ -7,10 +7,14 @@ namespace Mozzaro.Application.Services;
 public class OrderService : IOrderService
 {
     private readonly IUnitOfWork _unitOfWork;
+    private readonly IOrderRepository _orderRepository;
 
-    public OrderService(IUnitOfWork unitOfWork)
+    public OrderService(
+        IUnitOfWork unitOfWork,
+        IOrderRepository orderRepository)
     {
         _unitOfWork = unitOfWork;
+        _orderRepository = orderRepository;
     }
 
     public async Task<Order> CreateOrderAsync(
@@ -46,5 +50,10 @@ public class OrderService : IOrderService
         await _unitOfWork.SaveChangesAsync();
 
         return order;
+    }
+
+    public async Task<IEnumerable<Order>> GetUserOrdersAsync(int userId)
+    {
+        return await _orderRepository.GetByUserIdAsync(userId);
     }
 }
