@@ -6,16 +6,18 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 
+var apiBaseUrl = builder.Configuration["ApiBaseUrl"] ?? "http://localhost:5088/";
+
 builder.Services.AddHttpClient<PizzaApiService>(client =>
 {
-    client.BaseAddress = new Uri("http://localhost:5088/");
+    client.BaseAddress = new Uri(apiBaseUrl);
 });
 
 builder.Services.AddScoped<HttpClient>(sp =>
 {
     return new HttpClient
     {
-        BaseAddress = new Uri("http://localhost:5088/")
+        BaseAddress = new Uri(apiBaseUrl)
     };
 });
 
