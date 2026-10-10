@@ -261,12 +261,14 @@
 
     private int CreatedOrderId;
 
-    protected override void OnInitialized()
+    protected override async Task OnAfterRenderAsync(bool firstRender)
     {
-        if (!UserSession.IsAuthenticated)
+        if (firstRender && !UserSession.IsAuthenticated)
         {
             NavigationManager.NavigateTo("/login");
         }
+
+        await Task.CompletedTask;
     }
 
     private async Task CreateOrder()
