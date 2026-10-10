@@ -22,7 +22,7 @@ builder.Services.AddScoped<HttpClient>(sp =>
 });
 
 builder.Services.AddScoped<CartService>();
-builder.Services.AddSingleton<UserSessionService>();
+builder.Services.AddScoped<UserSessionService>();
 
 var app = builder.Build();
 
