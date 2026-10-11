@@ -1,0 +1,269 @@
+### YamlMime:TableOfContent
+items:
+- uid: Mozzaro.API.Controllers
+  name: Mozzaro.API.Controllers
+  type: Namespace
+  items:
+  - uid: Mozzaro.API.Controllers.CategoryController
+    name: CategoryController
+    type: Class
+  - uid: Mozzaro.API.Controllers.CreateOrderItemRequest
+    name: CreateOrderItemRequest
+    type: Class
+  - uid: Mozzaro.API.Controllers.CreateOrderRequest
+    name: CreateOrderRequest
+    type: Class
+  - uid: Mozzaro.API.Controllers.LoginRequest
+    name: LoginRequest
+    type: Class
+  - uid: Mozzaro.API.Controllers.OrderController
+    name: OrderController
+    type: Class
+  - uid: Mozzaro.API.Controllers.PizzaController
+    name: PizzaController
+    type: Class
+  - uid: Mozzaro.API.Controllers.RegisterRequest
+    name: RegisterRequest
+    type: Class
+  - uid: Mozzaro.API.Controllers.UserController
+    name: UserController
+    type: Class
+- uid: Mozzaro.Application.Interfaces.Repositories
+  name: Mozzaro.Application.Interfaces.Repositories
+  type: Namespace
+  items:
+  - uid: Mozzaro.Application.Interfaces.Repositories.IOrderRepository
+    name: IOrderRepository
+    type: Interface
+  - uid: Mozzaro.Application.Interfaces.Repositories.IRepository`1
+    name: IRepository<T>
+    type: Interface
+  - uid: Mozzaro.Application.Interfaces.Repositories.IUnitOfWork
+    name: IUnitOfWork
+    type: Interface
+- uid: Mozzaro.Application.Interfaces.Services
+  name: Mozzaro.Application.Interfaces.Services
+  type: Namespace
+  items:
+  - uid: Mozzaro.Application.Interfaces.Services.ICategoryService
+    name: ICategoryService
+    type: Interface
+  - uid: Mozzaro.Application.Interfaces.Services.IOrderService
+    name: IOrderService
+    type: Interface
+  - uid: Mozzaro.Application.Interfaces.Services.IPizzaService
+    name: IPizzaService
+    type: Interface
+  - uid: Mozzaro.Application.Interfaces.Services.IUserService
+    name: IUserService
+    type: Interface
+- uid: Mozzaro.Application.Services
+  name: Mozzaro.Application.Services
+  type: Namespace
+  items:
+  - uid: Mozzaro.Application.Services.OrderService
+    name: OrderService
+    type: Class
+  - uid: Mozzaro.Application.Services.UserService
+    name: UserService
+    type: Class
+- uid: Mozzaro.Client
+  name: Mozzaro.Client
+  type: Namespace
+  items:
+  - uid: Mozzaro.Client.PizzaDetails
+    name: PizzaDetails
+    type: Class
+- uid: Mozzaro.Client.Components
+  name: Mozzaro.Client.Components
+  type: Namespace
+  items:
+  - uid: Mozzaro.Client.Components.App
+    name: App
+    type: Class
+  - uid: Mozzaro.Client.Components.Routes
+    name: Routes
+    type: Class
+  - uid: Mozzaro.Client.Components._Imports
+    name: _Imports
+    type: Class
+- uid: Mozzaro.Client.Components.Layout
+  name: Mozzaro.Client.Components.Layout
+  type: Namespace
+  items:
+  - uid: Mozzaro.Client.Components.Layout.MainLayout
+    name: MainLayout
+    type: Class
+  - uid: Mozzaro.Client.Components.Layout.NavMenu
+    name: NavMenu
+    type: Class
+- uid: Mozzaro.Client.Components.Pages
+  name: Mozzaro.Client.Components.Pages
+  type: Namespace
+  items:
+  - uid: Mozzaro.Client.Components.Pages.Cart
+    name: Cart
+    type: Class
+  - uid: Mozzaro.Client.Components.Pages.Checkout
+    name: Checkout
+    type: Class
+  - uid: Mozzaro.Client.Components.Pages.Counter
+    name: Counter
+    type: Class
+  - uid: Mozzaro.Client.Components.Pages.Error
+    name: Error
+    type: Class
+  - uid: Mozzaro.Client.Components.Pages.Home
+    name: Home
+    type: Class
+  - uid: Mozzaro.Client.Components.Pages.Login
+    name: Login
+    type: Class
+  - uid: Mozzaro.Client.Components.Pages.Orders
+    name: Orders
+    type: Class
+  - uid: Mozzaro.Client.Components.Pages.Register
+    name: Register
+    type: Class
+  - uid: Mozzaro.Client.Components.Pages.Weather
+    name: Weather
+    type: Class
+- uid: Mozzaro.Client.Components.Pages.Menu
+  name: Mozzaro.Client.Components.Pages.Menu
+  type: Namespace
+  items:
+  - uid: Mozzaro.Client.Components.Pages.Menu.Menu
+    name: Menu
+    type: Class
+- uid: Mozzaro.Client.Services
+  name: Mozzaro.Client.Services
+  type: Namespace
+  items:
+  - uid: Mozzaro.Client.Services.CartService
+    name: CartService
+    type: Class
+  - uid: Mozzaro.Client.Services.CartService.CartLine
+    name: CartService.CartLine
+    type: Class
+  - uid: Mozzaro.Client.Services.PizzaApiService
+    name: PizzaApiService
+    type: Class
+  - uid: Mozzaro.Client.Services.UserSessionService
+    name: UserSessionService
+    type: Class
+- uid: Mozzaro.Domain.Entities
+  name: Mozzaro.Domain.Entities
+  type: Namespace
+  items:
+  - uid: Mozzaro.Domain.Entities.Cart
+    name: Cart
+    type: Class
+  - uid: Mozzaro.Domain.Entities.CartItem
+    name: CartItem
+    type: Class
+  - uid: Mozzaro.Domain.Entities.Category
+    name: Category
+    type: Class
+  - uid: Mozzaro.Domain.Entities.Ingredient
+    name: Ingredient
+    type: Class
+  - uid: Mozzaro.Domain.Entities.Order
+    name: Order
+    type: Class
+  - uid: Mozzaro.Domain.Entities.OrderItem
+    name: OrderItem
+    type: Class
+  - uid: Mozzaro.Domain.Entities.Pizza
+    name: Pizza
+    type: Class
+  - uid: Mozzaro.Domain.Entities.PizzaIngredient
+    name: PizzaIngredient
+    type: Class
+  - uid: Mozzaro.Domain.Entities.User
+    name: User
+    type: Class
+- uid: Mozzaro.Infrastructure.Migrations
+  name: Mozzaro.Infrastructure.Migrations
+  type: Namespace
+  items:
+  - uid: Mozzaro.Infrastructure.Migrations.initialcreate
+    name: initialcreate
+    type: Class
+- uid: Mozzaro.Infrastructure.Persistence
+  name: Mozzaro.Infrastructure.Persistence
+  type: Namespace
+  items:
+  - uid: Mozzaro.Infrastructure.Persistence.DbSeeder
+    name: DbSeeder
+    type: Class
+  - uid: Mozzaro.Infrastructure.Persistence.MozzaroDbContext
+    name: MozzaroDbContext
+    type: Class
+- uid: Mozzaro.Infrastructure.Persistence.Configurations
+  name: Mozzaro.Infrastructure.Persistence.Configurations
+  type: Namespace
+  items:
+  - uid: Mozzaro.Infrastructure.Persistence.Configurations.CartConfiguration
+    name: CartConfiguration
+    type: Class
+  - uid: Mozzaro.Infrastructure.Persistence.Configurations.CartItemConfiguration
+    name: CartItemConfiguration
+    type: Class
+  - uid: Mozzaro.Infrastructure.Persistence.Configurations.CategoryConfiguration
+    name: CategoryConfiguration
+    type: Class
+  - uid: Mozzaro.Infrastructure.Persistence.Configurations.IngredientConfiguration
+    name: IngredientConfiguration
+    type: Class
+  - uid: Mozzaro.Infrastructure.Persistence.Configurations.OrderConfiguration
+    name: OrderConfiguration
+    type: Class
+  - uid: Mozzaro.Infrastructure.Persistence.Configurations.OrderItemConfiguration
+    name: OrderItemConfiguration
+    type: Class
+  - uid: Mozzaro.Infrastructure.Persistence.Configurations.PizzaConfiguration
+    name: PizzaConfiguration
+    type: Class
+  - uid: Mozzaro.Infrastructure.Persistence.Configurations.PizzaIngredientConfiguration
+    name: PizzaIngredientConfiguration
+    type: Class
+  - uid: Mozzaro.Infrastructure.Persistence.Configurations.UserConfiguration
+    name: UserConfiguration
+    type: Class
+- uid: Mozzaro.Infrastructure.Repositories
+  name: Mozzaro.Infrastructure.Repositories
+  type: Namespace
+  items:
+  - uid: Mozzaro.Infrastructure.Repositories.OrderRepository
+    name: OrderRepository
+    type: Class
+  - uid: Mozzaro.Infrastructure.Repositories.Repository`1
+    name: Repository<T>
+    type: Class
+  - uid: Mozzaro.Infrastructure.Repositories.UnitOfWork
+    name: UnitOfWork
+    type: Class
+- uid: Mozzaro.Infrastructure.Services
+  name: Mozzaro.Infrastructure.Services
+  type: Namespace
+  items:
+  - uid: Mozzaro.Infrastructure.Services.CategoryService
+    name: CategoryService
+    type: Class
+  - uid: Mozzaro.Infrastructure.Services.PizzaService
+    name: PizzaService
+    type: Class
+- uid: Mozzaro.Tests
+  name: Mozzaro.Tests
+  type: Namespace
+  items:
+  - uid: Mozzaro.Tests.ApiIntegrationTests
+    name: ApiIntegrationTests
+    type: Class
+  - uid: Mozzaro.Tests.OrderServiceTests
+    name: OrderServiceTests
+    type: Class
+  - uid: Mozzaro.Tests.UserServiceTests
+    name: UserServiceTests
+    type: Class
+memberLayout: SamePage

@@ -1,5 +1,8 @@
 namespace Mozzaro.Domain.Entities;
 
+/// <summary>
+/// represents an item included in a customer order.
+/// </summary>
 public class OrderItem
 {
     public int Id { get; set; }

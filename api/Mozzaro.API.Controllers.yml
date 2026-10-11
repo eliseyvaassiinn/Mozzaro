@@ -1,0 +1,98 @@
+### YamlMime:ManagedReference
+items:
+- uid: Mozzaro.API.Controllers
+  commentId: N:Mozzaro.API.Controllers
+  id: Mozzaro.API.Controllers
+  children:
+  - Mozzaro.API.Controllers.CategoryController
+  - Mozzaro.API.Controllers.CreateOrderItemRequest
+  - Mozzaro.API.Controllers.CreateOrderRequest
+  - Mozzaro.API.Controllers.LoginRequest
+  - Mozzaro.API.Controllers.OrderController
+  - Mozzaro.API.Controllers.PizzaController
+  - Mozzaro.API.Controllers.RegisterRequest
+  - Mozzaro.API.Controllers.UserController
+  langs:
+  - csharp
+  - vb
+  name: Mozzaro.API.Controllers
+  nameWithType: Mozzaro.API.Controllers
+  fullName: Mozzaro.API.Controllers
+  type: Namespace
+  assemblies:
+  - Mozzaro.API
+references:
+- uid: Mozzaro.API.Controllers.CategoryController
+  commentId: T:Mozzaro.API.Controllers.CategoryController
+  href: Mozzaro.API.Controllers.CategoryController.html
+  name: CategoryController
+  nameWithType: CategoryController
+  fullName: Mozzaro.API.Controllers.CategoryController
+- uid: Mozzaro.API.Controllers.OrderController
+  commentId: T:Mozzaro.API.Controllers.OrderController
+  href: Mozzaro.API.Controllers.OrderController.html
+  name: OrderController
+  nameWithType: OrderController
+  fullName: Mozzaro.API.Controllers.OrderController
+- uid: Mozzaro.API.Controllers.CreateOrderRequest
+  commentId: T:Mozzaro.API.Controllers.CreateOrderRequest
+  parent: Mozzaro.API.Controllers
+  href: Mozzaro.API.Controllers.CreateOrderRequest.html
+  name: CreateOrderRequest
+  nameWithType: CreateOrderRequest
+  fullName: Mozzaro.API.Controllers.CreateOrderRequest
+- uid: Mozzaro.API.Controllers.CreateOrderItemRequest
+  commentId: T:Mozzaro.API.Controllers.CreateOrderItemRequest
+  href: Mozzaro.API.Controllers.CreateOrderItemRequest.html
+  name: CreateOrderItemRequest
+  nameWithType: CreateOrderItemRequest
+  fullName: Mozzaro.API.Controllers.CreateOrderItemRequest
+- uid: Mozzaro.API.Controllers.PizzaController
+  commentId: T:Mozzaro.API.Controllers.PizzaController
+  href: Mozzaro.API.Controllers.PizzaController.html
+  name: PizzaController
+  nameWithType: PizzaController
+  fullName: Mozzaro.API.Controllers.PizzaController
+- uid: Mozzaro.API.Controllers.UserController
+  commentId: T:Mozzaro.API.Controllers.UserController
+  href: Mozzaro.API.Controllers.UserController.html
+  name: UserController
+  nameWithType: UserController
+  fullName: Mozzaro.API.Controllers.UserController
+- uid: Mozzaro.API.Controllers.RegisterRequest
+  commentId: T:Mozzaro.API.Controllers.RegisterRequest
+  parent: Mozzaro.API.Controllers
+  href: Mozzaro.API.Controllers.RegisterRequest.html
+  name: RegisterRequest
+  nameWithType: RegisterRequest
+  fullName: Mozzaro.API.Controllers.RegisterRequest
+- uid: Mozzaro.API.Controllers.LoginRequest
+  commentId: T:Mozzaro.API.Controllers.LoginRequest
+  parent: Mozzaro.API.Controllers
+  href: Mozzaro.API.Controllers.LoginRequest.html
+  name: LoginRequest
+  nameWithType: LoginRequest
+  fullName: Mozzaro.API.Controllers.LoginRequest
+- uid: Mozzaro.API.Controllers
+  commentId: N:Mozzaro.API.Controllers
+  name: Mozzaro.API.Controllers
+  nameWithType: Mozzaro.API.Controllers
+  fullName: Mozzaro.API.Controllers
+  spec.csharp:
+  - uid: Mozzaro
+    name: Mozzaro
+  - name: .
+  - uid: Mozzaro.API
+    name: API
+  - name: .
+  - uid: Mozzaro.API.Controllers
+    name: Controllers
+  spec.vb:
+  - uid: Mozzaro
+    name: Mozzaro
+  - name: .
+  - uid: Mozzaro.API
+    name: API
+  - name: .
+  - uid: Mozzaro.API.Controllers
+    name: Controllers

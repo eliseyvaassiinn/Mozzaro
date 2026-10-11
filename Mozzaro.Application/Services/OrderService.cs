@@ -4,6 +4,9 @@ using Mozzaro.Domain.Entities;
 
 namespace Mozzaro.Application.Services;
 
+/// <summary>
+/// provides operations for creating and retrieving customer orders.
+/// </summary>
 public class OrderService : IOrderService
 {
     private readonly IUnitOfWork _unitOfWork;
@@ -17,6 +20,13 @@ public class OrderService : IOrderService
         _orderRepository = orderRepository;
     }
 
+    /// <summary>
+    /// creates a new customer order.
+    /// </summary>
+    /// <param name="userId">the user identifier.</param>
+    /// <param name="deliveryAddress">the delivery address.</param>
+    /// <param name="items">the pizzas and quantities included in the order.</param>
+    /// <returns>the created order.</returns>
     public async Task<Order> CreateOrderAsync(
         int userId,
         string deliveryAddress,
@@ -52,6 +62,11 @@ public class OrderService : IOrderService
         return order;
     }
 
+    /// <summary>
+    /// gets all orders belonging to a user.
+    /// </summary>
+    /// <param name="userId">the user identifier.</param>
+    /// <returns>the user's orders.</returns>
     public async Task<IEnumerable<Order>> GetUserOrdersAsync(int userId)
     {
         return await _orderRepository.GetByUserIdAsync(userId);

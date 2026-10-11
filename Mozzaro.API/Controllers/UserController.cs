@@ -3,6 +3,9 @@ using Mozzaro.Application.Interfaces.Services;
 
 namespace Mozzaro.API.Controllers;
 
+/// <summary>
+/// provides API endpoints for user registration and authentication.
+/// </summary>
 [ApiController]
 [Route("api/[controller]")]
 public class UserController : ControllerBase
@@ -14,6 +17,11 @@ public class UserController : ControllerBase
         _userService = userService;
     }
 
+    /// <summary>
+    /// registers a new user.
+    /// </summary>
+    /// <param name="request">the user registration data.</param>
+    /// <returns>the registered user's information.</returns>
     [HttpPost("register")]
     public async Task<IActionResult> Register(
         [FromBody] RegisterRequest request)
@@ -56,7 +64,11 @@ public class UserController : ControllerBase
         });
     }
 
-
+    /// <summary>
+    /// authenticates a user.
+    /// </summary>
+    /// <param name="request">the login credentials.</param>
+    /// <returns>the authenticated user's information.</returns>
     [HttpPost("login")]
     public async Task<IActionResult> Login(
         [FromBody] LoginRequest request)
@@ -85,20 +97,39 @@ public class UserController : ControllerBase
     }
 }
 
-
+/// <summary>
+/// represents the data required to register a user.
+/// </summary>
 public class RegisterRequest
 {
+    /// <summary>
+    /// gets or sets the user's name.
+    /// </summary>
     public string Name { get; set; } = string.Empty;
 
+    /// <summary>
+    /// gets or sets the user's email address.
+    /// </summary>
     public string Email { get; set; } = string.Empty;
 
+    /// <summary>
+    /// gets or sets the user's password.
+    /// </summary>
     public string Password { get; set; } = string.Empty;
 }
 
-
+/// <summary>
+/// represents the credentials required to log in.
+/// </summary>
 public class LoginRequest
 {
+    /// <summary>
+    /// gets or sets the user's email address.
+    /// </summary>
     public string Email { get; set; } = string.Empty;
 
+    /// <summary>
+    /// gets or sets the user's password.
+    /// </summary>
     public string Password { get; set; } = string.Empty;
 }

@@ -1,0 +1,30 @@
+### YamlMime:ManagedReference
+items:
+- uid: Mozzaro.Infrastructure.Services
+  commentId: N:Mozzaro.Infrastructure.Services
+  id: Mozzaro.Infrastructure.Services
+  children:
+  - Mozzaro.Infrastructure.Services.CategoryService
+  - Mozzaro.Infrastructure.Services.PizzaService
+  langs:
+  - csharp
+  - vb
+  name: Mozzaro.Infrastructure.Services
+  nameWithType: Mozzaro.Infrastructure.Services
+  fullName: Mozzaro.Infrastructure.Services
+  type: Namespace
+  assemblies:
+  - Mozzaro.Infrastructure
+references:
+- uid: Mozzaro.Infrastructure.Services.CategoryService
+  commentId: T:Mozzaro.Infrastructure.Services.CategoryService
+  href: Mozzaro.Infrastructure.Services.CategoryService.html
+  name: CategoryService
+  nameWithType: CategoryService
+  fullName: Mozzaro.Infrastructure.Services.CategoryService
+- uid: Mozzaro.Infrastructure.Services.PizzaService
+  commentId: T:Mozzaro.Infrastructure.Services.PizzaService
+  href: Mozzaro.Infrastructure.Services.PizzaService.html
+  name: PizzaService
+  nameWithType: PizzaService
+  fullName: Mozzaro.Infrastructure.Services.PizzaService

@@ -1,0 +1,639 @@
+### YamlMime:ManagedReference
+items:
+- uid: Mozzaro.Client.Services.UserSessionService
+  commentId: T:Mozzaro.Client.Services.UserSessionService
+  id: UserSessionService
+  parent: Mozzaro.Client.Services
+  children:
+  - Mozzaro.Client.Services.UserSessionService.IsAuthenticated
+  - Mozzaro.Client.Services.UserSessionService.Login(System.Int32,System.String,System.String)
+  - Mozzaro.Client.Services.UserSessionService.Logout
+  - Mozzaro.Client.Services.UserSessionService.OnChange
+  - Mozzaro.Client.Services.UserSessionService.UserEmail
+  - Mozzaro.Client.Services.UserSessionService.UserId
+  - Mozzaro.Client.Services.UserSessionService.UserName
+  langs:
+  - csharp
+  - vb
+  name: UserSessionService
+  nameWithType: UserSessionService
+  fullName: Mozzaro.Client.Services.UserSessionService
+  type: Class
+  source:
+    remote:
+      path: Mozzaro.Client/UserSessionService.cs
+      branch: master
+      repo: https://github.com/eliseyvaassiinn/Mozzaro.git
+    id: UserSessionService
+    path: Mozzaro.Client/UserSessionService.cs
+    startLine: 2
+  assemblies:
+  - Mozzaro.Client
+  namespace: Mozzaro.Client.Services
+  syntax:
+    content: public class UserSessionService
+    content.vb: Public Class UserSessionService
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Mozzaro.Client.Services.UserSessionService.UserId
+  commentId: P:Mozzaro.Client.Services.UserSessionService.UserId
+  id: UserId
+  parent: Mozzaro.Client.Services.UserSessionService
+  langs:
+  - csharp
+  - vb
+  name: UserId
+  nameWithType: UserSessionService.UserId
+  fullName: Mozzaro.Client.Services.UserSessionService.UserId
+  type: Property
+  source:
+    remote:
+      path: Mozzaro.Client/UserSessionService.cs
+      branch: master
+      repo: https://github.com/eliseyvaassiinn/Mozzaro.git
+    id: UserId
+    path: Mozzaro.Client/UserSessionService.cs
+    startLine: 4
+  assemblies:
+  - Mozzaro.Client
+  namespace: Mozzaro.Client.Services
+  syntax:
+    content: public int? UserId { get; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Int32}
+    content.vb: Public Property UserId As Integer?
+  overload: Mozzaro.Client.Services.UserSessionService.UserId*
+- uid: Mozzaro.Client.Services.UserSessionService.UserName
+  commentId: P:Mozzaro.Client.Services.UserSessionService.UserName
+  id: UserName
+  parent: Mozzaro.Client.Services.UserSessionService
+  langs:
+  - csharp
+  - vb
+  name: UserName
+  nameWithType: UserSessionService.UserName
+  fullName: Mozzaro.Client.Services.UserSessionService.UserName
+  type: Property
+  source:
+    remote:
+      path: Mozzaro.Client/UserSessionService.cs
+      branch: master
+      repo: https://github.com/eliseyvaassiinn/Mozzaro.git
+    id: UserName
+    path: Mozzaro.Client/UserSessionService.cs
+    startLine: 6
+  assemblies:
+  - Mozzaro.Client
+  namespace: Mozzaro.Client.Services
+  syntax:
+    content: public string? UserName { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property UserName As String
+  overload: Mozzaro.Client.Services.UserSessionService.UserName*
+- uid: Mozzaro.Client.Services.UserSessionService.UserEmail
+  commentId: P:Mozzaro.Client.Services.UserSessionService.UserEmail
+  id: UserEmail
+  parent: Mozzaro.Client.Services.UserSessionService
+  langs:
+  - csharp
+  - vb
+  name: UserEmail
+  nameWithType: UserSessionService.UserEmail
+  fullName: Mozzaro.Client.Services.UserSessionService.UserEmail
+  type: Property
+  source:
+    remote:
+      path: Mozzaro.Client/UserSessionService.cs
+      branch: master
+      repo: https://github.com/eliseyvaassiinn/Mozzaro.git
+    id: UserEmail
+    path: Mozzaro.Client/UserSessionService.cs
+    startLine: 8
+  assemblies:
+  - Mozzaro.Client
+  namespace: Mozzaro.Client.Services
+  syntax:
+    content: public string? UserEmail { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property UserEmail As String
+  overload: Mozzaro.Client.Services.UserSessionService.UserEmail*
+- uid: Mozzaro.Client.Services.UserSessionService.IsAuthenticated
+  commentId: P:Mozzaro.Client.Services.UserSessionService.IsAuthenticated
+  id: IsAuthenticated
+  parent: Mozzaro.Client.Services.UserSessionService
+  langs:
+  - csharp
+  - vb
+  name: IsAuthenticated
+  nameWithType: UserSessionService.IsAuthenticated
+  fullName: Mozzaro.Client.Services.UserSessionService.IsAuthenticated
+  type: Property
+  source:
+    remote:
+      path: Mozzaro.Client/UserSessionService.cs
+      branch: master
+      repo: https://github.com/eliseyvaassiinn/Mozzaro.git
+    id: IsAuthenticated
+    path: Mozzaro.Client/UserSessionService.cs
+    startLine: 10
+  assemblies:
+  - Mozzaro.Client
+  namespace: Mozzaro.Client.Services
+  syntax:
+    content: public bool IsAuthenticated { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsAuthenticated As Boolean
+  overload: Mozzaro.Client.Services.UserSessionService.IsAuthenticated*
+- uid: Mozzaro.Client.Services.UserSessionService.OnChange
+  commentId: E:Mozzaro.Client.Services.UserSessionService.OnChange
+  id: OnChange
+  parent: Mozzaro.Client.Services.UserSessionService
+  langs:
+  - csharp
+  - vb
+  name: OnChange
+  nameWithType: UserSessionService.OnChange
+  fullName: Mozzaro.Client.Services.UserSessionService.OnChange
+  type: Event
+  source:
+    remote:
+      path: Mozzaro.Client/UserSessionService.cs
+      branch: master
+      repo: https://github.com/eliseyvaassiinn/Mozzaro.git
+    id: OnChange
+    path: Mozzaro.Client/UserSessionService.cs
+    startLine: 12
+  assemblies:
+  - Mozzaro.Client
+  namespace: Mozzaro.Client.Services
+  syntax:
+    content: public event Action? OnChange
+    return:
+      type: System.Action
+    content.vb: Public Event OnChange As Action
+- uid: Mozzaro.Client.Services.UserSessionService.Login(System.Int32,System.String,System.String)
+  commentId: M:Mozzaro.Client.Services.UserSessionService.Login(System.Int32,System.String,System.String)
+  id: Login(System.Int32,System.String,System.String)
+  parent: Mozzaro.Client.Services.UserSessionService
+  langs:
+  - csharp
+  - vb
+  name: Login(int, string, string)
+  nameWithType: UserSessionService.Login(int, string, string)
+  fullName: Mozzaro.Client.Services.UserSessionService.Login(int, string, string)
+  type: Method
+  source:
+    remote:
+      path: Mozzaro.Client/UserSessionService.cs
+      branch: master
+      repo: https://github.com/eliseyvaassiinn/Mozzaro.git
+    id: Login
+    path: Mozzaro.Client/UserSessionService.cs
+    startLine: 14
+  assemblies:
+  - Mozzaro.Client
+  namespace: Mozzaro.Client.Services
+  syntax:
+    content: public void Login(int userId, string userName, string userEmail)
+    parameters:
+    - id: userId
+      type: System.Int32
+    - id: userName
+      type: System.String
+    - id: userEmail
+      type: System.String
+    content.vb: Public Sub Login(userId As Integer, userName As String, userEmail As String)
+  overload: Mozzaro.Client.Services.UserSessionService.Login*
+  nameWithType.vb: UserSessionService.Login(Integer, String, String)
+  fullName.vb: Mozzaro.Client.Services.UserSessionService.Login(Integer, String, String)
+  name.vb: Login(Integer, String, String)
+- uid: Mozzaro.Client.Services.UserSessionService.Logout
+  commentId: M:Mozzaro.Client.Services.UserSessionService.Logout
+  id: Logout
+  parent: Mozzaro.Client.Services.UserSessionService
+  langs:
+  - csharp
+  - vb
+  name: Logout()
+  nameWithType: UserSessionService.Logout()
+  fullName: Mozzaro.Client.Services.UserSessionService.Logout()
+  type: Method
+  source:
+    remote:
+      path: Mozzaro.Client/UserSessionService.cs
+      branch: master
+      repo: https://github.com/eliseyvaassiinn/Mozzaro.git
+    id: Logout
+    path: Mozzaro.Client/UserSessionService.cs
+    startLine: 23
+  assemblies:
+  - Mozzaro.Client
+  namespace: Mozzaro.Client.Services
+  syntax:
+    content: public void Logout()
+    content.vb: Public Sub Logout()
+  overload: Mozzaro.Client.Services.UserSessionService.Logout*
+references:
+- uid: Mozzaro.Client.Services
+  commentId: N:Mozzaro.Client.Services
+  name: Mozzaro.Client.Services
+  nameWithType: Mozzaro.Client.Services
+  fullName: Mozzaro.Client.Services
+  spec.csharp:
+  - uid: Mozzaro
+    name: Mozzaro
+  - name: .
+  - uid: Mozzaro.Client
+    name: Client
+  - name: .
+  - uid: Mozzaro.Client.Services
+    name: Services
+  spec.vb:
+  - uid: Mozzaro
+    name: Mozzaro
+  - name: .
+  - uid: Mozzaro.Client
+    name: Client
+  - name: .
+  - uid: Mozzaro.Client.Services
+    name: Services
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Mozzaro.Client.Services.UserSessionService.UserId*
+  commentId: Overload:Mozzaro.Client.Services.UserSessionService.UserId
+  href: Mozzaro.Client.Services.UserSessionService.html#Mozzaro_Client_Services_UserSessionService_UserId
+  name: UserId
+  nameWithType: UserSessionService.UserId
+  fullName: Mozzaro.Client.Services.UserSessionService.UserId
+- uid: System.Nullable{System.Int32}
+  commentId: T:System.Nullable{System.Int32}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int?
+  nameWithType: int?
+  fullName: int?
+  nameWithType.vb: Integer?
+  fullName.vb: Integer?
+  name.vb: Integer?
+  spec.csharp:
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+  spec.vb:
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Mozzaro.Client.Services.UserSessionService.UserName*
+  commentId: Overload:Mozzaro.Client.Services.UserSessionService.UserName
+  href: Mozzaro.Client.Services.UserSessionService.html#Mozzaro_Client_Services_UserSessionService_UserName
+  name: UserName
+  nameWithType: UserSessionService.UserName
+  fullName: Mozzaro.Client.Services.UserSessionService.UserName
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Mozzaro.Client.Services.UserSessionService.UserEmail*
+  commentId: Overload:Mozzaro.Client.Services.UserSessionService.UserEmail
+  href: Mozzaro.Client.Services.UserSessionService.html#Mozzaro_Client_Services_UserSessionService_UserEmail
+  name: UserEmail
+  nameWithType: UserSessionService.UserEmail
+  fullName: Mozzaro.Client.Services.UserSessionService.UserEmail
+- uid: Mozzaro.Client.Services.UserSessionService.IsAuthenticated*
+  commentId: Overload:Mozzaro.Client.Services.UserSessionService.IsAuthenticated
+  href: Mozzaro.Client.Services.UserSessionService.html#Mozzaro_Client_Services_UserSessionService_IsAuthenticated
+  name: IsAuthenticated
+  nameWithType: UserSessionService.IsAuthenticated
+  fullName: Mozzaro.Client.Services.UserSessionService.IsAuthenticated
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.Action
+  commentId: T:System.Action
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action
+  name: Action
+  nameWithType: Action
+  fullName: System.Action
+- uid: Mozzaro.Client.Services.UserSessionService.Login*
+  commentId: Overload:Mozzaro.Client.Services.UserSessionService.Login
+  href: Mozzaro.Client.Services.UserSessionService.html#Mozzaro_Client_Services_UserSessionService_Login_System_Int32_System_String_System_String_
+  name: Login
+  nameWithType: UserSessionService.Login
+  fullName: Mozzaro.Client.Services.UserSessionService.Login
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Mozzaro.Client.Services.UserSessionService.Logout*
+  commentId: Overload:Mozzaro.Client.Services.UserSessionService.Logout
+  href: Mozzaro.Client.Services.UserSessionService.html#Mozzaro_Client_Services_UserSessionService_Logout
+  name: Logout
+  nameWithType: UserSessionService.Logout
+  fullName: Mozzaro.Client.Services.UserSessionService.Logout

@@ -1,0 +1,961 @@
+### YamlMime:ManagedReference
+items:
+- uid: Mozzaro.Infrastructure.Services.PizzaService
+  commentId: T:Mozzaro.Infrastructure.Services.PizzaService
+  id: PizzaService
+  parent: Mozzaro.Infrastructure.Services
+  children:
+  - Mozzaro.Infrastructure.Services.PizzaService.#ctor(Mozzaro.Application.Interfaces.Repositories.IUnitOfWork)
+  - Mozzaro.Infrastructure.Services.PizzaService.AddAsync(Mozzaro.Domain.Entities.Pizza)
+  - Mozzaro.Infrastructure.Services.PizzaService.DeleteAsync(System.Int32)
+  - Mozzaro.Infrastructure.Services.PizzaService.GetAllAsync
+  - Mozzaro.Infrastructure.Services.PizzaService.GetByIdAsync(System.Int32)
+  - Mozzaro.Infrastructure.Services.PizzaService.UpdateAsync(Mozzaro.Domain.Entities.Pizza)
+  langs:
+  - csharp
+  - vb
+  name: PizzaService
+  nameWithType: PizzaService
+  fullName: Mozzaro.Infrastructure.Services.PizzaService
+  type: Class
+  source:
+    remote:
+      path: Mozzaro.Infrastructure/Services/PizzaService.cs
+      branch: master
+      repo: https://github.com/eliseyvaassiinn/Mozzaro.git
+    id: PizzaService
+    path: Mozzaro.Infrastructure/Services/PizzaService.cs
+    startLine: 9
+  assemblies:
+  - Mozzaro.Infrastructure
+  namespace: Mozzaro.Infrastructure.Services
+  summary: provides operations for managing pizzas.
+  example: []
+  syntax:
+    content: 'public class PizzaService : IPizzaService'
+    content.vb: Public Class PizzaService Implements IPizzaService
+  inheritance:
+  - System.Object
+  implements:
+  - Mozzaro.Application.Interfaces.Services.IPizzaService
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Mozzaro.Infrastructure.Services.PizzaService.#ctor(Mozzaro.Application.Interfaces.Repositories.IUnitOfWork)
+  commentId: M:Mozzaro.Infrastructure.Services.PizzaService.#ctor(Mozzaro.Application.Interfaces.Repositories.IUnitOfWork)
+  id: '#ctor(Mozzaro.Application.Interfaces.Repositories.IUnitOfWork)'
+  parent: Mozzaro.Infrastructure.Services.PizzaService
+  langs:
+  - csharp
+  - vb
+  name: PizzaService(IUnitOfWork)
+  nameWithType: PizzaService.PizzaService(IUnitOfWork)
+  fullName: Mozzaro.Infrastructure.Services.PizzaService.PizzaService(Mozzaro.Application.Interfaces.Repositories.IUnitOfWork)
+  type: Constructor
+  source:
+    remote:
+      path: Mozzaro.Infrastructure/Services/PizzaService.cs
+      branch: master
+      repo: https://github.com/eliseyvaassiinn/Mozzaro.git
+    id: .ctor
+    path: Mozzaro.Infrastructure/Services/PizzaService.cs
+    startLine: 13
+  assemblies:
+  - Mozzaro.Infrastructure
+  namespace: Mozzaro.Infrastructure.Services
+  syntax:
+    content: public PizzaService(IUnitOfWork unitOfWork)
+    parameters:
+    - id: unitOfWork
+      type: Mozzaro.Application.Interfaces.Repositories.IUnitOfWork
+    content.vb: Public Sub New(unitOfWork As IUnitOfWork)
+  overload: Mozzaro.Infrastructure.Services.PizzaService.#ctor*
+  nameWithType.vb: PizzaService.New(IUnitOfWork)
+  fullName.vb: Mozzaro.Infrastructure.Services.PizzaService.New(Mozzaro.Application.Interfaces.Repositories.IUnitOfWork)
+  name.vb: New(IUnitOfWork)
+- uid: Mozzaro.Infrastructure.Services.PizzaService.GetAllAsync
+  commentId: M:Mozzaro.Infrastructure.Services.PizzaService.GetAllAsync
+  id: GetAllAsync
+  parent: Mozzaro.Infrastructure.Services.PizzaService
+  langs:
+  - csharp
+  - vb
+  name: GetAllAsync()
+  nameWithType: PizzaService.GetAllAsync()
+  fullName: Mozzaro.Infrastructure.Services.PizzaService.GetAllAsync()
+  type: Method
+  source:
+    remote:
+      path: Mozzaro.Infrastructure/Services/PizzaService.cs
+      branch: master
+      repo: https://github.com/eliseyvaassiinn/Mozzaro.git
+    id: GetAllAsync
+    path: Mozzaro.Infrastructure/Services/PizzaService.cs
+    startLine: 22
+  assemblies:
+  - Mozzaro.Infrastructure
+  namespace: Mozzaro.Infrastructure.Services
+  summary: gets all pizzas.
+  example: []
+  syntax:
+    content: public Task<IEnumerable<Pizza>> GetAllAsync()
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.IEnumerable{Mozzaro.Domain.Entities.Pizza}}
+      description: a collection of pizzas.
+    content.vb: Public Function GetAllAsync() As Task(Of IEnumerable(Of Pizza))
+  overload: Mozzaro.Infrastructure.Services.PizzaService.GetAllAsync*
+  implements:
+  - Mozzaro.Application.Interfaces.Services.IPizzaService.GetAllAsync
+- uid: Mozzaro.Infrastructure.Services.PizzaService.GetByIdAsync(System.Int32)
+  commentId: M:Mozzaro.Infrastructure.Services.PizzaService.GetByIdAsync(System.Int32)
+  id: GetByIdAsync(System.Int32)
+  parent: Mozzaro.Infrastructure.Services.PizzaService
+  langs:
+  - csharp
+  - vb
+  name: GetByIdAsync(int)
+  nameWithType: PizzaService.GetByIdAsync(int)
+  fullName: Mozzaro.Infrastructure.Services.PizzaService.GetByIdAsync(int)
+  type: Method
+  source:
+    remote:
+      path: Mozzaro.Infrastructure/Services/PizzaService.cs
+      branch: master
+      repo: https://github.com/eliseyvaassiinn/Mozzaro.git
+    id: GetByIdAsync
+    path: Mozzaro.Infrastructure/Services/PizzaService.cs
+    startLine: 32
+  assemblies:
+  - Mozzaro.Infrastructure
+  namespace: Mozzaro.Infrastructure.Services
+  summary: gets a pizza by its identifier.
+  example: []
+  syntax:
+    content: public Task<Pizza?> GetByIdAsync(int id)
+    parameters:
+    - id: id
+      type: System.Int32
+      description: the pizza identifier.
+    return:
+      type: System.Threading.Tasks.Task{Mozzaro.Domain.Entities.Pizza}
+      description: the pizza if found; otherwise, null.
+    content.vb: Public Function GetByIdAsync(id As Integer) As Task(Of Pizza)
+  overload: Mozzaro.Infrastructure.Services.PizzaService.GetByIdAsync*
+  implements:
+  - Mozzaro.Application.Interfaces.Services.IPizzaService.GetByIdAsync(System.Int32)
+  nameWithType.vb: PizzaService.GetByIdAsync(Integer)
+  fullName.vb: Mozzaro.Infrastructure.Services.PizzaService.GetByIdAsync(Integer)
+  name.vb: GetByIdAsync(Integer)
+- uid: Mozzaro.Infrastructure.Services.PizzaService.AddAsync(Mozzaro.Domain.Entities.Pizza)
+  commentId: M:Mozzaro.Infrastructure.Services.PizzaService.AddAsync(Mozzaro.Domain.Entities.Pizza)
+  id: AddAsync(Mozzaro.Domain.Entities.Pizza)
+  parent: Mozzaro.Infrastructure.Services.PizzaService
+  langs:
+  - csharp
+  - vb
+  name: AddAsync(Pizza)
+  nameWithType: PizzaService.AddAsync(Pizza)
+  fullName: Mozzaro.Infrastructure.Services.PizzaService.AddAsync(Mozzaro.Domain.Entities.Pizza)
+  type: Method
+  source:
+    remote:
+      path: Mozzaro.Infrastructure/Services/PizzaService.cs
+      branch: master
+      repo: https://github.com/eliseyvaassiinn/Mozzaro.git
+    id: AddAsync
+    path: Mozzaro.Infrastructure/Services/PizzaService.cs
+    startLine: 41
+  assemblies:
+  - Mozzaro.Infrastructure
+  namespace: Mozzaro.Infrastructure.Services
+  summary: adds a new pizza.
+  example: []
+  syntax:
+    content: public Task AddAsync(Pizza pizza)
+    parameters:
+    - id: pizza
+      type: Mozzaro.Domain.Entities.Pizza
+      description: the pizza to add.
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Public Function AddAsync(pizza As Pizza) As Task
+  overload: Mozzaro.Infrastructure.Services.PizzaService.AddAsync*
+  implements:
+  - Mozzaro.Application.Interfaces.Services.IPizzaService.AddAsync(Mozzaro.Domain.Entities.Pizza)
+- uid: Mozzaro.Infrastructure.Services.PizzaService.UpdateAsync(Mozzaro.Domain.Entities.Pizza)
+  commentId: M:Mozzaro.Infrastructure.Services.PizzaService.UpdateAsync(Mozzaro.Domain.Entities.Pizza)
+  id: UpdateAsync(Mozzaro.Domain.Entities.Pizza)
+  parent: Mozzaro.Infrastructure.Services.PizzaService
+  langs:
+  - csharp
+  - vb
+  name: UpdateAsync(Pizza)
+  nameWithType: PizzaService.UpdateAsync(Pizza)
+  fullName: Mozzaro.Infrastructure.Services.PizzaService.UpdateAsync(Mozzaro.Domain.Entities.Pizza)
+  type: Method
+  source:
+    remote:
+      path: Mozzaro.Infrastructure/Services/PizzaService.cs
+      branch: master
+      repo: https://github.com/eliseyvaassiinn/Mozzaro.git
+    id: UpdateAsync
+    path: Mozzaro.Infrastructure/Services/PizzaService.cs
+    startLine: 51
+  assemblies:
+  - Mozzaro.Infrastructure
+  namespace: Mozzaro.Infrastructure.Services
+  summary: updates an existing pizza.
+  example: []
+  syntax:
+    content: public Task UpdateAsync(Pizza pizza)
+    parameters:
+    - id: pizza
+      type: Mozzaro.Domain.Entities.Pizza
+      description: the pizza to update.
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Public Function UpdateAsync(pizza As Pizza) As Task
+  overload: Mozzaro.Infrastructure.Services.PizzaService.UpdateAsync*
+  implements:
+  - Mozzaro.Application.Interfaces.Services.IPizzaService.UpdateAsync(Mozzaro.Domain.Entities.Pizza)
+- uid: Mozzaro.Infrastructure.Services.PizzaService.DeleteAsync(System.Int32)
+  commentId: M:Mozzaro.Infrastructure.Services.PizzaService.DeleteAsync(System.Int32)
+  id: DeleteAsync(System.Int32)
+  parent: Mozzaro.Infrastructure.Services.PizzaService
+  langs:
+  - csharp
+  - vb
+  name: DeleteAsync(int)
+  nameWithType: PizzaService.DeleteAsync(int)
+  fullName: Mozzaro.Infrastructure.Services.PizzaService.DeleteAsync(int)
+  type: Method
+  source:
+    remote:
+      path: Mozzaro.Infrastructure/Services/PizzaService.cs
+      branch: master
+      repo: https://github.com/eliseyvaassiinn/Mozzaro.git
+    id: DeleteAsync
+    path: Mozzaro.Infrastructure/Services/PizzaService.cs
+    startLine: 61
+  assemblies:
+  - Mozzaro.Infrastructure
+  namespace: Mozzaro.Infrastructure.Services
+  summary: deletes a pizza by its identifier.
+  example: []
+  syntax:
+    content: public Task DeleteAsync(int id)
+    parameters:
+    - id: id
+      type: System.Int32
+      description: the pizza identifier.
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Public Function DeleteAsync(id As Integer) As Task
+  overload: Mozzaro.Infrastructure.Services.PizzaService.DeleteAsync*
+  implements:
+  - Mozzaro.Application.Interfaces.Services.IPizzaService.DeleteAsync(System.Int32)
+  nameWithType.vb: PizzaService.DeleteAsync(Integer)
+  fullName.vb: Mozzaro.Infrastructure.Services.PizzaService.DeleteAsync(Integer)
+  name.vb: DeleteAsync(Integer)
+references:
+- uid: Mozzaro.Infrastructure.Services
+  commentId: N:Mozzaro.Infrastructure.Services
+  name: Mozzaro.Infrastructure.Services
+  nameWithType: Mozzaro.Infrastructure.Services
+  fullName: Mozzaro.Infrastructure.Services
+  spec.csharp:
+  - uid: Mozzaro
+    name: Mozzaro
+  - name: .
+  - uid: Mozzaro.Infrastructure
+    name: Infrastructure
+  - name: .
+  - uid: Mozzaro.Infrastructure.Services
+    name: Services
+  spec.vb:
+  - uid: Mozzaro
+    name: Mozzaro
+  - name: .
+  - uid: Mozzaro.Infrastructure
+    name: Infrastructure
+  - name: .
+  - uid: Mozzaro.Infrastructure.Services
+    name: Services
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Mozzaro.Application.Interfaces.Services.IPizzaService
+  commentId: T:Mozzaro.Application.Interfaces.Services.IPizzaService
+  parent: Mozzaro.Application.Interfaces.Services
+  href: Mozzaro.Application.Interfaces.Services.IPizzaService.html
+  name: IPizzaService
+  nameWithType: IPizzaService
+  fullName: Mozzaro.Application.Interfaces.Services.IPizzaService
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Mozzaro.Application.Interfaces.Services
+  commentId: N:Mozzaro.Application.Interfaces.Services
+  name: Mozzaro.Application.Interfaces.Services
+  nameWithType: Mozzaro.Application.Interfaces.Services
+  fullName: Mozzaro.Application.Interfaces.Services
+  spec.csharp:
+  - uid: Mozzaro
+    name: Mozzaro
+  - name: .
+  - uid: Mozzaro.Application
+    name: Application
+  - name: .
+  - uid: Mozzaro.Application.Interfaces
+    name: Interfaces
+  - name: .
+  - uid: Mozzaro.Application.Interfaces.Services
+    name: Services
+  spec.vb:
+  - uid: Mozzaro
+    name: Mozzaro
+  - name: .
+  - uid: Mozzaro.Application
+    name: Application
+  - name: .
+  - uid: Mozzaro.Application.Interfaces
+    name: Interfaces
+  - name: .
+  - uid: Mozzaro.Application.Interfaces.Services
+    name: Services
+- uid: Mozzaro.Infrastructure.Services.PizzaService.#ctor*
+  commentId: Overload:Mozzaro.Infrastructure.Services.PizzaService.#ctor
+  href: Mozzaro.Infrastructure.Services.PizzaService.html#Mozzaro_Infrastructure_Services_PizzaService__ctor_Mozzaro_Application_Interfaces_Repositories_IUnitOfWork_
+  name: PizzaService
+  nameWithType: PizzaService.PizzaService
+  fullName: Mozzaro.Infrastructure.Services.PizzaService.PizzaService
+  nameWithType.vb: PizzaService.New
+  fullName.vb: Mozzaro.Infrastructure.Services.PizzaService.New
+  name.vb: New
+- uid: Mozzaro.Application.Interfaces.Repositories.IUnitOfWork
+  commentId: T:Mozzaro.Application.Interfaces.Repositories.IUnitOfWork
+  parent: Mozzaro.Application.Interfaces.Repositories
+  href: Mozzaro.Application.Interfaces.Repositories.IUnitOfWork.html
+  name: IUnitOfWork
+  nameWithType: IUnitOfWork
+  fullName: Mozzaro.Application.Interfaces.Repositories.IUnitOfWork
+- uid: Mozzaro.Application.Interfaces.Repositories
+  commentId: N:Mozzaro.Application.Interfaces.Repositories
+  name: Mozzaro.Application.Interfaces.Repositories
+  nameWithType: Mozzaro.Application.Interfaces.Repositories
+  fullName: Mozzaro.Application.Interfaces.Repositories
+  spec.csharp:
+  - uid: Mozzaro
+    name: Mozzaro
+  - name: .
+  - uid: Mozzaro.Application
+    name: Application
+  - name: .
+  - uid: Mozzaro.Application.Interfaces
+    name: Interfaces
+  - name: .
+  - uid: Mozzaro.Application.Interfaces.Repositories
+    name: Repositories
+  spec.vb:
+  - uid: Mozzaro
+    name: Mozzaro
+  - name: .
+  - uid: Mozzaro.Application
+    name: Application
+  - name: .
+  - uid: Mozzaro.Application.Interfaces
+    name: Interfaces
+  - name: .
+  - uid: Mozzaro.Application.Interfaces.Repositories
+    name: Repositories
+- uid: Mozzaro.Infrastructure.Services.PizzaService.GetAllAsync*
+  commentId: Overload:Mozzaro.Infrastructure.Services.PizzaService.GetAllAsync
+  href: Mozzaro.Infrastructure.Services.PizzaService.html#Mozzaro_Infrastructure_Services_PizzaService_GetAllAsync
+  name: GetAllAsync
+  nameWithType: PizzaService.GetAllAsync
+  fullName: Mozzaro.Infrastructure.Services.PizzaService.GetAllAsync
+- uid: Mozzaro.Application.Interfaces.Services.IPizzaService.GetAllAsync
+  commentId: M:Mozzaro.Application.Interfaces.Services.IPizzaService.GetAllAsync
+  parent: Mozzaro.Application.Interfaces.Services.IPizzaService
+  href: Mozzaro.Application.Interfaces.Services.IPizzaService.html#Mozzaro_Application_Interfaces_Services_IPizzaService_GetAllAsync
+  name: GetAllAsync()
+  nameWithType: IPizzaService.GetAllAsync()
+  fullName: Mozzaro.Application.Interfaces.Services.IPizzaService.GetAllAsync()
+  spec.csharp:
+  - uid: Mozzaro.Application.Interfaces.Services.IPizzaService.GetAllAsync
+    name: GetAllAsync
+    href: Mozzaro.Application.Interfaces.Services.IPizzaService.html#Mozzaro_Application_Interfaces_Services_IPizzaService_GetAllAsync
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Mozzaro.Application.Interfaces.Services.IPizzaService.GetAllAsync
+    name: GetAllAsync
+    href: Mozzaro.Application.Interfaces.Services.IPizzaService.html#Mozzaro_Application_Interfaces_Services_IPizzaService_GetAllAsync
+  - name: (
+  - name: )
+- uid: System.Threading.Tasks.Task{System.Collections.Generic.IEnumerable{Mozzaro.Domain.Entities.Pizza}}
+  commentId: T:System.Threading.Tasks.Task{System.Collections.Generic.IEnumerable{Mozzaro.Domain.Entities.Pizza}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<IEnumerable<Pizza>>
+  nameWithType: Task<IEnumerable<Pizza>>
+  fullName: System.Threading.Tasks.Task<System.Collections.Generic.IEnumerable<Mozzaro.Domain.Entities.Pizza>>
+  nameWithType.vb: Task(Of IEnumerable(Of Pizza))
+  fullName.vb: System.Threading.Tasks.Task(Of System.Collections.Generic.IEnumerable(Of Mozzaro.Domain.Entities.Pizza))
+  name.vb: Task(Of IEnumerable(Of Pizza))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: Mozzaro.Domain.Entities.Pizza
+    name: Pizza
+    href: Mozzaro.Domain.Entities.Pizza.html
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Mozzaro.Domain.Entities.Pizza
+    name: Pizza
+    href: Mozzaro.Domain.Entities.Pizza.html
+  - name: )
+  - name: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: Mozzaro.Infrastructure.Services.PizzaService.GetByIdAsync*
+  commentId: Overload:Mozzaro.Infrastructure.Services.PizzaService.GetByIdAsync
+  href: Mozzaro.Infrastructure.Services.PizzaService.html#Mozzaro_Infrastructure_Services_PizzaService_GetByIdAsync_System_Int32_
+  name: GetByIdAsync
+  nameWithType: PizzaService.GetByIdAsync
+  fullName: Mozzaro.Infrastructure.Services.PizzaService.GetByIdAsync
+- uid: Mozzaro.Application.Interfaces.Services.IPizzaService.GetByIdAsync(System.Int32)
+  commentId: M:Mozzaro.Application.Interfaces.Services.IPizzaService.GetByIdAsync(System.Int32)
+  parent: Mozzaro.Application.Interfaces.Services.IPizzaService
+  isExternal: true
+  href: Mozzaro.Application.Interfaces.Services.IPizzaService.html#Mozzaro_Application_Interfaces_Services_IPizzaService_GetByIdAsync_System_Int32_
+  name: GetByIdAsync(int)
+  nameWithType: IPizzaService.GetByIdAsync(int)
+  fullName: Mozzaro.Application.Interfaces.Services.IPizzaService.GetByIdAsync(int)
+  nameWithType.vb: IPizzaService.GetByIdAsync(Integer)
+  fullName.vb: Mozzaro.Application.Interfaces.Services.IPizzaService.GetByIdAsync(Integer)
+  name.vb: GetByIdAsync(Integer)
+  spec.csharp:
+  - uid: Mozzaro.Application.Interfaces.Services.IPizzaService.GetByIdAsync(System.Int32)
+    name: GetByIdAsync
+    href: Mozzaro.Application.Interfaces.Services.IPizzaService.html#Mozzaro_Application_Interfaces_Services_IPizzaService_GetByIdAsync_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: Mozzaro.Application.Interfaces.Services.IPizzaService.GetByIdAsync(System.Int32)
+    name: GetByIdAsync
+    href: Mozzaro.Application.Interfaces.Services.IPizzaService.html#Mozzaro_Application_Interfaces_Services_IPizzaService_GetByIdAsync_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Threading.Tasks.Task{Mozzaro.Domain.Entities.Pizza}
+  commentId: T:System.Threading.Tasks.Task{Mozzaro.Domain.Entities.Pizza}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<Pizza>
+  nameWithType: Task<Pizza>
+  fullName: System.Threading.Tasks.Task<Mozzaro.Domain.Entities.Pizza>
+  nameWithType.vb: Task(Of Pizza)
+  fullName.vb: System.Threading.Tasks.Task(Of Mozzaro.Domain.Entities.Pizza)
+  name.vb: Task(Of Pizza)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Mozzaro.Domain.Entities.Pizza
+    name: Pizza
+    href: Mozzaro.Domain.Entities.Pizza.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Mozzaro.Domain.Entities.Pizza
+    name: Pizza
+    href: Mozzaro.Domain.Entities.Pizza.html
+  - name: )
+- uid: Mozzaro.Infrastructure.Services.PizzaService.AddAsync*
+  commentId: Overload:Mozzaro.Infrastructure.Services.PizzaService.AddAsync
+  href: Mozzaro.Infrastructure.Services.PizzaService.html#Mozzaro_Infrastructure_Services_PizzaService_AddAsync_Mozzaro_Domain_Entities_Pizza_
+  name: AddAsync
+  nameWithType: PizzaService.AddAsync
+  fullName: Mozzaro.Infrastructure.Services.PizzaService.AddAsync
+- uid: Mozzaro.Application.Interfaces.Services.IPizzaService.AddAsync(Mozzaro.Domain.Entities.Pizza)
+  commentId: M:Mozzaro.Application.Interfaces.Services.IPizzaService.AddAsync(Mozzaro.Domain.Entities.Pizza)
+  parent: Mozzaro.Application.Interfaces.Services.IPizzaService
+  href: Mozzaro.Application.Interfaces.Services.IPizzaService.html#Mozzaro_Application_Interfaces_Services_IPizzaService_AddAsync_Mozzaro_Domain_Entities_Pizza_
+  name: AddAsync(Pizza)
+  nameWithType: IPizzaService.AddAsync(Pizza)
+  fullName: Mozzaro.Application.Interfaces.Services.IPizzaService.AddAsync(Mozzaro.Domain.Entities.Pizza)
+  spec.csharp:
+  - uid: Mozzaro.Application.Interfaces.Services.IPizzaService.AddAsync(Mozzaro.Domain.Entities.Pizza)
+    name: AddAsync
+    href: Mozzaro.Application.Interfaces.Services.IPizzaService.html#Mozzaro_Application_Interfaces_Services_IPizzaService_AddAsync_Mozzaro_Domain_Entities_Pizza_
+  - name: (
+  - uid: Mozzaro.Domain.Entities.Pizza
+    name: Pizza
+    href: Mozzaro.Domain.Entities.Pizza.html
+  - name: )
+  spec.vb:
+  - uid: Mozzaro.Application.Interfaces.Services.IPizzaService.AddAsync(Mozzaro.Domain.Entities.Pizza)
+    name: AddAsync
+    href: Mozzaro.Application.Interfaces.Services.IPizzaService.html#Mozzaro_Application_Interfaces_Services_IPizzaService_AddAsync_Mozzaro_Domain_Entities_Pizza_
+  - name: (
+  - uid: Mozzaro.Domain.Entities.Pizza
+    name: Pizza
+    href: Mozzaro.Domain.Entities.Pizza.html
+  - name: )
+- uid: Mozzaro.Domain.Entities.Pizza
+  commentId: T:Mozzaro.Domain.Entities.Pizza
+  parent: Mozzaro.Domain.Entities
+  href: Mozzaro.Domain.Entities.Pizza.html
+  name: Pizza
+  nameWithType: Pizza
+  fullName: Mozzaro.Domain.Entities.Pizza
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: Mozzaro.Domain.Entities
+  commentId: N:Mozzaro.Domain.Entities
+  name: Mozzaro.Domain.Entities
+  nameWithType: Mozzaro.Domain.Entities
+  fullName: Mozzaro.Domain.Entities
+  spec.csharp:
+  - uid: Mozzaro
+    name: Mozzaro
+  - name: .
+  - uid: Mozzaro.Domain
+    name: Domain
+  - name: .
+  - uid: Mozzaro.Domain.Entities
+    name: Entities
+  spec.vb:
+  - uid: Mozzaro
+    name: Mozzaro
+  - name: .
+  - uid: Mozzaro.Domain
+    name: Domain
+  - name: .
+  - uid: Mozzaro.Domain.Entities
+    name: Entities
+- uid: Mozzaro.Infrastructure.Services.PizzaService.UpdateAsync*
+  commentId: Overload:Mozzaro.Infrastructure.Services.PizzaService.UpdateAsync
+  href: Mozzaro.Infrastructure.Services.PizzaService.html#Mozzaro_Infrastructure_Services_PizzaService_UpdateAsync_Mozzaro_Domain_Entities_Pizza_
+  name: UpdateAsync
+  nameWithType: PizzaService.UpdateAsync
+  fullName: Mozzaro.Infrastructure.Services.PizzaService.UpdateAsync
+- uid: Mozzaro.Application.Interfaces.Services.IPizzaService.UpdateAsync(Mozzaro.Domain.Entities.Pizza)
+  commentId: M:Mozzaro.Application.Interfaces.Services.IPizzaService.UpdateAsync(Mozzaro.Domain.Entities.Pizza)
+  parent: Mozzaro.Application.Interfaces.Services.IPizzaService
+  href: Mozzaro.Application.Interfaces.Services.IPizzaService.html#Mozzaro_Application_Interfaces_Services_IPizzaService_UpdateAsync_Mozzaro_Domain_Entities_Pizza_
+  name: UpdateAsync(Pizza)
+  nameWithType: IPizzaService.UpdateAsync(Pizza)
+  fullName: Mozzaro.Application.Interfaces.Services.IPizzaService.UpdateAsync(Mozzaro.Domain.Entities.Pizza)
+  spec.csharp:
+  - uid: Mozzaro.Application.Interfaces.Services.IPizzaService.UpdateAsync(Mozzaro.Domain.Entities.Pizza)
+    name: UpdateAsync
+    href: Mozzaro.Application.Interfaces.Services.IPizzaService.html#Mozzaro_Application_Interfaces_Services_IPizzaService_UpdateAsync_Mozzaro_Domain_Entities_Pizza_
+  - name: (
+  - uid: Mozzaro.Domain.Entities.Pizza
+    name: Pizza
+    href: Mozzaro.Domain.Entities.Pizza.html
+  - name: )
+  spec.vb:
+  - uid: Mozzaro.Application.Interfaces.Services.IPizzaService.UpdateAsync(Mozzaro.Domain.Entities.Pizza)
+    name: UpdateAsync
+    href: Mozzaro.Application.Interfaces.Services.IPizzaService.html#Mozzaro_Application_Interfaces_Services_IPizzaService_UpdateAsync_Mozzaro_Domain_Entities_Pizza_
+  - name: (
+  - uid: Mozzaro.Domain.Entities.Pizza
+    name: Pizza
+    href: Mozzaro.Domain.Entities.Pizza.html
+  - name: )
+- uid: Mozzaro.Infrastructure.Services.PizzaService.DeleteAsync*
+  commentId: Overload:Mozzaro.Infrastructure.Services.PizzaService.DeleteAsync
+  href: Mozzaro.Infrastructure.Services.PizzaService.html#Mozzaro_Infrastructure_Services_PizzaService_DeleteAsync_System_Int32_
+  name: DeleteAsync
+  nameWithType: PizzaService.DeleteAsync
+  fullName: Mozzaro.Infrastructure.Services.PizzaService.DeleteAsync
+- uid: Mozzaro.Application.Interfaces.Services.IPizzaService.DeleteAsync(System.Int32)
+  commentId: M:Mozzaro.Application.Interfaces.Services.IPizzaService.DeleteAsync(System.Int32)
+  parent: Mozzaro.Application.Interfaces.Services.IPizzaService
+  isExternal: true
+  href: Mozzaro.Application.Interfaces.Services.IPizzaService.html#Mozzaro_Application_Interfaces_Services_IPizzaService_DeleteAsync_System_Int32_
+  name: DeleteAsync(int)
+  nameWithType: IPizzaService.DeleteAsync(int)
+  fullName: Mozzaro.Application.Interfaces.Services.IPizzaService.DeleteAsync(int)
+  nameWithType.vb: IPizzaService.DeleteAsync(Integer)
+  fullName.vb: Mozzaro.Application.Interfaces.Services.IPizzaService.DeleteAsync(Integer)
+  name.vb: DeleteAsync(Integer)
+  spec.csharp:
+  - uid: Mozzaro.Application.Interfaces.Services.IPizzaService.DeleteAsync(System.Int32)
+    name: DeleteAsync
+    href: Mozzaro.Application.Interfaces.Services.IPizzaService.html#Mozzaro_Application_Interfaces_Services_IPizzaService_DeleteAsync_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: Mozzaro.Application.Interfaces.Services.IPizzaService.DeleteAsync(System.Int32)
+    name: DeleteAsync
+    href: Mozzaro.Application.Interfaces.Services.IPizzaService.html#Mozzaro_Application_Interfaces_Services_IPizzaService_DeleteAsync_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )

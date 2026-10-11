@@ -1,5 +1,8 @@
 namespace Mozzaro.Domain.Entities;
 
+/// <summary>
+/// represents a user of the Mozzaro application.
+/// </summary>
 public class User
 {
     public int Id { get; set; }

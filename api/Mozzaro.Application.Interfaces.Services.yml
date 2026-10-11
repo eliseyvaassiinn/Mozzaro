@@ -1,0 +1,77 @@
+### YamlMime:ManagedReference
+items:
+- uid: Mozzaro.Application.Interfaces.Services
+  commentId: N:Mozzaro.Application.Interfaces.Services
+  id: Mozzaro.Application.Interfaces.Services
+  children:
+  - Mozzaro.Application.Interfaces.Services.ICategoryService
+  - Mozzaro.Application.Interfaces.Services.IOrderService
+  - Mozzaro.Application.Interfaces.Services.IPizzaService
+  - Mozzaro.Application.Interfaces.Services.IUserService
+  langs:
+  - csharp
+  - vb
+  name: Mozzaro.Application.Interfaces.Services
+  nameWithType: Mozzaro.Application.Interfaces.Services
+  fullName: Mozzaro.Application.Interfaces.Services
+  type: Namespace
+  assemblies:
+  - Mozzaro.Application
+references:
+- uid: Mozzaro.Application.Interfaces.Services.ICategoryService
+  commentId: T:Mozzaro.Application.Interfaces.Services.ICategoryService
+  parent: Mozzaro.Application.Interfaces.Services
+  href: Mozzaro.Application.Interfaces.Services.ICategoryService.html
+  name: ICategoryService
+  nameWithType: ICategoryService
+  fullName: Mozzaro.Application.Interfaces.Services.ICategoryService
+- uid: Mozzaro.Application.Interfaces.Services.IOrderService
+  commentId: T:Mozzaro.Application.Interfaces.Services.IOrderService
+  parent: Mozzaro.Application.Interfaces.Services
+  href: Mozzaro.Application.Interfaces.Services.IOrderService.html
+  name: IOrderService
+  nameWithType: IOrderService
+  fullName: Mozzaro.Application.Interfaces.Services.IOrderService
+- uid: Mozzaro.Application.Interfaces.Services.IPizzaService
+  commentId: T:Mozzaro.Application.Interfaces.Services.IPizzaService
+  parent: Mozzaro.Application.Interfaces.Services
+  href: Mozzaro.Application.Interfaces.Services.IPizzaService.html
+  name: IPizzaService
+  nameWithType: IPizzaService
+  fullName: Mozzaro.Application.Interfaces.Services.IPizzaService
+- uid: Mozzaro.Application.Interfaces.Services.IUserService
+  commentId: T:Mozzaro.Application.Interfaces.Services.IUserService
+  parent: Mozzaro.Application.Interfaces.Services
+  href: Mozzaro.Application.Interfaces.Services.IUserService.html
+  name: IUserService
+  nameWithType: IUserService
+  fullName: Mozzaro.Application.Interfaces.Services.IUserService
+- uid: Mozzaro.Application.Interfaces.Services
+  commentId: N:Mozzaro.Application.Interfaces.Services
+  name: Mozzaro.Application.Interfaces.Services
+  nameWithType: Mozzaro.Application.Interfaces.Services
+  fullName: Mozzaro.Application.Interfaces.Services
+  spec.csharp:
+  - uid: Mozzaro
+    name: Mozzaro
+  - name: .
+  - uid: Mozzaro.Application
+    name: Application
+  - name: .
+  - uid: Mozzaro.Application.Interfaces
+    name: Interfaces
+  - name: .
+  - uid: Mozzaro.Application.Interfaces.Services
+    name: Services
+  spec.vb:
+  - uid: Mozzaro
+    name: Mozzaro
+  - name: .
+  - uid: Mozzaro.Application
+    name: Application
+  - name: .
+  - uid: Mozzaro.Application.Interfaces
+    name: Interfaces
+  - name: .
+  - uid: Mozzaro.Application.Interfaces.Services
+    name: Services

@@ -1,0 +1,30 @@
+### YamlMime:ManagedReference
+items:
+- uid: Mozzaro.Application.Services
+  commentId: N:Mozzaro.Application.Services
+  id: Mozzaro.Application.Services
+  children:
+  - Mozzaro.Application.Services.OrderService
+  - Mozzaro.Application.Services.UserService
+  langs:
+  - csharp
+  - vb
+  name: Mozzaro.Application.Services
+  nameWithType: Mozzaro.Application.Services
+  fullName: Mozzaro.Application.Services
+  type: Namespace
+  assemblies:
+  - Mozzaro.Application
+references:
+- uid: Mozzaro.Application.Services.OrderService
+  commentId: T:Mozzaro.Application.Services.OrderService
+  href: Mozzaro.Application.Services.OrderService.html
+  name: OrderService
+  nameWithType: OrderService
+  fullName: Mozzaro.Application.Services.OrderService
+- uid: Mozzaro.Application.Services.UserService
+  commentId: T:Mozzaro.Application.Services.UserService
+  href: Mozzaro.Application.Services.UserService.html
+  name: UserService
+  nameWithType: UserService
+  fullName: Mozzaro.Application.Services.UserService

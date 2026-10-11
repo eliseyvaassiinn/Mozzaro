@@ -1,5 +1,8 @@
 namespace Mozzaro.Domain.Entities;
 
+/// <summary>
+/// represents a user's shopping cart.
+/// </summary>
 public class Cart
 {
     public int Id { get; set; }

@@ -1,0 +1,60 @@
+### YamlMime:ManagedReference
+items:
+- uid: Mozzaro.Client.Services
+  commentId: N:Mozzaro.Client.Services
+  id: Mozzaro.Client.Services
+  children:
+  - Mozzaro.Client.Services.CartService
+  - Mozzaro.Client.Services.CartService.CartLine
+  - Mozzaro.Client.Services.PizzaApiService
+  - Mozzaro.Client.Services.UserSessionService
+  langs:
+  - csharp
+  - vb
+  name: Mozzaro.Client.Services
+  nameWithType: Mozzaro.Client.Services
+  fullName: Mozzaro.Client.Services
+  type: Namespace
+  assemblies:
+  - Mozzaro.Client
+references:
+- uid: Mozzaro.Client.Services.CartService
+  commentId: T:Mozzaro.Client.Services.CartService
+  href: Mozzaro.Client.Services.CartService.html
+  name: CartService
+  nameWithType: CartService
+  fullName: Mozzaro.Client.Services.CartService
+- uid: Mozzaro.Client.Services.CartService.CartLine
+  commentId: T:Mozzaro.Client.Services.CartService.CartLine
+  href: Mozzaro.Client.Services.CartService.html
+  name: CartService.CartLine
+  nameWithType: CartService.CartLine
+  fullName: Mozzaro.Client.Services.CartService.CartLine
+  spec.csharp:
+  - uid: Mozzaro.Client.Services.CartService
+    name: CartService
+    href: Mozzaro.Client.Services.CartService.html
+  - name: .
+  - uid: Mozzaro.Client.Services.CartService.CartLine
+    name: CartLine
+    href: Mozzaro.Client.Services.CartService.CartLine.html
+  spec.vb:
+  - uid: Mozzaro.Client.Services.CartService
+    name: CartService
+    href: Mozzaro.Client.Services.CartService.html
+  - name: .
+  - uid: Mozzaro.Client.Services.CartService.CartLine
+    name: CartLine
+    href: Mozzaro.Client.Services.CartService.CartLine.html
+- uid: Mozzaro.Client.Services.PizzaApiService
+  commentId: T:Mozzaro.Client.Services.PizzaApiService
+  href: Mozzaro.Client.Services.PizzaApiService.html
+  name: PizzaApiService
+  nameWithType: PizzaApiService
+  fullName: Mozzaro.Client.Services.PizzaApiService
+- uid: Mozzaro.Client.Services.UserSessionService
+  commentId: T:Mozzaro.Client.Services.UserSessionService
+  href: Mozzaro.Client.Services.UserSessionService.html
+  name: UserSessionService
+  nameWithType: UserSessionService
+  fullName: Mozzaro.Client.Services.UserSessionService

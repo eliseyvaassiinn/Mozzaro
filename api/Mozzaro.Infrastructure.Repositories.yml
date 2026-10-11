@@ -1,0 +1,56 @@
+### YamlMime:ManagedReference
+items:
+- uid: Mozzaro.Infrastructure.Repositories
+  commentId: N:Mozzaro.Infrastructure.Repositories
+  id: Mozzaro.Infrastructure.Repositories
+  children:
+  - Mozzaro.Infrastructure.Repositories.OrderRepository
+  - Mozzaro.Infrastructure.Repositories.Repository`1
+  - Mozzaro.Infrastructure.Repositories.UnitOfWork
+  langs:
+  - csharp
+  - vb
+  name: Mozzaro.Infrastructure.Repositories
+  nameWithType: Mozzaro.Infrastructure.Repositories
+  fullName: Mozzaro.Infrastructure.Repositories
+  type: Namespace
+  assemblies:
+  - Mozzaro.Infrastructure
+references:
+- uid: Mozzaro.Infrastructure.Repositories.OrderRepository
+  commentId: T:Mozzaro.Infrastructure.Repositories.OrderRepository
+  href: Mozzaro.Infrastructure.Repositories.OrderRepository.html
+  name: OrderRepository
+  nameWithType: OrderRepository
+  fullName: Mozzaro.Infrastructure.Repositories.OrderRepository
+- uid: Mozzaro.Infrastructure.Repositories.Repository`1
+  commentId: T:Mozzaro.Infrastructure.Repositories.Repository`1
+  href: Mozzaro.Infrastructure.Repositories.Repository-1.html
+  name: Repository<T>
+  nameWithType: Repository<T>
+  fullName: Mozzaro.Infrastructure.Repositories.Repository<T>
+  nameWithType.vb: Repository(Of T)
+  fullName.vb: Mozzaro.Infrastructure.Repositories.Repository(Of T)
+  name.vb: Repository(Of T)
+  spec.csharp:
+  - uid: Mozzaro.Infrastructure.Repositories.Repository`1
+    name: Repository
+    href: Mozzaro.Infrastructure.Repositories.Repository-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Mozzaro.Infrastructure.Repositories.Repository`1
+    name: Repository
+    href: Mozzaro.Infrastructure.Repositories.Repository-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Mozzaro.Infrastructure.Repositories.UnitOfWork
+  commentId: T:Mozzaro.Infrastructure.Repositories.UnitOfWork
+  href: Mozzaro.Infrastructure.Repositories.UnitOfWork.html
+  name: UnitOfWork
+  nameWithType: UnitOfWork
+  fullName: Mozzaro.Infrastructure.Repositories.UnitOfWork

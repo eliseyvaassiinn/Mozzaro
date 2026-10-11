@@ -1,0 +1,296 @@
+### YamlMime:ManagedReference
+items:
+- uid: Mozzaro.Application.Interfaces.Repositories.IUnitOfWork
+  commentId: T:Mozzaro.Application.Interfaces.Repositories.IUnitOfWork
+  id: IUnitOfWork
+  parent: Mozzaro.Application.Interfaces.Repositories
+  children:
+  - Mozzaro.Application.Interfaces.Repositories.IUnitOfWork.Repository``1
+  - Mozzaro.Application.Interfaces.Repositories.IUnitOfWork.SaveChangesAsync
+  langs:
+  - csharp
+  - vb
+  name: IUnitOfWork
+  nameWithType: IUnitOfWork
+  fullName: Mozzaro.Application.Interfaces.Repositories.IUnitOfWork
+  type: Interface
+  source:
+    remote:
+      path: Mozzaro.Application/Interfaces/Repositories/IUnitOfWork.cs
+      branch: master
+      repo: https://github.com/eliseyvaassiinn/Mozzaro.git
+    id: IUnitOfWork
+    path: Mozzaro.Application/Interfaces/Repositories/IUnitOfWork.cs
+    startLine: 5
+  assemblies:
+  - Mozzaro.Application
+  namespace: Mozzaro.Application.Interfaces.Repositories
+  summary: defines a unit of work for managing repositories and saving changes.
+  example: []
+  syntax:
+    content: public interface IUnitOfWork
+    content.vb: Public Interface IUnitOfWork
+  derivedClasses:
+  - Mozzaro.Infrastructure.Repositories.UnitOfWork
+- uid: Mozzaro.Application.Interfaces.Repositories.IUnitOfWork.Repository``1
+  commentId: M:Mozzaro.Application.Interfaces.Repositories.IUnitOfWork.Repository``1
+  id: Repository``1
+  parent: Mozzaro.Application.Interfaces.Repositories.IUnitOfWork
+  langs:
+  - csharp
+  - vb
+  name: Repository<T>()
+  nameWithType: IUnitOfWork.Repository<T>()
+  fullName: Mozzaro.Application.Interfaces.Repositories.IUnitOfWork.Repository<T>()
+  type: Method
+  source:
+    remote:
+      path: Mozzaro.Application/Interfaces/Repositories/IUnitOfWork.cs
+      branch: master
+      repo: https://github.com/eliseyvaassiinn/Mozzaro.git
+    id: Repository
+    path: Mozzaro.Application/Interfaces/Repositories/IUnitOfWork.cs
+    startLine: 12
+  assemblies:
+  - Mozzaro.Application
+  namespace: Mozzaro.Application.Interfaces.Repositories
+  summary: gets a repository for the specified entity type.
+  example: []
+  syntax:
+    content: 'IRepository<T> Repository<T>() where T : class'
+    typeParameters:
+    - id: T
+      description: the entity type.
+    return:
+      type: Mozzaro.Application.Interfaces.Repositories.IRepository{{T}}
+      description: the repository for the specified entity type.
+    content.vb: Function Repository(Of T As Class)() As IRepository(Of T)
+  overload: Mozzaro.Application.Interfaces.Repositories.IUnitOfWork.Repository*
+  nameWithType.vb: IUnitOfWork.Repository(Of T)()
+  fullName.vb: Mozzaro.Application.Interfaces.Repositories.IUnitOfWork.Repository(Of T)()
+  name.vb: Repository(Of T)()
+- uid: Mozzaro.Application.Interfaces.Repositories.IUnitOfWork.SaveChangesAsync
+  commentId: M:Mozzaro.Application.Interfaces.Repositories.IUnitOfWork.SaveChangesAsync
+  id: SaveChangesAsync
+  parent: Mozzaro.Application.Interfaces.Repositories.IUnitOfWork
+  langs:
+  - csharp
+  - vb
+  name: SaveChangesAsync()
+  nameWithType: IUnitOfWork.SaveChangesAsync()
+  fullName: Mozzaro.Application.Interfaces.Repositories.IUnitOfWork.SaveChangesAsync()
+  type: Method
+  source:
+    remote:
+      path: Mozzaro.Application/Interfaces/Repositories/IUnitOfWork.cs
+      branch: master
+      repo: https://github.com/eliseyvaassiinn/Mozzaro.git
+    id: SaveChangesAsync
+    path: Mozzaro.Application/Interfaces/Repositories/IUnitOfWork.cs
+    startLine: 18
+  assemblies:
+  - Mozzaro.Application
+  namespace: Mozzaro.Application.Interfaces.Repositories
+  summary: saves all pending changes.
+  example: []
+  syntax:
+    content: Task<int> SaveChangesAsync()
+    return:
+      type: System.Threading.Tasks.Task{System.Int32}
+      description: the number of affected records.
+    content.vb: Function SaveChangesAsync() As Task(Of Integer)
+  overload: Mozzaro.Application.Interfaces.Repositories.IUnitOfWork.SaveChangesAsync*
+references:
+- uid: Mozzaro.Application.Interfaces.Repositories
+  commentId: N:Mozzaro.Application.Interfaces.Repositories
+  name: Mozzaro.Application.Interfaces.Repositories
+  nameWithType: Mozzaro.Application.Interfaces.Repositories
+  fullName: Mozzaro.Application.Interfaces.Repositories
+  spec.csharp:
+  - uid: Mozzaro
+    name: Mozzaro
+  - name: .
+  - uid: Mozzaro.Application
+    name: Application
+  - name: .
+  - uid: Mozzaro.Application.Interfaces
+    name: Interfaces
+  - name: .
+  - uid: Mozzaro.Application.Interfaces.Repositories
+    name: Repositories
+  spec.vb:
+  - uid: Mozzaro
+    name: Mozzaro
+  - name: .
+  - uid: Mozzaro.Application
+    name: Application
+  - name: .
+  - uid: Mozzaro.Application.Interfaces
+    name: Interfaces
+  - name: .
+  - uid: Mozzaro.Application.Interfaces.Repositories
+    name: Repositories
+- uid: Mozzaro.Application.Interfaces.Repositories.IUnitOfWork.Repository*
+  commentId: Overload:Mozzaro.Application.Interfaces.Repositories.IUnitOfWork.Repository
+  href: Mozzaro.Application.Interfaces.Repositories.IUnitOfWork.html#Mozzaro_Application_Interfaces_Repositories_IUnitOfWork_Repository__1
+  name: Repository
+  nameWithType: IUnitOfWork.Repository
+  fullName: Mozzaro.Application.Interfaces.Repositories.IUnitOfWork.Repository
+- uid: Mozzaro.Application.Interfaces.Repositories.IRepository{{T}}
+  commentId: T:Mozzaro.Application.Interfaces.Repositories.IRepository{``0}
+  parent: Mozzaro.Application.Interfaces.Repositories
+  definition: Mozzaro.Application.Interfaces.Repositories.IRepository`1
+  href: Mozzaro.Application.Interfaces.Repositories.IRepository-1.html
+  name: IRepository<T>
+  nameWithType: IRepository<T>
+  fullName: Mozzaro.Application.Interfaces.Repositories.IRepository<T>
+  nameWithType.vb: IRepository(Of T)
+  fullName.vb: Mozzaro.Application.Interfaces.Repositories.IRepository(Of T)
+  name.vb: IRepository(Of T)
+  spec.csharp:
+  - uid: Mozzaro.Application.Interfaces.Repositories.IRepository`1
+    name: IRepository
+    href: Mozzaro.Application.Interfaces.Repositories.IRepository-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Mozzaro.Application.Interfaces.Repositories.IRepository`1
+    name: IRepository
+    href: Mozzaro.Application.Interfaces.Repositories.IRepository-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Mozzaro.Application.Interfaces.Repositories.IRepository`1
+  commentId: T:Mozzaro.Application.Interfaces.Repositories.IRepository`1
+  href: Mozzaro.Application.Interfaces.Repositories.IRepository-1.html
+  name: IRepository<T>
+  nameWithType: IRepository<T>
+  fullName: Mozzaro.Application.Interfaces.Repositories.IRepository<T>
+  nameWithType.vb: IRepository(Of T)
+  fullName.vb: Mozzaro.Application.Interfaces.Repositories.IRepository(Of T)
+  name.vb: IRepository(Of T)
+  spec.csharp:
+  - uid: Mozzaro.Application.Interfaces.Repositories.IRepository`1
+    name: IRepository
+    href: Mozzaro.Application.Interfaces.Repositories.IRepository-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Mozzaro.Application.Interfaces.Repositories.IRepository`1
+    name: IRepository
+    href: Mozzaro.Application.Interfaces.Repositories.IRepository-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Mozzaro.Application.Interfaces.Repositories.IUnitOfWork.SaveChangesAsync*
+  commentId: Overload:Mozzaro.Application.Interfaces.Repositories.IUnitOfWork.SaveChangesAsync
+  href: Mozzaro.Application.Interfaces.Repositories.IUnitOfWork.html#Mozzaro_Application_Interfaces_Repositories_IUnitOfWork_SaveChangesAsync
+  name: SaveChangesAsync
+  nameWithType: IUnitOfWork.SaveChangesAsync
+  fullName: Mozzaro.Application.Interfaces.Repositories.IUnitOfWork.SaveChangesAsync
+- uid: System.Threading.Tasks.Task{System.Int32}
+  commentId: T:System.Threading.Tasks.Task{System.Int32}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<int>
+  nameWithType: Task<int>
+  fullName: System.Threading.Tasks.Task<int>
+  nameWithType.vb: Task(Of Integer)
+  fullName.vb: System.Threading.Tasks.Task(Of Integer)
+  name.vb: Task(Of Integer)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks

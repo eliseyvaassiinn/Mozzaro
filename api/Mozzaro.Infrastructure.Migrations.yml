@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: Mozzaro.Infrastructure.Migrations
+  commentId: N:Mozzaro.Infrastructure.Migrations
+  id: Mozzaro.Infrastructure.Migrations
+  children:
+  - Mozzaro.Infrastructure.Migrations.initialcreate
+  langs:
+  - csharp
+  - vb
+  name: Mozzaro.Infrastructure.Migrations
+  nameWithType: Mozzaro.Infrastructure.Migrations
+  fullName: Mozzaro.Infrastructure.Migrations
+  type: Namespace
+  assemblies:
+  - Mozzaro.Infrastructure
+references:
+- uid: Mozzaro.Infrastructure.Migrations.initialcreate
+  commentId: T:Mozzaro.Infrastructure.Migrations.initialcreate
+  href: Mozzaro.Infrastructure.Migrations.initialcreate.html
+  name: initialcreate
+  nameWithType: initialcreate
+  fullName: Mozzaro.Infrastructure.Migrations.initialcreate

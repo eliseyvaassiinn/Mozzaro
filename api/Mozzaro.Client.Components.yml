@@ -1,0 +1,37 @@
+### YamlMime:ManagedReference
+items:
+- uid: Mozzaro.Client.Components
+  commentId: N:Mozzaro.Client.Components
+  id: Mozzaro.Client.Components
+  children:
+  - Mozzaro.Client.Components.App
+  - Mozzaro.Client.Components.Routes
+  - Mozzaro.Client.Components._Imports
+  langs:
+  - csharp
+  - vb
+  name: Mozzaro.Client.Components
+  nameWithType: Mozzaro.Client.Components
+  fullName: Mozzaro.Client.Components
+  type: Namespace
+  assemblies:
+  - Mozzaro.Client
+references:
+- uid: Mozzaro.Client.Components.Routes
+  commentId: T:Mozzaro.Client.Components.Routes
+  href: Mozzaro.Client.Components.Routes.html
+  name: Routes
+  nameWithType: Routes
+  fullName: Mozzaro.Client.Components.Routes
+- uid: Mozzaro.Client.Components.App
+  commentId: T:Mozzaro.Client.Components.App
+  href: Mozzaro.Client.Components.App.html
+  name: App
+  nameWithType: App
+  fullName: Mozzaro.Client.Components.App
+- uid: Mozzaro.Client.Components._Imports
+  commentId: T:Mozzaro.Client.Components._Imports
+  href: Mozzaro.Client.Components._Imports.html
+  name: _Imports
+  nameWithType: _Imports
+  fullName: Mozzaro.Client.Components._Imports

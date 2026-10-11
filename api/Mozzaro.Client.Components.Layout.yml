@@ -1,0 +1,30 @@
+### YamlMime:ManagedReference
+items:
+- uid: Mozzaro.Client.Components.Layout
+  commentId: N:Mozzaro.Client.Components.Layout
+  id: Mozzaro.Client.Components.Layout
+  children:
+  - Mozzaro.Client.Components.Layout.MainLayout
+  - Mozzaro.Client.Components.Layout.NavMenu
+  langs:
+  - csharp
+  - vb
+  name: Mozzaro.Client.Components.Layout
+  nameWithType: Mozzaro.Client.Components.Layout
+  fullName: Mozzaro.Client.Components.Layout
+  type: Namespace
+  assemblies:
+  - Mozzaro.Client
+references:
+- uid: Mozzaro.Client.Components.Layout.MainLayout
+  commentId: T:Mozzaro.Client.Components.Layout.MainLayout
+  href: Mozzaro.Client.Components.Layout.MainLayout.html
+  name: MainLayout
+  nameWithType: MainLayout
+  fullName: Mozzaro.Client.Components.Layout.MainLayout
+- uid: Mozzaro.Client.Components.Layout.NavMenu
+  commentId: T:Mozzaro.Client.Components.Layout.NavMenu
+  href: Mozzaro.Client.Components.Layout.NavMenu.html
+  name: NavMenu
+  nameWithType: NavMenu
+  fullName: Mozzaro.Client.Components.Layout.NavMenu

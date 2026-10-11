@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: Mozzaro.Client
+  commentId: N:Mozzaro.Client
+  id: Mozzaro.Client
+  children:
+  - Mozzaro.Client.PizzaDetails
+  langs:
+  - csharp
+  - vb
+  name: Mozzaro.Client
+  nameWithType: Mozzaro.Client
+  fullName: Mozzaro.Client
+  type: Namespace
+  assemblies:
+  - Mozzaro.Client
+references:
+- uid: Mozzaro.Client.PizzaDetails
+  commentId: T:Mozzaro.Client.PizzaDetails
+  href: Mozzaro.Client.PizzaDetails.html
+  name: PizzaDetails
+  nameWithType: PizzaDetails
+  fullName: Mozzaro.Client.PizzaDetails

@@ -1,5 +1,8 @@
 namespace Mozzaro.Domain.Entities;
 
+/// <summary>
+/// represents the relationship between a pizza and an ingredient.
+/// </summary>
 public class PizzaIngredient
 {
     public int PizzaId { get; set; }

@@ -1,0 +1,1118 @@
+### YamlMime:ManagedReference
+items:
+- uid: Mozzaro.Infrastructure.Repositories.OrderRepository
+  commentId: T:Mozzaro.Infrastructure.Repositories.OrderRepository
+  id: OrderRepository
+  parent: Mozzaro.Infrastructure.Repositories
+  children:
+  - Mozzaro.Infrastructure.Repositories.OrderRepository.#ctor(Mozzaro.Infrastructure.Persistence.MozzaroDbContext)
+  - Mozzaro.Infrastructure.Repositories.OrderRepository.GetByUserIdAsync(System.Int32)
+  langs:
+  - csharp
+  - vb
+  name: OrderRepository
+  nameWithType: OrderRepository
+  fullName: Mozzaro.Infrastructure.Repositories.OrderRepository
+  type: Class
+  source:
+    remote:
+      path: Mozzaro.Infrastructure/Repositories/OrderRepository.cs
+      branch: master
+      repo: https://github.com/eliseyvaassiinn/Mozzaro.git
+    id: OrderRepository
+    path: Mozzaro.Infrastructure/Repositories/OrderRepository.cs
+    startLine: 10
+  assemblies:
+  - Mozzaro.Infrastructure
+  namespace: Mozzaro.Infrastructure.Repositories
+  summary: provides data access operations for customer orders.
+  example: []
+  syntax:
+    content: 'public class OrderRepository : Repository<Order>, IOrderRepository, IRepository<Order>'
+    content.vb: Public Class OrderRepository Inherits Repository(Of Order) Implements IOrderRepository, IRepository(Of Order)
+  inheritance:
+  - System.Object
+  - Mozzaro.Infrastructure.Repositories.Repository{Mozzaro.Domain.Entities.Order}
+  implements:
+  - Mozzaro.Application.Interfaces.Repositories.IOrderRepository
+  - Mozzaro.Application.Interfaces.Repositories.IRepository{Mozzaro.Domain.Entities.Order}
+  inheritedMembers:
+  - Mozzaro.Infrastructure.Repositories.Repository{Mozzaro.Domain.Entities.Order}.GetAllAsync
+  - Mozzaro.Infrastructure.Repositories.Repository{Mozzaro.Domain.Entities.Order}.GetByIdAsync(System.Int32)
+  - Mozzaro.Infrastructure.Repositories.Repository{Mozzaro.Domain.Entities.Order}.FirstOrDefaultAsync(System.Linq.Expressions.Expression{System.Func{Mozzaro.Domain.Entities.Order,System.Boolean}})
+  - Mozzaro.Infrastructure.Repositories.Repository{Mozzaro.Domain.Entities.Order}.AddAsync(Mozzaro.Domain.Entities.Order)
+  - Mozzaro.Infrastructure.Repositories.Repository{Mozzaro.Domain.Entities.Order}.Update(Mozzaro.Domain.Entities.Order)
+  - Mozzaro.Infrastructure.Repositories.Repository{Mozzaro.Domain.Entities.Order}.Delete(Mozzaro.Domain.Entities.Order)
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Mozzaro.Infrastructure.Repositories.OrderRepository.#ctor(Mozzaro.Infrastructure.Persistence.MozzaroDbContext)
+  commentId: M:Mozzaro.Infrastructure.Repositories.OrderRepository.#ctor(Mozzaro.Infrastructure.Persistence.MozzaroDbContext)
+  id: '#ctor(Mozzaro.Infrastructure.Persistence.MozzaroDbContext)'
+  parent: Mozzaro.Infrastructure.Repositories.OrderRepository
+  langs:
+  - csharp
+  - vb
+  name: OrderRepository(MozzaroDbContext)
+  nameWithType: OrderRepository.OrderRepository(MozzaroDbContext)
+  fullName: Mozzaro.Infrastructure.Repositories.OrderRepository.OrderRepository(Mozzaro.Infrastructure.Persistence.MozzaroDbContext)
+  type: Constructor
+  source:
+    remote:
+      path: Mozzaro.Infrastructure/Repositories/OrderRepository.cs
+      branch: master
+      repo: https://github.com/eliseyvaassiinn/Mozzaro.git
+    id: .ctor
+    path: Mozzaro.Infrastructure/Repositories/OrderRepository.cs
+    startLine: 14
+  assemblies:
+  - Mozzaro.Infrastructure
+  namespace: Mozzaro.Infrastructure.Repositories
+  syntax:
+    content: public OrderRepository(MozzaroDbContext context)
+    parameters:
+    - id: context
+      type: Mozzaro.Infrastructure.Persistence.MozzaroDbContext
+    content.vb: Public Sub New(context As MozzaroDbContext)
+  overload: Mozzaro.Infrastructure.Repositories.OrderRepository.#ctor*
+  nameWithType.vb: OrderRepository.New(MozzaroDbContext)
+  fullName.vb: Mozzaro.Infrastructure.Repositories.OrderRepository.New(Mozzaro.Infrastructure.Persistence.MozzaroDbContext)
+  name.vb: New(MozzaroDbContext)
+- uid: Mozzaro.Infrastructure.Repositories.OrderRepository.GetByUserIdAsync(System.Int32)
+  commentId: M:Mozzaro.Infrastructure.Repositories.OrderRepository.GetByUserIdAsync(System.Int32)
+  id: GetByUserIdAsync(System.Int32)
+  parent: Mozzaro.Infrastructure.Repositories.OrderRepository
+  langs:
+  - csharp
+  - vb
+  name: GetByUserIdAsync(int)
+  nameWithType: OrderRepository.GetByUserIdAsync(int)
+  fullName: Mozzaro.Infrastructure.Repositories.OrderRepository.GetByUserIdAsync(int)
+  type: Method
+  source:
+    remote:
+      path: Mozzaro.Infrastructure/Repositories/OrderRepository.cs
+      branch: master
+      repo: https://github.com/eliseyvaassiinn/Mozzaro.git
+    id: GetByUserIdAsync
+    path: Mozzaro.Infrastructure/Repositories/OrderRepository.cs
+    startLine: 25
+  assemblies:
+  - Mozzaro.Infrastructure
+  namespace: Mozzaro.Infrastructure.Repositories
+  summary: gets all orders belonging to a specific user.
+  example: []
+  syntax:
+    content: public Task<IEnumerable<Order>> GetByUserIdAsync(int userId)
+    parameters:
+    - id: userId
+      type: System.Int32
+      description: the user identifier.
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.IEnumerable{Mozzaro.Domain.Entities.Order}}
+      description: the user's orders with their order items and pizzas.
+    content.vb: Public Function GetByUserIdAsync(userId As Integer) As Task(Of IEnumerable(Of Order))
+  overload: Mozzaro.Infrastructure.Repositories.OrderRepository.GetByUserIdAsync*
+  implements:
+  - Mozzaro.Application.Interfaces.Repositories.IOrderRepository.GetByUserIdAsync(System.Int32)
+  nameWithType.vb: OrderRepository.GetByUserIdAsync(Integer)
+  fullName.vb: Mozzaro.Infrastructure.Repositories.OrderRepository.GetByUserIdAsync(Integer)
+  name.vb: GetByUserIdAsync(Integer)
+references:
+- uid: Mozzaro.Infrastructure.Repositories
+  commentId: N:Mozzaro.Infrastructure.Repositories
+  name: Mozzaro.Infrastructure.Repositories
+  nameWithType: Mozzaro.Infrastructure.Repositories
+  fullName: Mozzaro.Infrastructure.Repositories
+  spec.csharp:
+  - uid: Mozzaro
+    name: Mozzaro
+  - name: .
+  - uid: Mozzaro.Infrastructure
+    name: Infrastructure
+  - name: .
+  - uid: Mozzaro.Infrastructure.Repositories
+    name: Repositories
+  spec.vb:
+  - uid: Mozzaro
+    name: Mozzaro
+  - name: .
+  - uid: Mozzaro.Infrastructure
+    name: Infrastructure
+  - name: .
+  - uid: Mozzaro.Infrastructure.Repositories
+    name: Repositories
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Mozzaro.Infrastructure.Repositories.Repository{Mozzaro.Domain.Entities.Order}
+  commentId: T:Mozzaro.Infrastructure.Repositories.Repository{Mozzaro.Domain.Entities.Order}
+  parent: Mozzaro.Infrastructure.Repositories
+  definition: Mozzaro.Infrastructure.Repositories.Repository`1
+  href: Mozzaro.Infrastructure.Repositories.Repository-1.html
+  name: Repository<Order>
+  nameWithType: Repository<Order>
+  fullName: Mozzaro.Infrastructure.Repositories.Repository<Mozzaro.Domain.Entities.Order>
+  nameWithType.vb: Repository(Of Order)
+  fullName.vb: Mozzaro.Infrastructure.Repositories.Repository(Of Mozzaro.Domain.Entities.Order)
+  name.vb: Repository(Of Order)
+  spec.csharp:
+  - uid: Mozzaro.Infrastructure.Repositories.Repository`1
+    name: Repository
+    href: Mozzaro.Infrastructure.Repositories.Repository-1.html
+  - name: <
+  - uid: Mozzaro.Domain.Entities.Order
+    name: Order
+    href: Mozzaro.Domain.Entities.Order.html
+  - name: '>'
+  spec.vb:
+  - uid: Mozzaro.Infrastructure.Repositories.Repository`1
+    name: Repository
+    href: Mozzaro.Infrastructure.Repositories.Repository-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Mozzaro.Domain.Entities.Order
+    name: Order
+    href: Mozzaro.Domain.Entities.Order.html
+  - name: )
+- uid: Mozzaro.Application.Interfaces.Repositories.IOrderRepository
+  commentId: T:Mozzaro.Application.Interfaces.Repositories.IOrderRepository
+  parent: Mozzaro.Application.Interfaces.Repositories
+  href: Mozzaro.Application.Interfaces.Repositories.IOrderRepository.html
+  name: IOrderRepository
+  nameWithType: IOrderRepository
+  fullName: Mozzaro.Application.Interfaces.Repositories.IOrderRepository
+- uid: Mozzaro.Application.Interfaces.Repositories.IRepository{Mozzaro.Domain.Entities.Order}
+  commentId: T:Mozzaro.Application.Interfaces.Repositories.IRepository{Mozzaro.Domain.Entities.Order}
+  parent: Mozzaro.Application.Interfaces.Repositories
+  definition: Mozzaro.Application.Interfaces.Repositories.IRepository`1
+  href: Mozzaro.Application.Interfaces.Repositories.IRepository-1.html
+  name: IRepository<Order>
+  nameWithType: IRepository<Order>
+  fullName: Mozzaro.Application.Interfaces.Repositories.IRepository<Mozzaro.Domain.Entities.Order>
+  nameWithType.vb: IRepository(Of Order)
+  fullName.vb: Mozzaro.Application.Interfaces.Repositories.IRepository(Of Mozzaro.Domain.Entities.Order)
+  name.vb: IRepository(Of Order)
+  spec.csharp:
+  - uid: Mozzaro.Application.Interfaces.Repositories.IRepository`1
+    name: IRepository
+    href: Mozzaro.Application.Interfaces.Repositories.IRepository-1.html
+  - name: <
+  - uid: Mozzaro.Domain.Entities.Order
+    name: Order
+    href: Mozzaro.Domain.Entities.Order.html
+  - name: '>'
+  spec.vb:
+  - uid: Mozzaro.Application.Interfaces.Repositories.IRepository`1
+    name: IRepository
+    href: Mozzaro.Application.Interfaces.Repositories.IRepository-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Mozzaro.Domain.Entities.Order
+    name: Order
+    href: Mozzaro.Domain.Entities.Order.html
+  - name: )
+- uid: Mozzaro.Infrastructure.Repositories.Repository{Mozzaro.Domain.Entities.Order}.GetAllAsync
+  commentId: M:Mozzaro.Infrastructure.Repositories.Repository{Mozzaro.Domain.Entities.Order}.GetAllAsync
+  parent: Mozzaro.Infrastructure.Repositories.Repository{Mozzaro.Domain.Entities.Order}
+  definition: Mozzaro.Infrastructure.Repositories.Repository`1.GetAllAsync
+  href: Mozzaro.Infrastructure.Repositories.Repository-1.html#Mozzaro_Infrastructure_Repositories_Repository_1_GetAllAsync
+  name: GetAllAsync()
+  nameWithType: Repository<Order>.GetAllAsync()
+  fullName: Mozzaro.Infrastructure.Repositories.Repository<Mozzaro.Domain.Entities.Order>.GetAllAsync()
+  nameWithType.vb: Repository(Of Order).GetAllAsync()
+  fullName.vb: Mozzaro.Infrastructure.Repositories.Repository(Of Mozzaro.Domain.Entities.Order).GetAllAsync()
+  spec.csharp:
+  - uid: Mozzaro.Infrastructure.Repositories.Repository{Mozzaro.Domain.Entities.Order}.GetAllAsync
+    name: GetAllAsync
+    href: Mozzaro.Infrastructure.Repositories.Repository-1.html#Mozzaro_Infrastructure_Repositories_Repository_1_GetAllAsync
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Mozzaro.Infrastructure.Repositories.Repository{Mozzaro.Domain.Entities.Order}.GetAllAsync
+    name: GetAllAsync
+    href: Mozzaro.Infrastructure.Repositories.Repository-1.html#Mozzaro_Infrastructure_Repositories_Repository_1_GetAllAsync
+  - name: (
+  - name: )
+- uid: Mozzaro.Infrastructure.Repositories.Repository{Mozzaro.Domain.Entities.Order}.GetByIdAsync(System.Int32)
+  commentId: M:Mozzaro.Infrastructure.Repositories.Repository{Mozzaro.Domain.Entities.Order}.GetByIdAsync(System.Int32)
+  parent: Mozzaro.Infrastructure.Repositories.Repository{Mozzaro.Domain.Entities.Order}
+  definition: Mozzaro.Infrastructure.Repositories.Repository`1.GetByIdAsync(System.Int32)
+  href: Mozzaro.Infrastructure.Repositories.Repository-1.html#Mozzaro_Infrastructure_Repositories_Repository_1_GetByIdAsync_System_Int32_
+  name: GetByIdAsync(int)
+  nameWithType: Repository<Order>.GetByIdAsync(int)
+  fullName: Mozzaro.Infrastructure.Repositories.Repository<Mozzaro.Domain.Entities.Order>.GetByIdAsync(int)
+  nameWithType.vb: Repository(Of Order).GetByIdAsync(Integer)
+  fullName.vb: Mozzaro.Infrastructure.Repositories.Repository(Of Mozzaro.Domain.Entities.Order).GetByIdAsync(Integer)
+  name.vb: GetByIdAsync(Integer)
+  spec.csharp:
+  - uid: Mozzaro.Infrastructure.Repositories.Repository{Mozzaro.Domain.Entities.Order}.GetByIdAsync(System.Int32)
+    name: GetByIdAsync
+    href: Mozzaro.Infrastructure.Repositories.Repository-1.html#Mozzaro_Infrastructure_Repositories_Repository_1_GetByIdAsync_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: Mozzaro.Infrastructure.Repositories.Repository{Mozzaro.Domain.Entities.Order}.GetByIdAsync(System.Int32)
+    name: GetByIdAsync
+    href: Mozzaro.Infrastructure.Repositories.Repository-1.html#Mozzaro_Infrastructure_Repositories_Repository_1_GetByIdAsync_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: Mozzaro.Infrastructure.Repositories.Repository{Mozzaro.Domain.Entities.Order}.FirstOrDefaultAsync(System.Linq.Expressions.Expression{System.Func{Mozzaro.Domain.Entities.Order,System.Boolean}})
+  commentId: M:Mozzaro.Infrastructure.Repositories.Repository{Mozzaro.Domain.Entities.Order}.FirstOrDefaultAsync(System.Linq.Expressions.Expression{System.Func{Mozzaro.Domain.Entities.Order,System.Boolean}})
+  parent: Mozzaro.Infrastructure.Repositories.Repository{Mozzaro.Domain.Entities.Order}
+  definition: Mozzaro.Infrastructure.Repositories.Repository`1.FirstOrDefaultAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})
+  href: Mozzaro.Infrastructure.Repositories.Repository-1.html#Mozzaro_Infrastructure_Repositories_Repository_1_FirstOrDefaultAsync_System_Linq_Expressions_Expression_System_Func__0_System_Boolean___
+  name: FirstOrDefaultAsync(Expression<Func<Order, bool>>)
+  nameWithType: Repository<Order>.FirstOrDefaultAsync(Expression<Func<Order, bool>>)
+  fullName: Mozzaro.Infrastructure.Repositories.Repository<Mozzaro.Domain.Entities.Order>.FirstOrDefaultAsync(System.Linq.Expressions.Expression<System.Func<Mozzaro.Domain.Entities.Order, bool>>)
+  nameWithType.vb: Repository(Of Order).FirstOrDefaultAsync(Expression(Of Func(Of Order, Boolean)))
+  fullName.vb: Mozzaro.Infrastructure.Repositories.Repository(Of Mozzaro.Domain.Entities.Order).FirstOrDefaultAsync(System.Linq.Expressions.Expression(Of System.Func(Of Mozzaro.Domain.Entities.Order, Boolean)))
+  name.vb: FirstOrDefaultAsync(Expression(Of Func(Of Order, Boolean)))
+  spec.csharp:
+  - uid: Mozzaro.Infrastructure.Repositories.Repository{Mozzaro.Domain.Entities.Order}.FirstOrDefaultAsync(System.Linq.Expressions.Expression{System.Func{Mozzaro.Domain.Entities.Order,System.Boolean}})
+    name: FirstOrDefaultAsync
+    href: Mozzaro.Infrastructure.Repositories.Repository-1.html#Mozzaro_Infrastructure_Repositories_Repository_1_FirstOrDefaultAsync_System_Linq_Expressions_Expression_System_Func__0_System_Boolean___
+  - name: (
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: <
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: Mozzaro.Domain.Entities.Order
+    name: Order
+    href: Mozzaro.Domain.Entities.Order.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Mozzaro.Infrastructure.Repositories.Repository{Mozzaro.Domain.Entities.Order}.FirstOrDefaultAsync(System.Linq.Expressions.Expression{System.Func{Mozzaro.Domain.Entities.Order,System.Boolean}})
+    name: FirstOrDefaultAsync
+    href: Mozzaro.Infrastructure.Repositories.Repository-1.html#Mozzaro_Infrastructure_Repositories_Repository_1_FirstOrDefaultAsync_System_Linq_Expressions_Expression_System_Func__0_System_Boolean___
+  - name: (
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Mozzaro.Domain.Entities.Order
+    name: Order
+    href: Mozzaro.Domain.Entities.Order.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  - name: )
+  - name: )
+- uid: Mozzaro.Infrastructure.Repositories.Repository{Mozzaro.Domain.Entities.Order}.AddAsync(Mozzaro.Domain.Entities.Order)
+  commentId: M:Mozzaro.Infrastructure.Repositories.Repository{Mozzaro.Domain.Entities.Order}.AddAsync(Mozzaro.Domain.Entities.Order)
+  parent: Mozzaro.Infrastructure.Repositories.Repository{Mozzaro.Domain.Entities.Order}
+  definition: Mozzaro.Infrastructure.Repositories.Repository`1.AddAsync(`0)
+  href: Mozzaro.Infrastructure.Repositories.Repository-1.html#Mozzaro_Infrastructure_Repositories_Repository_1_AddAsync__0_
+  name: AddAsync(Order)
+  nameWithType: Repository<Order>.AddAsync(Order)
+  fullName: Mozzaro.Infrastructure.Repositories.Repository<Mozzaro.Domain.Entities.Order>.AddAsync(Mozzaro.Domain.Entities.Order)
+  nameWithType.vb: Repository(Of Order).AddAsync(Order)
+  fullName.vb: Mozzaro.Infrastructure.Repositories.Repository(Of Mozzaro.Domain.Entities.Order).AddAsync(Mozzaro.Domain.Entities.Order)
+  spec.csharp:
+  - uid: Mozzaro.Infrastructure.Repositories.Repository{Mozzaro.Domain.Entities.Order}.AddAsync(Mozzaro.Domain.Entities.Order)
+    name: AddAsync
+    href: Mozzaro.Infrastructure.Repositories.Repository-1.html#Mozzaro_Infrastructure_Repositories_Repository_1_AddAsync__0_
+  - name: (
+  - uid: Mozzaro.Domain.Entities.Order
+    name: Order
+    href: Mozzaro.Domain.Entities.Order.html
+  - name: )
+  spec.vb:
+  - uid: Mozzaro.Infrastructure.Repositories.Repository{Mozzaro.Domain.Entities.Order}.AddAsync(Mozzaro.Domain.Entities.Order)
+    name: AddAsync
+    href: Mozzaro.Infrastructure.Repositories.Repository-1.html#Mozzaro_Infrastructure_Repositories_Repository_1_AddAsync__0_
+  - name: (
+  - uid: Mozzaro.Domain.Entities.Order
+    name: Order
+    href: Mozzaro.Domain.Entities.Order.html
+  - name: )
+- uid: Mozzaro.Infrastructure.Repositories.Repository{Mozzaro.Domain.Entities.Order}.Update(Mozzaro.Domain.Entities.Order)
+  commentId: M:Mozzaro.Infrastructure.Repositories.Repository{Mozzaro.Domain.Entities.Order}.Update(Mozzaro.Domain.Entities.Order)
+  parent: Mozzaro.Infrastructure.Repositories.Repository{Mozzaro.Domain.Entities.Order}
+  definition: Mozzaro.Infrastructure.Repositories.Repository`1.Update(`0)
+  href: Mozzaro.Infrastructure.Repositories.Repository-1.html#Mozzaro_Infrastructure_Repositories_Repository_1_Update__0_
+  name: Update(Order)
+  nameWithType: Repository<Order>.Update(Order)
+  fullName: Mozzaro.Infrastructure.Repositories.Repository<Mozzaro.Domain.Entities.Order>.Update(Mozzaro.Domain.Entities.Order)
+  nameWithType.vb: Repository(Of Order).Update(Order)
+  fullName.vb: Mozzaro.Infrastructure.Repositories.Repository(Of Mozzaro.Domain.Entities.Order).Update(Mozzaro.Domain.Entities.Order)
+  spec.csharp:
+  - uid: Mozzaro.Infrastructure.Repositories.Repository{Mozzaro.Domain.Entities.Order}.Update(Mozzaro.Domain.Entities.Order)
+    name: Update
+    href: Mozzaro.Infrastructure.Repositories.Repository-1.html#Mozzaro_Infrastructure_Repositories_Repository_1_Update__0_
+  - name: (
+  - uid: Mozzaro.Domain.Entities.Order
+    name: Order
+    href: Mozzaro.Domain.Entities.Order.html
+  - name: )
+  spec.vb:
+  - uid: Mozzaro.Infrastructure.Repositories.Repository{Mozzaro.Domain.Entities.Order}.Update(Mozzaro.Domain.Entities.Order)
+    name: Update
+    href: Mozzaro.Infrastructure.Repositories.Repository-1.html#Mozzaro_Infrastructure_Repositories_Repository_1_Update__0_
+  - name: (
+  - uid: Mozzaro.Domain.Entities.Order
+    name: Order
+    href: Mozzaro.Domain.Entities.Order.html
+  - name: )
+- uid: Mozzaro.Infrastructure.Repositories.Repository{Mozzaro.Domain.Entities.Order}.Delete(Mozzaro.Domain.Entities.Order)
+  commentId: M:Mozzaro.Infrastructure.Repositories.Repository{Mozzaro.Domain.Entities.Order}.Delete(Mozzaro.Domain.Entities.Order)
+  parent: Mozzaro.Infrastructure.Repositories.Repository{Mozzaro.Domain.Entities.Order}
+  definition: Mozzaro.Infrastructure.Repositories.Repository`1.Delete(`0)
+  href: Mozzaro.Infrastructure.Repositories.Repository-1.html#Mozzaro_Infrastructure_Repositories_Repository_1_Delete__0_
+  name: Delete(Order)
+  nameWithType: Repository<Order>.Delete(Order)
+  fullName: Mozzaro.Infrastructure.Repositories.Repository<Mozzaro.Domain.Entities.Order>.Delete(Mozzaro.Domain.Entities.Order)
+  nameWithType.vb: Repository(Of Order).Delete(Order)
+  fullName.vb: Mozzaro.Infrastructure.Repositories.Repository(Of Mozzaro.Domain.Entities.Order).Delete(Mozzaro.Domain.Entities.Order)
+  spec.csharp:
+  - uid: Mozzaro.Infrastructure.Repositories.Repository{Mozzaro.Domain.Entities.Order}.Delete(Mozzaro.Domain.Entities.Order)
+    name: Delete
+    href: Mozzaro.Infrastructure.Repositories.Repository-1.html#Mozzaro_Infrastructure_Repositories_Repository_1_Delete__0_
+  - name: (
+  - uid: Mozzaro.Domain.Entities.Order
+    name: Order
+    href: Mozzaro.Domain.Entities.Order.html
+  - name: )
+  spec.vb:
+  - uid: Mozzaro.Infrastructure.Repositories.Repository{Mozzaro.Domain.Entities.Order}.Delete(Mozzaro.Domain.Entities.Order)
+    name: Delete
+    href: Mozzaro.Infrastructure.Repositories.Repository-1.html#Mozzaro_Infrastructure_Repositories_Repository_1_Delete__0_
+  - name: (
+  - uid: Mozzaro.Domain.Entities.Order
+    name: Order
+    href: Mozzaro.Domain.Entities.Order.html
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Mozzaro.Infrastructure.Repositories.Repository`1
+  commentId: T:Mozzaro.Infrastructure.Repositories.Repository`1
+  href: Mozzaro.Infrastructure.Repositories.Repository-1.html
+  name: Repository<T>
+  nameWithType: Repository<T>
+  fullName: Mozzaro.Infrastructure.Repositories.Repository<T>
+  nameWithType.vb: Repository(Of T)
+  fullName.vb: Mozzaro.Infrastructure.Repositories.Repository(Of T)
+  name.vb: Repository(Of T)
+  spec.csharp:
+  - uid: Mozzaro.Infrastructure.Repositories.Repository`1
+    name: Repository
+    href: Mozzaro.Infrastructure.Repositories.Repository-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Mozzaro.Infrastructure.Repositories.Repository`1
+    name: Repository
+    href: Mozzaro.Infrastructure.Repositories.Repository-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Mozzaro.Application.Interfaces.Repositories
+  commentId: N:Mozzaro.Application.Interfaces.Repositories
+  name: Mozzaro.Application.Interfaces.Repositories
+  nameWithType: Mozzaro.Application.Interfaces.Repositories
+  fullName: Mozzaro.Application.Interfaces.Repositories
+  spec.csharp:
+  - uid: Mozzaro
+    name: Mozzaro
+  - name: .
+  - uid: Mozzaro.Application
+    name: Application
+  - name: .
+  - uid: Mozzaro.Application.Interfaces
+    name: Interfaces
+  - name: .
+  - uid: Mozzaro.Application.Interfaces.Repositories
+    name: Repositories
+  spec.vb:
+  - uid: Mozzaro
+    name: Mozzaro
+  - name: .
+  - uid: Mozzaro.Application
+    name: Application
+  - name: .
+  - uid: Mozzaro.Application.Interfaces
+    name: Interfaces
+  - name: .
+  - uid: Mozzaro.Application.Interfaces.Repositories
+    name: Repositories
+- uid: Mozzaro.Application.Interfaces.Repositories.IRepository`1
+  commentId: T:Mozzaro.Application.Interfaces.Repositories.IRepository`1
+  href: Mozzaro.Application.Interfaces.Repositories.IRepository-1.html
+  name: IRepository<T>
+  nameWithType: IRepository<T>
+  fullName: Mozzaro.Application.Interfaces.Repositories.IRepository<T>
+  nameWithType.vb: IRepository(Of T)
+  fullName.vb: Mozzaro.Application.Interfaces.Repositories.IRepository(Of T)
+  name.vb: IRepository(Of T)
+  spec.csharp:
+  - uid: Mozzaro.Application.Interfaces.Repositories.IRepository`1
+    name: IRepository
+    href: Mozzaro.Application.Interfaces.Repositories.IRepository-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Mozzaro.Application.Interfaces.Repositories.IRepository`1
+    name: IRepository
+    href: Mozzaro.Application.Interfaces.Repositories.IRepository-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Mozzaro.Infrastructure.Repositories.Repository`1.GetAllAsync
+  commentId: M:Mozzaro.Infrastructure.Repositories.Repository`1.GetAllAsync
+  href: Mozzaro.Infrastructure.Repositories.Repository-1.html#Mozzaro_Infrastructure_Repositories_Repository_1_GetAllAsync
+  name: GetAllAsync()
+  nameWithType: Repository<T>.GetAllAsync()
+  fullName: Mozzaro.Infrastructure.Repositories.Repository<T>.GetAllAsync()
+  nameWithType.vb: Repository(Of T).GetAllAsync()
+  fullName.vb: Mozzaro.Infrastructure.Repositories.Repository(Of T).GetAllAsync()
+  spec.csharp:
+  - uid: Mozzaro.Infrastructure.Repositories.Repository`1.GetAllAsync
+    name: GetAllAsync
+    href: Mozzaro.Infrastructure.Repositories.Repository-1.html#Mozzaro_Infrastructure_Repositories_Repository_1_GetAllAsync
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Mozzaro.Infrastructure.Repositories.Repository`1.GetAllAsync
+    name: GetAllAsync
+    href: Mozzaro.Infrastructure.Repositories.Repository-1.html#Mozzaro_Infrastructure_Repositories_Repository_1_GetAllAsync
+  - name: (
+  - name: )
+- uid: Mozzaro.Infrastructure.Repositories.Repository`1.GetByIdAsync(System.Int32)
+  commentId: M:Mozzaro.Infrastructure.Repositories.Repository`1.GetByIdAsync(System.Int32)
+  isExternal: true
+  href: Mozzaro.Infrastructure.Repositories.Repository-1.html#Mozzaro_Infrastructure_Repositories_Repository_1_GetByIdAsync_System_Int32_
+  name: GetByIdAsync(int)
+  nameWithType: Repository<T>.GetByIdAsync(int)
+  fullName: Mozzaro.Infrastructure.Repositories.Repository<T>.GetByIdAsync(int)
+  nameWithType.vb: Repository(Of T).GetByIdAsync(Integer)
+  fullName.vb: Mozzaro.Infrastructure.Repositories.Repository(Of T).GetByIdAsync(Integer)
+  name.vb: GetByIdAsync(Integer)
+  spec.csharp:
+  - uid: Mozzaro.Infrastructure.Repositories.Repository`1.GetByIdAsync(System.Int32)
+    name: GetByIdAsync
+    href: Mozzaro.Infrastructure.Repositories.Repository-1.html#Mozzaro_Infrastructure_Repositories_Repository_1_GetByIdAsync_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: Mozzaro.Infrastructure.Repositories.Repository`1.GetByIdAsync(System.Int32)
+    name: GetByIdAsync
+    href: Mozzaro.Infrastructure.Repositories.Repository-1.html#Mozzaro_Infrastructure_Repositories_Repository_1_GetByIdAsync_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: Mozzaro.Infrastructure.Repositories.Repository`1.FirstOrDefaultAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})
+  commentId: M:Mozzaro.Infrastructure.Repositories.Repository`1.FirstOrDefaultAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})
+  isExternal: true
+  href: Mozzaro.Infrastructure.Repositories.Repository-1.html#Mozzaro_Infrastructure_Repositories_Repository_1_FirstOrDefaultAsync_System_Linq_Expressions_Expression_System_Func__0_System_Boolean___
+  name: FirstOrDefaultAsync(Expression<Func<T, bool>>)
+  nameWithType: Repository<T>.FirstOrDefaultAsync(Expression<Func<T, bool>>)
+  fullName: Mozzaro.Infrastructure.Repositories.Repository<T>.FirstOrDefaultAsync(System.Linq.Expressions.Expression<System.Func<T, bool>>)
+  nameWithType.vb: Repository(Of T).FirstOrDefaultAsync(Expression(Of Func(Of T, Boolean)))
+  fullName.vb: Mozzaro.Infrastructure.Repositories.Repository(Of T).FirstOrDefaultAsync(System.Linq.Expressions.Expression(Of System.Func(Of T, Boolean)))
+  name.vb: FirstOrDefaultAsync(Expression(Of Func(Of T, Boolean)))
+  spec.csharp:
+  - uid: Mozzaro.Infrastructure.Repositories.Repository`1.FirstOrDefaultAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})
+    name: FirstOrDefaultAsync
+    href: Mozzaro.Infrastructure.Repositories.Repository-1.html#Mozzaro_Infrastructure_Repositories_Repository_1_FirstOrDefaultAsync_System_Linq_Expressions_Expression_System_Func__0_System_Boolean___
+  - name: (
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: <
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Mozzaro.Infrastructure.Repositories.Repository`1.FirstOrDefaultAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})
+    name: FirstOrDefaultAsync
+    href: Mozzaro.Infrastructure.Repositories.Repository-1.html#Mozzaro_Infrastructure_Repositories_Repository_1_FirstOrDefaultAsync_System_Linq_Expressions_Expression_System_Func__0_System_Boolean___
+  - name: (
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  - name: )
+  - name: )
+- uid: Mozzaro.Infrastructure.Repositories.Repository`1.AddAsync(`0)
+  commentId: M:Mozzaro.Infrastructure.Repositories.Repository`1.AddAsync(`0)
+  href: Mozzaro.Infrastructure.Repositories.Repository-1.html#Mozzaro_Infrastructure_Repositories_Repository_1_AddAsync__0_
+  name: AddAsync(T)
+  nameWithType: Repository<T>.AddAsync(T)
+  fullName: Mozzaro.Infrastructure.Repositories.Repository<T>.AddAsync(T)
+  nameWithType.vb: Repository(Of T).AddAsync(T)
+  fullName.vb: Mozzaro.Infrastructure.Repositories.Repository(Of T).AddAsync(T)
+  spec.csharp:
+  - uid: Mozzaro.Infrastructure.Repositories.Repository`1.AddAsync(`0)
+    name: AddAsync
+    href: Mozzaro.Infrastructure.Repositories.Repository-1.html#Mozzaro_Infrastructure_Repositories_Repository_1_AddAsync__0_
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Mozzaro.Infrastructure.Repositories.Repository`1.AddAsync(`0)
+    name: AddAsync
+    href: Mozzaro.Infrastructure.Repositories.Repository-1.html#Mozzaro_Infrastructure_Repositories_Repository_1_AddAsync__0_
+  - name: (
+  - name: T
+  - name: )
+- uid: Mozzaro.Infrastructure.Repositories.Repository`1.Update(`0)
+  commentId: M:Mozzaro.Infrastructure.Repositories.Repository`1.Update(`0)
+  href: Mozzaro.Infrastructure.Repositories.Repository-1.html#Mozzaro_Infrastructure_Repositories_Repository_1_Update__0_
+  name: Update(T)
+  nameWithType: Repository<T>.Update(T)
+  fullName: Mozzaro.Infrastructure.Repositories.Repository<T>.Update(T)
+  nameWithType.vb: Repository(Of T).Update(T)
+  fullName.vb: Mozzaro.Infrastructure.Repositories.Repository(Of T).Update(T)
+  spec.csharp:
+  - uid: Mozzaro.Infrastructure.Repositories.Repository`1.Update(`0)
+    name: Update
+    href: Mozzaro.Infrastructure.Repositories.Repository-1.html#Mozzaro_Infrastructure_Repositories_Repository_1_Update__0_
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Mozzaro.Infrastructure.Repositories.Repository`1.Update(`0)
+    name: Update
+    href: Mozzaro.Infrastructure.Repositories.Repository-1.html#Mozzaro_Infrastructure_Repositories_Repository_1_Update__0_
+  - name: (
+  - name: T
+  - name: )
+- uid: Mozzaro.Infrastructure.Repositories.Repository`1.Delete(`0)
+  commentId: M:Mozzaro.Infrastructure.Repositories.Repository`1.Delete(`0)
+  href: Mozzaro.Infrastructure.Repositories.Repository-1.html#Mozzaro_Infrastructure_Repositories_Repository_1_Delete__0_
+  name: Delete(T)
+  nameWithType: Repository<T>.Delete(T)
+  fullName: Mozzaro.Infrastructure.Repositories.Repository<T>.Delete(T)
+  nameWithType.vb: Repository(Of T).Delete(T)
+  fullName.vb: Mozzaro.Infrastructure.Repositories.Repository(Of T).Delete(T)
+  spec.csharp:
+  - uid: Mozzaro.Infrastructure.Repositories.Repository`1.Delete(`0)
+    name: Delete
+    href: Mozzaro.Infrastructure.Repositories.Repository-1.html#Mozzaro_Infrastructure_Repositories_Repository_1_Delete__0_
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: Mozzaro.Infrastructure.Repositories.Repository`1.Delete(`0)
+    name: Delete
+    href: Mozzaro.Infrastructure.Repositories.Repository-1.html#Mozzaro_Infrastructure_Repositories_Repository_1_Delete__0_
+  - name: (
+  - name: T
+  - name: )
+- uid: Mozzaro.Infrastructure.Repositories.OrderRepository.#ctor*
+  commentId: Overload:Mozzaro.Infrastructure.Repositories.OrderRepository.#ctor
+  href: Mozzaro.Infrastructure.Repositories.OrderRepository.html#Mozzaro_Infrastructure_Repositories_OrderRepository__ctor_Mozzaro_Infrastructure_Persistence_MozzaroDbContext_
+  name: OrderRepository
+  nameWithType: OrderRepository.OrderRepository
+  fullName: Mozzaro.Infrastructure.Repositories.OrderRepository.OrderRepository
+  nameWithType.vb: OrderRepository.New
+  fullName.vb: Mozzaro.Infrastructure.Repositories.OrderRepository.New
+  name.vb: New
+- uid: Mozzaro.Infrastructure.Persistence.MozzaroDbContext
+  commentId: T:Mozzaro.Infrastructure.Persistence.MozzaroDbContext
+  parent: Mozzaro.Infrastructure.Persistence
+  href: Mozzaro.Infrastructure.Persistence.MozzaroDbContext.html
+  name: MozzaroDbContext
+  nameWithType: MozzaroDbContext
+  fullName: Mozzaro.Infrastructure.Persistence.MozzaroDbContext
+- uid: Mozzaro.Infrastructure.Persistence
+  commentId: N:Mozzaro.Infrastructure.Persistence
+  name: Mozzaro.Infrastructure.Persistence
+  nameWithType: Mozzaro.Infrastructure.Persistence
+  fullName: Mozzaro.Infrastructure.Persistence
+  spec.csharp:
+  - uid: Mozzaro
+    name: Mozzaro
+  - name: .
+  - uid: Mozzaro.Infrastructure
+    name: Infrastructure
+  - name: .
+  - uid: Mozzaro.Infrastructure.Persistence
+    name: Persistence
+  spec.vb:
+  - uid: Mozzaro
+    name: Mozzaro
+  - name: .
+  - uid: Mozzaro.Infrastructure
+    name: Infrastructure
+  - name: .
+  - uid: Mozzaro.Infrastructure.Persistence
+    name: Persistence
+- uid: Mozzaro.Infrastructure.Repositories.OrderRepository.GetByUserIdAsync*
+  commentId: Overload:Mozzaro.Infrastructure.Repositories.OrderRepository.GetByUserIdAsync
+  href: Mozzaro.Infrastructure.Repositories.OrderRepository.html#Mozzaro_Infrastructure_Repositories_OrderRepository_GetByUserIdAsync_System_Int32_
+  name: GetByUserIdAsync
+  nameWithType: OrderRepository.GetByUserIdAsync
+  fullName: Mozzaro.Infrastructure.Repositories.OrderRepository.GetByUserIdAsync
+- uid: Mozzaro.Application.Interfaces.Repositories.IOrderRepository.GetByUserIdAsync(System.Int32)
+  commentId: M:Mozzaro.Application.Interfaces.Repositories.IOrderRepository.GetByUserIdAsync(System.Int32)
+  parent: Mozzaro.Application.Interfaces.Repositories.IOrderRepository
+  isExternal: true
+  href: Mozzaro.Application.Interfaces.Repositories.IOrderRepository.html#Mozzaro_Application_Interfaces_Repositories_IOrderRepository_GetByUserIdAsync_System_Int32_
+  name: GetByUserIdAsync(int)
+  nameWithType: IOrderRepository.GetByUserIdAsync(int)
+  fullName: Mozzaro.Application.Interfaces.Repositories.IOrderRepository.GetByUserIdAsync(int)
+  nameWithType.vb: IOrderRepository.GetByUserIdAsync(Integer)
+  fullName.vb: Mozzaro.Application.Interfaces.Repositories.IOrderRepository.GetByUserIdAsync(Integer)
+  name.vb: GetByUserIdAsync(Integer)
+  spec.csharp:
+  - uid: Mozzaro.Application.Interfaces.Repositories.IOrderRepository.GetByUserIdAsync(System.Int32)
+    name: GetByUserIdAsync
+    href: Mozzaro.Application.Interfaces.Repositories.IOrderRepository.html#Mozzaro_Application_Interfaces_Repositories_IOrderRepository_GetByUserIdAsync_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: Mozzaro.Application.Interfaces.Repositories.IOrderRepository.GetByUserIdAsync(System.Int32)
+    name: GetByUserIdAsync
+    href: Mozzaro.Application.Interfaces.Repositories.IOrderRepository.html#Mozzaro_Application_Interfaces_Repositories_IOrderRepository_GetByUserIdAsync_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Threading.Tasks.Task{System.Collections.Generic.IEnumerable{Mozzaro.Domain.Entities.Order}}
+  commentId: T:System.Threading.Tasks.Task{System.Collections.Generic.IEnumerable{Mozzaro.Domain.Entities.Order}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<IEnumerable<Order>>
+  nameWithType: Task<IEnumerable<Order>>
+  fullName: System.Threading.Tasks.Task<System.Collections.Generic.IEnumerable<Mozzaro.Domain.Entities.Order>>
+  nameWithType.vb: Task(Of IEnumerable(Of Order))
+  fullName.vb: System.Threading.Tasks.Task(Of System.Collections.Generic.IEnumerable(Of Mozzaro.Domain.Entities.Order))
+  name.vb: Task(Of IEnumerable(Of Order))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: Mozzaro.Domain.Entities.Order
+    name: Order
+    href: Mozzaro.Domain.Entities.Order.html
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Mozzaro.Domain.Entities.Order
+    name: Order
+    href: Mozzaro.Domain.Entities.Order.html
+  - name: )
+  - name: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks

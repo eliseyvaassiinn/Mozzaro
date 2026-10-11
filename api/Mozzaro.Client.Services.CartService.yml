@@ -1,0 +1,751 @@
+### YamlMime:ManagedReference
+items:
+- uid: Mozzaro.Client.Services.CartService
+  commentId: T:Mozzaro.Client.Services.CartService
+  id: CartService
+  parent: Mozzaro.Client.Services
+  children:
+  - Mozzaro.Client.Services.CartService.Add(Mozzaro.Domain.Entities.Pizza)
+  - Mozzaro.Client.Services.CartService.Clear
+  - Mozzaro.Client.Services.CartService.Decrease(System.Int32)
+  - Mozzaro.Client.Services.CartService.Increase(System.Int32)
+  - Mozzaro.Client.Services.CartService.Items
+  - Mozzaro.Client.Services.CartService.Remove(System.Int32)
+  - Mozzaro.Client.Services.CartService.TotalItems
+  - Mozzaro.Client.Services.CartService.TotalPrice
+  langs:
+  - csharp
+  - vb
+  name: CartService
+  nameWithType: CartService
+  fullName: Mozzaro.Client.Services.CartService
+  type: Class
+  source:
+    remote:
+      path: Mozzaro.Client/CartService.cs
+      branch: master
+      repo: https://github.com/eliseyvaassiinn/Mozzaro.git
+    id: CartService
+    path: Mozzaro.Client/CartService.cs
+    startLine: 4
+  assemblies:
+  - Mozzaro.Client
+  namespace: Mozzaro.Client.Services
+  syntax:
+    content: public class CartService
+    content.vb: Public Class CartService
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Mozzaro.Client.Services.CartService.Items
+  commentId: P:Mozzaro.Client.Services.CartService.Items
+  id: Items
+  parent: Mozzaro.Client.Services.CartService
+  langs:
+  - csharp
+  - vb
+  name: Items
+  nameWithType: CartService.Items
+  fullName: Mozzaro.Client.Services.CartService.Items
+  type: Property
+  source:
+    remote:
+      path: Mozzaro.Client/CartService.cs
+      branch: master
+      repo: https://github.com/eliseyvaassiinn/Mozzaro.git
+    id: Items
+    path: Mozzaro.Client/CartService.cs
+    startLine: 8
+  assemblies:
+  - Mozzaro.Client
+  namespace: Mozzaro.Client.Services
+  syntax:
+    content: public IReadOnlyList<CartService.CartLine> Items { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IReadOnlyList{Mozzaro.Client.Services.CartService.CartLine}
+    content.vb: Public ReadOnly Property Items As IReadOnlyList(Of CartService.CartLine)
+  overload: Mozzaro.Client.Services.CartService.Items*
+- uid: Mozzaro.Client.Services.CartService.TotalItems
+  commentId: P:Mozzaro.Client.Services.CartService.TotalItems
+  id: TotalItems
+  parent: Mozzaro.Client.Services.CartService
+  langs:
+  - csharp
+  - vb
+  name: TotalItems
+  nameWithType: CartService.TotalItems
+  fullName: Mozzaro.Client.Services.CartService.TotalItems
+  type: Property
+  source:
+    remote:
+      path: Mozzaro.Client/CartService.cs
+      branch: master
+      repo: https://github.com/eliseyvaassiinn/Mozzaro.git
+    id: TotalItems
+    path: Mozzaro.Client/CartService.cs
+    startLine: 10
+  assemblies:
+  - Mozzaro.Client
+  namespace: Mozzaro.Client.Services
+  syntax:
+    content: public int TotalItems { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property TotalItems As Integer
+  overload: Mozzaro.Client.Services.CartService.TotalItems*
+- uid: Mozzaro.Client.Services.CartService.TotalPrice
+  commentId: P:Mozzaro.Client.Services.CartService.TotalPrice
+  id: TotalPrice
+  parent: Mozzaro.Client.Services.CartService
+  langs:
+  - csharp
+  - vb
+  name: TotalPrice
+  nameWithType: CartService.TotalPrice
+  fullName: Mozzaro.Client.Services.CartService.TotalPrice
+  type: Property
+  source:
+    remote:
+      path: Mozzaro.Client/CartService.cs
+      branch: master
+      repo: https://github.com/eliseyvaassiinn/Mozzaro.git
+    id: TotalPrice
+    path: Mozzaro.Client/CartService.cs
+    startLine: 13
+  assemblies:
+  - Mozzaro.Client
+  namespace: Mozzaro.Client.Services
+  syntax:
+    content: public decimal TotalPrice { get; }
+    parameters: []
+    return:
+      type: System.Decimal
+    content.vb: Public ReadOnly Property TotalPrice As Decimal
+  overload: Mozzaro.Client.Services.CartService.TotalPrice*
+- uid: Mozzaro.Client.Services.CartService.Add(Mozzaro.Domain.Entities.Pizza)
+  commentId: M:Mozzaro.Client.Services.CartService.Add(Mozzaro.Domain.Entities.Pizza)
+  id: Add(Mozzaro.Domain.Entities.Pizza)
+  parent: Mozzaro.Client.Services.CartService
+  langs:
+  - csharp
+  - vb
+  name: Add(Pizza)
+  nameWithType: CartService.Add(Pizza)
+  fullName: Mozzaro.Client.Services.CartService.Add(Mozzaro.Domain.Entities.Pizza)
+  type: Method
+  source:
+    remote:
+      path: Mozzaro.Client/CartService.cs
+      branch: master
+      repo: https://github.com/eliseyvaassiinn/Mozzaro.git
+    id: Add
+    path: Mozzaro.Client/CartService.cs
+    startLine: 16
+  assemblies:
+  - Mozzaro.Client
+  namespace: Mozzaro.Client.Services
+  syntax:
+    content: public void Add(Pizza pizza)
+    parameters:
+    - id: pizza
+      type: Mozzaro.Domain.Entities.Pizza
+    content.vb: Public Sub Add(pizza As Pizza)
+  overload: Mozzaro.Client.Services.CartService.Add*
+- uid: Mozzaro.Client.Services.CartService.Increase(System.Int32)
+  commentId: M:Mozzaro.Client.Services.CartService.Increase(System.Int32)
+  id: Increase(System.Int32)
+  parent: Mozzaro.Client.Services.CartService
+  langs:
+  - csharp
+  - vb
+  name: Increase(int)
+  nameWithType: CartService.Increase(int)
+  fullName: Mozzaro.Client.Services.CartService.Increase(int)
+  type: Method
+  source:
+    remote:
+      path: Mozzaro.Client/CartService.cs
+      branch: master
+      repo: https://github.com/eliseyvaassiinn/Mozzaro.git
+    id: Increase
+    path: Mozzaro.Client/CartService.cs
+    startLine: 35
+  assemblies:
+  - Mozzaro.Client
+  namespace: Mozzaro.Client.Services
+  syntax:
+    content: public void Increase(int pizzaId)
+    parameters:
+    - id: pizzaId
+      type: System.Int32
+    content.vb: Public Sub Increase(pizzaId As Integer)
+  overload: Mozzaro.Client.Services.CartService.Increase*
+  nameWithType.vb: CartService.Increase(Integer)
+  fullName.vb: Mozzaro.Client.Services.CartService.Increase(Integer)
+  name.vb: Increase(Integer)
+- uid: Mozzaro.Client.Services.CartService.Decrease(System.Int32)
+  commentId: M:Mozzaro.Client.Services.CartService.Decrease(System.Int32)
+  id: Decrease(System.Int32)
+  parent: Mozzaro.Client.Services.CartService
+  langs:
+  - csharp
+  - vb
+  name: Decrease(int)
+  nameWithType: CartService.Decrease(int)
+  fullName: Mozzaro.Client.Services.CartService.Decrease(int)
+  type: Method
+  source:
+    remote:
+      path: Mozzaro.Client/CartService.cs
+      branch: master
+      repo: https://github.com/eliseyvaassiinn/Mozzaro.git
+    id: Decrease
+    path: Mozzaro.Client/CartService.cs
+    startLine: 46
+  assemblies:
+  - Mozzaro.Client
+  namespace: Mozzaro.Client.Services
+  syntax:
+    content: public void Decrease(int pizzaId)
+    parameters:
+    - id: pizzaId
+      type: System.Int32
+    content.vb: Public Sub Decrease(pizzaId As Integer)
+  overload: Mozzaro.Client.Services.CartService.Decrease*
+  nameWithType.vb: CartService.Decrease(Integer)
+  fullName.vb: Mozzaro.Client.Services.CartService.Decrease(Integer)
+  name.vb: Decrease(Integer)
+- uid: Mozzaro.Client.Services.CartService.Remove(System.Int32)
+  commentId: M:Mozzaro.Client.Services.CartService.Remove(System.Int32)
+  id: Remove(System.Int32)
+  parent: Mozzaro.Client.Services.CartService
+  langs:
+  - csharp
+  - vb
+  name: Remove(int)
+  nameWithType: CartService.Remove(int)
+  fullName: Mozzaro.Client.Services.CartService.Remove(int)
+  type: Method
+  source:
+    remote:
+      path: Mozzaro.Client/CartService.cs
+      branch: master
+      repo: https://github.com/eliseyvaassiinn/Mozzaro.git
+    id: Remove
+    path: Mozzaro.Client/CartService.cs
+    startLine: 64
+  assemblies:
+  - Mozzaro.Client
+  namespace: Mozzaro.Client.Services
+  syntax:
+    content: public void Remove(int pizzaId)
+    parameters:
+    - id: pizzaId
+      type: System.Int32
+    content.vb: Public Sub Remove(pizzaId As Integer)
+  overload: Mozzaro.Client.Services.CartService.Remove*
+  nameWithType.vb: CartService.Remove(Integer)
+  fullName.vb: Mozzaro.Client.Services.CartService.Remove(Integer)
+  name.vb: Remove(Integer)
+- uid: Mozzaro.Client.Services.CartService.Clear
+  commentId: M:Mozzaro.Client.Services.CartService.Clear
+  id: Clear
+  parent: Mozzaro.Client.Services.CartService
+  langs:
+  - csharp
+  - vb
+  name: Clear()
+  nameWithType: CartService.Clear()
+  fullName: Mozzaro.Client.Services.CartService.Clear()
+  type: Method
+  source:
+    remote:
+      path: Mozzaro.Client/CartService.cs
+      branch: master
+      repo: https://github.com/eliseyvaassiinn/Mozzaro.git
+    id: Clear
+    path: Mozzaro.Client/CartService.cs
+    startLine: 75
+  assemblies:
+  - Mozzaro.Client
+  namespace: Mozzaro.Client.Services
+  syntax:
+    content: public void Clear()
+    content.vb: Public Sub Clear()
+  overload: Mozzaro.Client.Services.CartService.Clear*
+references:
+- uid: Mozzaro.Client.Services
+  commentId: N:Mozzaro.Client.Services
+  name: Mozzaro.Client.Services
+  nameWithType: Mozzaro.Client.Services
+  fullName: Mozzaro.Client.Services
+  spec.csharp:
+  - uid: Mozzaro
+    name: Mozzaro
+  - name: .
+  - uid: Mozzaro.Client
+    name: Client
+  - name: .
+  - uid: Mozzaro.Client.Services
+    name: Services
+  spec.vb:
+  - uid: Mozzaro
+    name: Mozzaro
+  - name: .
+  - uid: Mozzaro.Client
+    name: Client
+  - name: .
+  - uid: Mozzaro.Client.Services
+    name: Services
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Mozzaro.Client.Services.CartService.Items*
+  commentId: Overload:Mozzaro.Client.Services.CartService.Items
+  href: Mozzaro.Client.Services.CartService.html#Mozzaro_Client_Services_CartService_Items
+  name: Items
+  nameWithType: CartService.Items
+  fullName: Mozzaro.Client.Services.CartService.Items
+- uid: System.Collections.Generic.IReadOnlyList{Mozzaro.Client.Services.CartService.CartLine}
+  commentId: T:System.Collections.Generic.IReadOnlyList{Mozzaro.Client.Services.CartService.CartLine}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<CartService.CartLine>
+  nameWithType: IReadOnlyList<CartService.CartLine>
+  fullName: System.Collections.Generic.IReadOnlyList<Mozzaro.Client.Services.CartService.CartLine>
+  nameWithType.vb: IReadOnlyList(Of CartService.CartLine)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of Mozzaro.Client.Services.CartService.CartLine)
+  name.vb: IReadOnlyList(Of CartService.CartLine)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - uid: Mozzaro.Client.Services.CartService
+    name: CartService
+    href: Mozzaro.Client.Services.CartService.html
+  - name: .
+  - uid: Mozzaro.Client.Services.CartService.CartLine
+    name: CartLine
+    href: Mozzaro.Client.Services.CartService.CartLine.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Mozzaro.Client.Services.CartService
+    name: CartService
+    href: Mozzaro.Client.Services.CartService.html
+  - name: .
+  - uid: Mozzaro.Client.Services.CartService.CartLine
+    name: CartLine
+    href: Mozzaro.Client.Services.CartService.CartLine.html
+  - name: )
+- uid: System.Collections.Generic.IReadOnlyList`1
+  commentId: T:System.Collections.Generic.IReadOnlyList`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<T>
+  nameWithType: IReadOnlyList<T>
+  fullName: System.Collections.Generic.IReadOnlyList<T>
+  nameWithType.vb: IReadOnlyList(Of T)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of T)
+  name.vb: IReadOnlyList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: Mozzaro.Client.Services.CartService.TotalItems*
+  commentId: Overload:Mozzaro.Client.Services.CartService.TotalItems
+  href: Mozzaro.Client.Services.CartService.html#Mozzaro_Client_Services_CartService_TotalItems
+  name: TotalItems
+  nameWithType: CartService.TotalItems
+  fullName: Mozzaro.Client.Services.CartService.TotalItems
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Mozzaro.Client.Services.CartService.TotalPrice*
+  commentId: Overload:Mozzaro.Client.Services.CartService.TotalPrice
+  href: Mozzaro.Client.Services.CartService.html#Mozzaro_Client_Services_CartService_TotalPrice
+  name: TotalPrice
+  nameWithType: CartService.TotalPrice
+  fullName: Mozzaro.Client.Services.CartService.TotalPrice
+- uid: System.Decimal
+  commentId: T:System.Decimal
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.decimal
+  name: decimal
+  nameWithType: decimal
+  fullName: decimal
+  nameWithType.vb: Decimal
+  fullName.vb: Decimal
+  name.vb: Decimal
+- uid: Mozzaro.Client.Services.CartService.Add*
+  commentId: Overload:Mozzaro.Client.Services.CartService.Add
+  href: Mozzaro.Client.Services.CartService.html#Mozzaro_Client_Services_CartService_Add_Mozzaro_Domain_Entities_Pizza_
+  name: Add
+  nameWithType: CartService.Add
+  fullName: Mozzaro.Client.Services.CartService.Add
+- uid: Mozzaro.Domain.Entities.Pizza
+  commentId: T:Mozzaro.Domain.Entities.Pizza
+  parent: Mozzaro.Domain.Entities
+  href: Mozzaro.Domain.Entities.Pizza.html
+  name: Pizza
+  nameWithType: Pizza
+  fullName: Mozzaro.Domain.Entities.Pizza
+- uid: Mozzaro.Domain.Entities
+  commentId: N:Mozzaro.Domain.Entities
+  name: Mozzaro.Domain.Entities
+  nameWithType: Mozzaro.Domain.Entities
+  fullName: Mozzaro.Domain.Entities
+  spec.csharp:
+  - uid: Mozzaro
+    name: Mozzaro
+  - name: .
+  - uid: Mozzaro.Domain
+    name: Domain
+  - name: .
+  - uid: Mozzaro.Domain.Entities
+    name: Entities
+  spec.vb:
+  - uid: Mozzaro
+    name: Mozzaro
+  - name: .
+  - uid: Mozzaro.Domain
+    name: Domain
+  - name: .
+  - uid: Mozzaro.Domain.Entities
+    name: Entities
+- uid: Mozzaro.Client.Services.CartService.Increase*
+  commentId: Overload:Mozzaro.Client.Services.CartService.Increase
+  href: Mozzaro.Client.Services.CartService.html#Mozzaro_Client_Services_CartService_Increase_System_Int32_
+  name: Increase
+  nameWithType: CartService.Increase
+  fullName: Mozzaro.Client.Services.CartService.Increase
+- uid: Mozzaro.Client.Services.CartService.Decrease*
+  commentId: Overload:Mozzaro.Client.Services.CartService.Decrease
+  href: Mozzaro.Client.Services.CartService.html#Mozzaro_Client_Services_CartService_Decrease_System_Int32_
+  name: Decrease
+  nameWithType: CartService.Decrease
+  fullName: Mozzaro.Client.Services.CartService.Decrease
+- uid: Mozzaro.Client.Services.CartService.Remove*
+  commentId: Overload:Mozzaro.Client.Services.CartService.Remove
+  href: Mozzaro.Client.Services.CartService.html#Mozzaro_Client_Services_CartService_Remove_System_Int32_
+  name: Remove
+  nameWithType: CartService.Remove
+  fullName: Mozzaro.Client.Services.CartService.Remove
+- uid: Mozzaro.Client.Services.CartService.Clear*
+  commentId: Overload:Mozzaro.Client.Services.CartService.Clear
+  href: Mozzaro.Client.Services.CartService.html#Mozzaro_Client_Services_CartService_Clear
+  name: Clear
+  nameWithType: CartService.Clear
+  fullName: Mozzaro.Client.Services.CartService.Clear

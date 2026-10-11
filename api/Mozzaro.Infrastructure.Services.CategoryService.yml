@@ -1,0 +1,961 @@
+### YamlMime:ManagedReference
+items:
+- uid: Mozzaro.Infrastructure.Services.CategoryService
+  commentId: T:Mozzaro.Infrastructure.Services.CategoryService
+  id: CategoryService
+  parent: Mozzaro.Infrastructure.Services
+  children:
+  - Mozzaro.Infrastructure.Services.CategoryService.#ctor(Mozzaro.Application.Interfaces.Repositories.IUnitOfWork)
+  - Mozzaro.Infrastructure.Services.CategoryService.AddAsync(Mozzaro.Domain.Entities.Category)
+  - Mozzaro.Infrastructure.Services.CategoryService.DeleteAsync(System.Int32)
+  - Mozzaro.Infrastructure.Services.CategoryService.GetAllAsync
+  - Mozzaro.Infrastructure.Services.CategoryService.GetByIdAsync(System.Int32)
+  - Mozzaro.Infrastructure.Services.CategoryService.UpdateAsync(Mozzaro.Domain.Entities.Category)
+  langs:
+  - csharp
+  - vb
+  name: CategoryService
+  nameWithType: CategoryService
+  fullName: Mozzaro.Infrastructure.Services.CategoryService
+  type: Class
+  source:
+    remote:
+      path: Mozzaro.Infrastructure/Services/CategoryService.cs
+      branch: master
+      repo: https://github.com/eliseyvaassiinn/Mozzaro.git
+    id: CategoryService
+    path: Mozzaro.Infrastructure/Services/CategoryService.cs
+    startLine: 9
+  assemblies:
+  - Mozzaro.Infrastructure
+  namespace: Mozzaro.Infrastructure.Services
+  summary: provides operations for managing pizza categories.
+  example: []
+  syntax:
+    content: 'public class CategoryService : ICategoryService'
+    content.vb: Public Class CategoryService Implements ICategoryService
+  inheritance:
+  - System.Object
+  implements:
+  - Mozzaro.Application.Interfaces.Services.ICategoryService
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Mozzaro.Infrastructure.Services.CategoryService.#ctor(Mozzaro.Application.Interfaces.Repositories.IUnitOfWork)
+  commentId: M:Mozzaro.Infrastructure.Services.CategoryService.#ctor(Mozzaro.Application.Interfaces.Repositories.IUnitOfWork)
+  id: '#ctor(Mozzaro.Application.Interfaces.Repositories.IUnitOfWork)'
+  parent: Mozzaro.Infrastructure.Services.CategoryService
+  langs:
+  - csharp
+  - vb
+  name: CategoryService(IUnitOfWork)
+  nameWithType: CategoryService.CategoryService(IUnitOfWork)
+  fullName: Mozzaro.Infrastructure.Services.CategoryService.CategoryService(Mozzaro.Application.Interfaces.Repositories.IUnitOfWork)
+  type: Constructor
+  source:
+    remote:
+      path: Mozzaro.Infrastructure/Services/CategoryService.cs
+      branch: master
+      repo: https://github.com/eliseyvaassiinn/Mozzaro.git
+    id: .ctor
+    path: Mozzaro.Infrastructure/Services/CategoryService.cs
+    startLine: 13
+  assemblies:
+  - Mozzaro.Infrastructure
+  namespace: Mozzaro.Infrastructure.Services
+  syntax:
+    content: public CategoryService(IUnitOfWork unitOfWork)
+    parameters:
+    - id: unitOfWork
+      type: Mozzaro.Application.Interfaces.Repositories.IUnitOfWork
+    content.vb: Public Sub New(unitOfWork As IUnitOfWork)
+  overload: Mozzaro.Infrastructure.Services.CategoryService.#ctor*
+  nameWithType.vb: CategoryService.New(IUnitOfWork)
+  fullName.vb: Mozzaro.Infrastructure.Services.CategoryService.New(Mozzaro.Application.Interfaces.Repositories.IUnitOfWork)
+  name.vb: New(IUnitOfWork)
+- uid: Mozzaro.Infrastructure.Services.CategoryService.GetAllAsync
+  commentId: M:Mozzaro.Infrastructure.Services.CategoryService.GetAllAsync
+  id: GetAllAsync
+  parent: Mozzaro.Infrastructure.Services.CategoryService
+  langs:
+  - csharp
+  - vb
+  name: GetAllAsync()
+  nameWithType: CategoryService.GetAllAsync()
+  fullName: Mozzaro.Infrastructure.Services.CategoryService.GetAllAsync()
+  type: Method
+  source:
+    remote:
+      path: Mozzaro.Infrastructure/Services/CategoryService.cs
+      branch: master
+      repo: https://github.com/eliseyvaassiinn/Mozzaro.git
+    id: GetAllAsync
+    path: Mozzaro.Infrastructure/Services/CategoryService.cs
+    startLine: 22
+  assemblies:
+  - Mozzaro.Infrastructure
+  namespace: Mozzaro.Infrastructure.Services
+  summary: gets all categories.
+  example: []
+  syntax:
+    content: public Task<IEnumerable<Category>> GetAllAsync()
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.IEnumerable{Mozzaro.Domain.Entities.Category}}
+      description: a collection of categories.
+    content.vb: Public Function GetAllAsync() As Task(Of IEnumerable(Of Category))
+  overload: Mozzaro.Infrastructure.Services.CategoryService.GetAllAsync*
+  implements:
+  - Mozzaro.Application.Interfaces.Services.ICategoryService.GetAllAsync
+- uid: Mozzaro.Infrastructure.Services.CategoryService.GetByIdAsync(System.Int32)
+  commentId: M:Mozzaro.Infrastructure.Services.CategoryService.GetByIdAsync(System.Int32)
+  id: GetByIdAsync(System.Int32)
+  parent: Mozzaro.Infrastructure.Services.CategoryService
+  langs:
+  - csharp
+  - vb
+  name: GetByIdAsync(int)
+  nameWithType: CategoryService.GetByIdAsync(int)
+  fullName: Mozzaro.Infrastructure.Services.CategoryService.GetByIdAsync(int)
+  type: Method
+  source:
+    remote:
+      path: Mozzaro.Infrastructure/Services/CategoryService.cs
+      branch: master
+      repo: https://github.com/eliseyvaassiinn/Mozzaro.git
+    id: GetByIdAsync
+    path: Mozzaro.Infrastructure/Services/CategoryService.cs
+    startLine: 32
+  assemblies:
+  - Mozzaro.Infrastructure
+  namespace: Mozzaro.Infrastructure.Services
+  summary: gets a category by its identifier.
+  example: []
+  syntax:
+    content: public Task<Category?> GetByIdAsync(int id)
+    parameters:
+    - id: id
+      type: System.Int32
+      description: the category identifier.
+    return:
+      type: System.Threading.Tasks.Task{Mozzaro.Domain.Entities.Category}
+      description: the category if found; otherwise, null.
+    content.vb: Public Function GetByIdAsync(id As Integer) As Task(Of Category)
+  overload: Mozzaro.Infrastructure.Services.CategoryService.GetByIdAsync*
+  implements:
+  - Mozzaro.Application.Interfaces.Services.ICategoryService.GetByIdAsync(System.Int32)
+  nameWithType.vb: CategoryService.GetByIdAsync(Integer)
+  fullName.vb: Mozzaro.Infrastructure.Services.CategoryService.GetByIdAsync(Integer)
+  name.vb: GetByIdAsync(Integer)
+- uid: Mozzaro.Infrastructure.Services.CategoryService.AddAsync(Mozzaro.Domain.Entities.Category)
+  commentId: M:Mozzaro.Infrastructure.Services.CategoryService.AddAsync(Mozzaro.Domain.Entities.Category)
+  id: AddAsync(Mozzaro.Domain.Entities.Category)
+  parent: Mozzaro.Infrastructure.Services.CategoryService
+  langs:
+  - csharp
+  - vb
+  name: AddAsync(Category)
+  nameWithType: CategoryService.AddAsync(Category)
+  fullName: Mozzaro.Infrastructure.Services.CategoryService.AddAsync(Mozzaro.Domain.Entities.Category)
+  type: Method
+  source:
+    remote:
+      path: Mozzaro.Infrastructure/Services/CategoryService.cs
+      branch: master
+      repo: https://github.com/eliseyvaassiinn/Mozzaro.git
+    id: AddAsync
+    path: Mozzaro.Infrastructure/Services/CategoryService.cs
+    startLine: 41
+  assemblies:
+  - Mozzaro.Infrastructure
+  namespace: Mozzaro.Infrastructure.Services
+  summary: adds a new category.
+  example: []
+  syntax:
+    content: public Task AddAsync(Category category)
+    parameters:
+    - id: category
+      type: Mozzaro.Domain.Entities.Category
+      description: the category to add.
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Public Function AddAsync(category As Category) As Task
+  overload: Mozzaro.Infrastructure.Services.CategoryService.AddAsync*
+  implements:
+  - Mozzaro.Application.Interfaces.Services.ICategoryService.AddAsync(Mozzaro.Domain.Entities.Category)
+- uid: Mozzaro.Infrastructure.Services.CategoryService.UpdateAsync(Mozzaro.Domain.Entities.Category)
+  commentId: M:Mozzaro.Infrastructure.Services.CategoryService.UpdateAsync(Mozzaro.Domain.Entities.Category)
+  id: UpdateAsync(Mozzaro.Domain.Entities.Category)
+  parent: Mozzaro.Infrastructure.Services.CategoryService
+  langs:
+  - csharp
+  - vb
+  name: UpdateAsync(Category)
+  nameWithType: CategoryService.UpdateAsync(Category)
+  fullName: Mozzaro.Infrastructure.Services.CategoryService.UpdateAsync(Mozzaro.Domain.Entities.Category)
+  type: Method
+  source:
+    remote:
+      path: Mozzaro.Infrastructure/Services/CategoryService.cs
+      branch: master
+      repo: https://github.com/eliseyvaassiinn/Mozzaro.git
+    id: UpdateAsync
+    path: Mozzaro.Infrastructure/Services/CategoryService.cs
+    startLine: 51
+  assemblies:
+  - Mozzaro.Infrastructure
+  namespace: Mozzaro.Infrastructure.Services
+  summary: updates an existing category.
+  example: []
+  syntax:
+    content: public Task UpdateAsync(Category category)
+    parameters:
+    - id: category
+      type: Mozzaro.Domain.Entities.Category
+      description: the category to update.
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Public Function UpdateAsync(category As Category) As Task
+  overload: Mozzaro.Infrastructure.Services.CategoryService.UpdateAsync*
+  implements:
+  - Mozzaro.Application.Interfaces.Services.ICategoryService.UpdateAsync(Mozzaro.Domain.Entities.Category)
+- uid: Mozzaro.Infrastructure.Services.CategoryService.DeleteAsync(System.Int32)
+  commentId: M:Mozzaro.Infrastructure.Services.CategoryService.DeleteAsync(System.Int32)
+  id: DeleteAsync(System.Int32)
+  parent: Mozzaro.Infrastructure.Services.CategoryService
+  langs:
+  - csharp
+  - vb
+  name: DeleteAsync(int)
+  nameWithType: CategoryService.DeleteAsync(int)
+  fullName: Mozzaro.Infrastructure.Services.CategoryService.DeleteAsync(int)
+  type: Method
+  source:
+    remote:
+      path: Mozzaro.Infrastructure/Services/CategoryService.cs
+      branch: master
+      repo: https://github.com/eliseyvaassiinn/Mozzaro.git
+    id: DeleteAsync
+    path: Mozzaro.Infrastructure/Services/CategoryService.cs
+    startLine: 61
+  assemblies:
+  - Mozzaro.Infrastructure
+  namespace: Mozzaro.Infrastructure.Services
+  summary: deletes a category by its identifier.
+  example: []
+  syntax:
+    content: public Task DeleteAsync(int id)
+    parameters:
+    - id: id
+      type: System.Int32
+      description: the category identifier.
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Public Function DeleteAsync(id As Integer) As Task
+  overload: Mozzaro.Infrastructure.Services.CategoryService.DeleteAsync*
+  implements:
+  - Mozzaro.Application.Interfaces.Services.ICategoryService.DeleteAsync(System.Int32)
+  nameWithType.vb: CategoryService.DeleteAsync(Integer)
+  fullName.vb: Mozzaro.Infrastructure.Services.CategoryService.DeleteAsync(Integer)
+  name.vb: DeleteAsync(Integer)
+references:
+- uid: Mozzaro.Infrastructure.Services
+  commentId: N:Mozzaro.Infrastructure.Services
+  name: Mozzaro.Infrastructure.Services
+  nameWithType: Mozzaro.Infrastructure.Services
+  fullName: Mozzaro.Infrastructure.Services
+  spec.csharp:
+  - uid: Mozzaro
+    name: Mozzaro
+  - name: .
+  - uid: Mozzaro.Infrastructure
+    name: Infrastructure
+  - name: .
+  - uid: Mozzaro.Infrastructure.Services
+    name: Services
+  spec.vb:
+  - uid: Mozzaro
+    name: Mozzaro
+  - name: .
+  - uid: Mozzaro.Infrastructure
+    name: Infrastructure
+  - name: .
+  - uid: Mozzaro.Infrastructure.Services
+    name: Services
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Mozzaro.Application.Interfaces.Services.ICategoryService
+  commentId: T:Mozzaro.Application.Interfaces.Services.ICategoryService
+  parent: Mozzaro.Application.Interfaces.Services
+  href: Mozzaro.Application.Interfaces.Services.ICategoryService.html
+  name: ICategoryService
+  nameWithType: ICategoryService
+  fullName: Mozzaro.Application.Interfaces.Services.ICategoryService
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Mozzaro.Application.Interfaces.Services
+  commentId: N:Mozzaro.Application.Interfaces.Services
+  name: Mozzaro.Application.Interfaces.Services
+  nameWithType: Mozzaro.Application.Interfaces.Services
+  fullName: Mozzaro.Application.Interfaces.Services
+  spec.csharp:
+  - uid: Mozzaro
+    name: Mozzaro
+  - name: .
+  - uid: Mozzaro.Application
+    name: Application
+  - name: .
+  - uid: Mozzaro.Application.Interfaces
+    name: Interfaces
+  - name: .
+  - uid: Mozzaro.Application.Interfaces.Services
+    name: Services
+  spec.vb:
+  - uid: Mozzaro
+    name: Mozzaro
+  - name: .
+  - uid: Mozzaro.Application
+    name: Application
+  - name: .
+  - uid: Mozzaro.Application.Interfaces
+    name: Interfaces
+  - name: .
+  - uid: Mozzaro.Application.Interfaces.Services
+    name: Services
+- uid: Mozzaro.Infrastructure.Services.CategoryService.#ctor*
+  commentId: Overload:Mozzaro.Infrastructure.Services.CategoryService.#ctor
+  href: Mozzaro.Infrastructure.Services.CategoryService.html#Mozzaro_Infrastructure_Services_CategoryService__ctor_Mozzaro_Application_Interfaces_Repositories_IUnitOfWork_
+  name: CategoryService
+  nameWithType: CategoryService.CategoryService
+  fullName: Mozzaro.Infrastructure.Services.CategoryService.CategoryService
+  nameWithType.vb: CategoryService.New
+  fullName.vb: Mozzaro.Infrastructure.Services.CategoryService.New
+  name.vb: New
+- uid: Mozzaro.Application.Interfaces.Repositories.IUnitOfWork
+  commentId: T:Mozzaro.Application.Interfaces.Repositories.IUnitOfWork
+  parent: Mozzaro.Application.Interfaces.Repositories
+  href: Mozzaro.Application.Interfaces.Repositories.IUnitOfWork.html
+  name: IUnitOfWork
+  nameWithType: IUnitOfWork
+  fullName: Mozzaro.Application.Interfaces.Repositories.IUnitOfWork
+- uid: Mozzaro.Application.Interfaces.Repositories
+  commentId: N:Mozzaro.Application.Interfaces.Repositories
+  name: Mozzaro.Application.Interfaces.Repositories
+  nameWithType: Mozzaro.Application.Interfaces.Repositories
+  fullName: Mozzaro.Application.Interfaces.Repositories
+  spec.csharp:
+  - uid: Mozzaro
+    name: Mozzaro
+  - name: .
+  - uid: Mozzaro.Application
+    name: Application
+  - name: .
+  - uid: Mozzaro.Application.Interfaces
+    name: Interfaces
+  - name: .
+  - uid: Mozzaro.Application.Interfaces.Repositories
+    name: Repositories
+  spec.vb:
+  - uid: Mozzaro
+    name: Mozzaro
+  - name: .
+  - uid: Mozzaro.Application
+    name: Application
+  - name: .
+  - uid: Mozzaro.Application.Interfaces
+    name: Interfaces
+  - name: .
+  - uid: Mozzaro.Application.Interfaces.Repositories
+    name: Repositories
+- uid: Mozzaro.Infrastructure.Services.CategoryService.GetAllAsync*
+  commentId: Overload:Mozzaro.Infrastructure.Services.CategoryService.GetAllAsync
+  href: Mozzaro.Infrastructure.Services.CategoryService.html#Mozzaro_Infrastructure_Services_CategoryService_GetAllAsync
+  name: GetAllAsync
+  nameWithType: CategoryService.GetAllAsync
+  fullName: Mozzaro.Infrastructure.Services.CategoryService.GetAllAsync
+- uid: Mozzaro.Application.Interfaces.Services.ICategoryService.GetAllAsync
+  commentId: M:Mozzaro.Application.Interfaces.Services.ICategoryService.GetAllAsync
+  parent: Mozzaro.Application.Interfaces.Services.ICategoryService
+  href: Mozzaro.Application.Interfaces.Services.ICategoryService.html#Mozzaro_Application_Interfaces_Services_ICategoryService_GetAllAsync
+  name: GetAllAsync()
+  nameWithType: ICategoryService.GetAllAsync()
+  fullName: Mozzaro.Application.Interfaces.Services.ICategoryService.GetAllAsync()
+  spec.csharp:
+  - uid: Mozzaro.Application.Interfaces.Services.ICategoryService.GetAllAsync
+    name: GetAllAsync
+    href: Mozzaro.Application.Interfaces.Services.ICategoryService.html#Mozzaro_Application_Interfaces_Services_ICategoryService_GetAllAsync
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Mozzaro.Application.Interfaces.Services.ICategoryService.GetAllAsync
+    name: GetAllAsync
+    href: Mozzaro.Application.Interfaces.Services.ICategoryService.html#Mozzaro_Application_Interfaces_Services_ICategoryService_GetAllAsync
+  - name: (
+  - name: )
+- uid: System.Threading.Tasks.Task{System.Collections.Generic.IEnumerable{Mozzaro.Domain.Entities.Category}}
+  commentId: T:System.Threading.Tasks.Task{System.Collections.Generic.IEnumerable{Mozzaro.Domain.Entities.Category}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<IEnumerable<Category>>
+  nameWithType: Task<IEnumerable<Category>>
+  fullName: System.Threading.Tasks.Task<System.Collections.Generic.IEnumerable<Mozzaro.Domain.Entities.Category>>
+  nameWithType.vb: Task(Of IEnumerable(Of Category))
+  fullName.vb: System.Threading.Tasks.Task(Of System.Collections.Generic.IEnumerable(Of Mozzaro.Domain.Entities.Category))
+  name.vb: Task(Of IEnumerable(Of Category))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: Mozzaro.Domain.Entities.Category
+    name: Category
+    href: Mozzaro.Domain.Entities.Category.html
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Mozzaro.Domain.Entities.Category
+    name: Category
+    href: Mozzaro.Domain.Entities.Category.html
+  - name: )
+  - name: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: Mozzaro.Infrastructure.Services.CategoryService.GetByIdAsync*
+  commentId: Overload:Mozzaro.Infrastructure.Services.CategoryService.GetByIdAsync
+  href: Mozzaro.Infrastructure.Services.CategoryService.html#Mozzaro_Infrastructure_Services_CategoryService_GetByIdAsync_System_Int32_
+  name: GetByIdAsync
+  nameWithType: CategoryService.GetByIdAsync
+  fullName: Mozzaro.Infrastructure.Services.CategoryService.GetByIdAsync
+- uid: Mozzaro.Application.Interfaces.Services.ICategoryService.GetByIdAsync(System.Int32)
+  commentId: M:Mozzaro.Application.Interfaces.Services.ICategoryService.GetByIdAsync(System.Int32)
+  parent: Mozzaro.Application.Interfaces.Services.ICategoryService
+  isExternal: true
+  href: Mozzaro.Application.Interfaces.Services.ICategoryService.html#Mozzaro_Application_Interfaces_Services_ICategoryService_GetByIdAsync_System_Int32_
+  name: GetByIdAsync(int)
+  nameWithType: ICategoryService.GetByIdAsync(int)
+  fullName: Mozzaro.Application.Interfaces.Services.ICategoryService.GetByIdAsync(int)
+  nameWithType.vb: ICategoryService.GetByIdAsync(Integer)
+  fullName.vb: Mozzaro.Application.Interfaces.Services.ICategoryService.GetByIdAsync(Integer)
+  name.vb: GetByIdAsync(Integer)
+  spec.csharp:
+  - uid: Mozzaro.Application.Interfaces.Services.ICategoryService.GetByIdAsync(System.Int32)
+    name: GetByIdAsync
+    href: Mozzaro.Application.Interfaces.Services.ICategoryService.html#Mozzaro_Application_Interfaces_Services_ICategoryService_GetByIdAsync_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: Mozzaro.Application.Interfaces.Services.ICategoryService.GetByIdAsync(System.Int32)
+    name: GetByIdAsync
+    href: Mozzaro.Application.Interfaces.Services.ICategoryService.html#Mozzaro_Application_Interfaces_Services_ICategoryService_GetByIdAsync_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Threading.Tasks.Task{Mozzaro.Domain.Entities.Category}
+  commentId: T:System.Threading.Tasks.Task{Mozzaro.Domain.Entities.Category}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<Category>
+  nameWithType: Task<Category>
+  fullName: System.Threading.Tasks.Task<Mozzaro.Domain.Entities.Category>
+  nameWithType.vb: Task(Of Category)
+  fullName.vb: System.Threading.Tasks.Task(Of Mozzaro.Domain.Entities.Category)
+  name.vb: Task(Of Category)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Mozzaro.Domain.Entities.Category
+    name: Category
+    href: Mozzaro.Domain.Entities.Category.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Mozzaro.Domain.Entities.Category
+    name: Category
+    href: Mozzaro.Domain.Entities.Category.html
+  - name: )
+- uid: Mozzaro.Infrastructure.Services.CategoryService.AddAsync*
+  commentId: Overload:Mozzaro.Infrastructure.Services.CategoryService.AddAsync
+  href: Mozzaro.Infrastructure.Services.CategoryService.html#Mozzaro_Infrastructure_Services_CategoryService_AddAsync_Mozzaro_Domain_Entities_Category_
+  name: AddAsync
+  nameWithType: CategoryService.AddAsync
+  fullName: Mozzaro.Infrastructure.Services.CategoryService.AddAsync
+- uid: Mozzaro.Application.Interfaces.Services.ICategoryService.AddAsync(Mozzaro.Domain.Entities.Category)
+  commentId: M:Mozzaro.Application.Interfaces.Services.ICategoryService.AddAsync(Mozzaro.Domain.Entities.Category)
+  parent: Mozzaro.Application.Interfaces.Services.ICategoryService
+  href: Mozzaro.Application.Interfaces.Services.ICategoryService.html#Mozzaro_Application_Interfaces_Services_ICategoryService_AddAsync_Mozzaro_Domain_Entities_Category_
+  name: AddAsync(Category)
+  nameWithType: ICategoryService.AddAsync(Category)
+  fullName: Mozzaro.Application.Interfaces.Services.ICategoryService.AddAsync(Mozzaro.Domain.Entities.Category)
+  spec.csharp:
+  - uid: Mozzaro.Application.Interfaces.Services.ICategoryService.AddAsync(Mozzaro.Domain.Entities.Category)
+    name: AddAsync
+    href: Mozzaro.Application.Interfaces.Services.ICategoryService.html#Mozzaro_Application_Interfaces_Services_ICategoryService_AddAsync_Mozzaro_Domain_Entities_Category_
+  - name: (
+  - uid: Mozzaro.Domain.Entities.Category
+    name: Category
+    href: Mozzaro.Domain.Entities.Category.html
+  - name: )
+  spec.vb:
+  - uid: Mozzaro.Application.Interfaces.Services.ICategoryService.AddAsync(Mozzaro.Domain.Entities.Category)
+    name: AddAsync
+    href: Mozzaro.Application.Interfaces.Services.ICategoryService.html#Mozzaro_Application_Interfaces_Services_ICategoryService_AddAsync_Mozzaro_Domain_Entities_Category_
+  - name: (
+  - uid: Mozzaro.Domain.Entities.Category
+    name: Category
+    href: Mozzaro.Domain.Entities.Category.html
+  - name: )
+- uid: Mozzaro.Domain.Entities.Category
+  commentId: T:Mozzaro.Domain.Entities.Category
+  parent: Mozzaro.Domain.Entities
+  href: Mozzaro.Domain.Entities.Category.html
+  name: Category
+  nameWithType: Category
+  fullName: Mozzaro.Domain.Entities.Category
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: Mozzaro.Domain.Entities
+  commentId: N:Mozzaro.Domain.Entities
+  name: Mozzaro.Domain.Entities
+  nameWithType: Mozzaro.Domain.Entities
+  fullName: Mozzaro.Domain.Entities
+  spec.csharp:
+  - uid: Mozzaro
+    name: Mozzaro
+  - name: .
+  - uid: Mozzaro.Domain
+    name: Domain
+  - name: .
+  - uid: Mozzaro.Domain.Entities
+    name: Entities
+  spec.vb:
+  - uid: Mozzaro
+    name: Mozzaro
+  - name: .
+  - uid: Mozzaro.Domain
+    name: Domain
+  - name: .
+  - uid: Mozzaro.Domain.Entities
+    name: Entities
+- uid: Mozzaro.Infrastructure.Services.CategoryService.UpdateAsync*
+  commentId: Overload:Mozzaro.Infrastructure.Services.CategoryService.UpdateAsync
+  href: Mozzaro.Infrastructure.Services.CategoryService.html#Mozzaro_Infrastructure_Services_CategoryService_UpdateAsync_Mozzaro_Domain_Entities_Category_
+  name: UpdateAsync
+  nameWithType: CategoryService.UpdateAsync
+  fullName: Mozzaro.Infrastructure.Services.CategoryService.UpdateAsync
+- uid: Mozzaro.Application.Interfaces.Services.ICategoryService.UpdateAsync(Mozzaro.Domain.Entities.Category)
+  commentId: M:Mozzaro.Application.Interfaces.Services.ICategoryService.UpdateAsync(Mozzaro.Domain.Entities.Category)
+  parent: Mozzaro.Application.Interfaces.Services.ICategoryService
+  href: Mozzaro.Application.Interfaces.Services.ICategoryService.html#Mozzaro_Application_Interfaces_Services_ICategoryService_UpdateAsync_Mozzaro_Domain_Entities_Category_
+  name: UpdateAsync(Category)
+  nameWithType: ICategoryService.UpdateAsync(Category)
+  fullName: Mozzaro.Application.Interfaces.Services.ICategoryService.UpdateAsync(Mozzaro.Domain.Entities.Category)
+  spec.csharp:
+  - uid: Mozzaro.Application.Interfaces.Services.ICategoryService.UpdateAsync(Mozzaro.Domain.Entities.Category)
+    name: UpdateAsync
+    href: Mozzaro.Application.Interfaces.Services.ICategoryService.html#Mozzaro_Application_Interfaces_Services_ICategoryService_UpdateAsync_Mozzaro_Domain_Entities_Category_
+  - name: (
+  - uid: Mozzaro.Domain.Entities.Category
+    name: Category
+    href: Mozzaro.Domain.Entities.Category.html
+  - name: )
+  spec.vb:
+  - uid: Mozzaro.Application.Interfaces.Services.ICategoryService.UpdateAsync(Mozzaro.Domain.Entities.Category)
+    name: UpdateAsync
+    href: Mozzaro.Application.Interfaces.Services.ICategoryService.html#Mozzaro_Application_Interfaces_Services_ICategoryService_UpdateAsync_Mozzaro_Domain_Entities_Category_
+  - name: (
+  - uid: Mozzaro.Domain.Entities.Category
+    name: Category
+    href: Mozzaro.Domain.Entities.Category.html
+  - name: )
+- uid: Mozzaro.Infrastructure.Services.CategoryService.DeleteAsync*
+  commentId: Overload:Mozzaro.Infrastructure.Services.CategoryService.DeleteAsync
+  href: Mozzaro.Infrastructure.Services.CategoryService.html#Mozzaro_Infrastructure_Services_CategoryService_DeleteAsync_System_Int32_
+  name: DeleteAsync
+  nameWithType: CategoryService.DeleteAsync
+  fullName: Mozzaro.Infrastructure.Services.CategoryService.DeleteAsync
+- uid: Mozzaro.Application.Interfaces.Services.ICategoryService.DeleteAsync(System.Int32)
+  commentId: M:Mozzaro.Application.Interfaces.Services.ICategoryService.DeleteAsync(System.Int32)
+  parent: Mozzaro.Application.Interfaces.Services.ICategoryService
+  isExternal: true
+  href: Mozzaro.Application.Interfaces.Services.ICategoryService.html#Mozzaro_Application_Interfaces_Services_ICategoryService_DeleteAsync_System_Int32_
+  name: DeleteAsync(int)
+  nameWithType: ICategoryService.DeleteAsync(int)
+  fullName: Mozzaro.Application.Interfaces.Services.ICategoryService.DeleteAsync(int)
+  nameWithType.vb: ICategoryService.DeleteAsync(Integer)
+  fullName.vb: Mozzaro.Application.Interfaces.Services.ICategoryService.DeleteAsync(Integer)
+  name.vb: DeleteAsync(Integer)
+  spec.csharp:
+  - uid: Mozzaro.Application.Interfaces.Services.ICategoryService.DeleteAsync(System.Int32)
+    name: DeleteAsync
+    href: Mozzaro.Application.Interfaces.Services.ICategoryService.html#Mozzaro_Application_Interfaces_Services_ICategoryService_DeleteAsync_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: Mozzaro.Application.Interfaces.Services.ICategoryService.DeleteAsync(System.Int32)
+    name: DeleteAsync
+    href: Mozzaro.Application.Interfaces.Services.ICategoryService.html#Mozzaro_Application_Interfaces_Services_ICategoryService_DeleteAsync_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )

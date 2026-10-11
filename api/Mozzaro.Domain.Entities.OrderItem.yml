@@ -1,0 +1,589 @@
+### YamlMime:ManagedReference
+items:
+- uid: Mozzaro.Domain.Entities.OrderItem
+  commentId: T:Mozzaro.Domain.Entities.OrderItem
+  id: OrderItem
+  parent: Mozzaro.Domain.Entities
+  children:
+  - Mozzaro.Domain.Entities.OrderItem.Id
+  - Mozzaro.Domain.Entities.OrderItem.Order
+  - Mozzaro.Domain.Entities.OrderItem.OrderId
+  - Mozzaro.Domain.Entities.OrderItem.Pizza
+  - Mozzaro.Domain.Entities.OrderItem.PizzaId
+  - Mozzaro.Domain.Entities.OrderItem.Price
+  - Mozzaro.Domain.Entities.OrderItem.Quantity
+  langs:
+  - csharp
+  - vb
+  name: OrderItem
+  nameWithType: OrderItem
+  fullName: Mozzaro.Domain.Entities.OrderItem
+  type: Class
+  source:
+    remote:
+      path: Mozzaro.Domain/Entities/OrderItem.cs
+      branch: master
+      repo: https://github.com/eliseyvaassiinn/Mozzaro.git
+    id: OrderItem
+    path: Mozzaro.Domain/Entities/OrderItem.cs
+    startLine: 5
+  assemblies:
+  - Mozzaro.Domain
+  namespace: Mozzaro.Domain.Entities
+  summary: represents an item included in a customer order.
+  example: []
+  syntax:
+    content: public class OrderItem
+    content.vb: Public Class OrderItem
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Mozzaro.Domain.Entities.OrderItem.Id
+  commentId: P:Mozzaro.Domain.Entities.OrderItem.Id
+  id: Id
+  parent: Mozzaro.Domain.Entities.OrderItem
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: OrderItem.Id
+  fullName: Mozzaro.Domain.Entities.OrderItem.Id
+  type: Property
+  source:
+    remote:
+      path: Mozzaro.Domain/Entities/OrderItem.cs
+      branch: master
+      repo: https://github.com/eliseyvaassiinn/Mozzaro.git
+    id: Id
+    path: Mozzaro.Domain/Entities/OrderItem.cs
+    startLine: 7
+  assemblies:
+  - Mozzaro.Domain
+  namespace: Mozzaro.Domain.Entities
+  syntax:
+    content: public int Id { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Id As Integer
+  overload: Mozzaro.Domain.Entities.OrderItem.Id*
+- uid: Mozzaro.Domain.Entities.OrderItem.OrderId
+  commentId: P:Mozzaro.Domain.Entities.OrderItem.OrderId
+  id: OrderId
+  parent: Mozzaro.Domain.Entities.OrderItem
+  langs:
+  - csharp
+  - vb
+  name: OrderId
+  nameWithType: OrderItem.OrderId
+  fullName: Mozzaro.Domain.Entities.OrderItem.OrderId
+  type: Property
+  source:
+    remote:
+      path: Mozzaro.Domain/Entities/OrderItem.cs
+      branch: master
+      repo: https://github.com/eliseyvaassiinn/Mozzaro.git
+    id: OrderId
+    path: Mozzaro.Domain/Entities/OrderItem.cs
+    startLine: 9
+  assemblies:
+  - Mozzaro.Domain
+  namespace: Mozzaro.Domain.Entities
+  syntax:
+    content: public int OrderId { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property OrderId As Integer
+  overload: Mozzaro.Domain.Entities.OrderItem.OrderId*
+- uid: Mozzaro.Domain.Entities.OrderItem.Order
+  commentId: P:Mozzaro.Domain.Entities.OrderItem.Order
+  id: Order
+  parent: Mozzaro.Domain.Entities.OrderItem
+  langs:
+  - csharp
+  - vb
+  name: Order
+  nameWithType: OrderItem.Order
+  fullName: Mozzaro.Domain.Entities.OrderItem.Order
+  type: Property
+  source:
+    remote:
+      path: Mozzaro.Domain/Entities/OrderItem.cs
+      branch: master
+      repo: https://github.com/eliseyvaassiinn/Mozzaro.git
+    id: Order
+    path: Mozzaro.Domain/Entities/OrderItem.cs
+    startLine: 10
+  assemblies:
+  - Mozzaro.Domain
+  namespace: Mozzaro.Domain.Entities
+  syntax:
+    content: public Order Order { get; set; }
+    parameters: []
+    return:
+      type: Mozzaro.Domain.Entities.Order
+    content.vb: Public Property Order As Order
+  overload: Mozzaro.Domain.Entities.OrderItem.Order*
+- uid: Mozzaro.Domain.Entities.OrderItem.PizzaId
+  commentId: P:Mozzaro.Domain.Entities.OrderItem.PizzaId
+  id: PizzaId
+  parent: Mozzaro.Domain.Entities.OrderItem
+  langs:
+  - csharp
+  - vb
+  name: PizzaId
+  nameWithType: OrderItem.PizzaId
+  fullName: Mozzaro.Domain.Entities.OrderItem.PizzaId
+  type: Property
+  source:
+    remote:
+      path: Mozzaro.Domain/Entities/OrderItem.cs
+      branch: master
+      repo: https://github.com/eliseyvaassiinn/Mozzaro.git
+    id: PizzaId
+    path: Mozzaro.Domain/Entities/OrderItem.cs
+    startLine: 12
+  assemblies:
+  - Mozzaro.Domain
+  namespace: Mozzaro.Domain.Entities
+  syntax:
+    content: public int PizzaId { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property PizzaId As Integer
+  overload: Mozzaro.Domain.Entities.OrderItem.PizzaId*
+- uid: Mozzaro.Domain.Entities.OrderItem.Pizza
+  commentId: P:Mozzaro.Domain.Entities.OrderItem.Pizza
+  id: Pizza
+  parent: Mozzaro.Domain.Entities.OrderItem
+  langs:
+  - csharp
+  - vb
+  name: Pizza
+  nameWithType: OrderItem.Pizza
+  fullName: Mozzaro.Domain.Entities.OrderItem.Pizza
+  type: Property
+  source:
+    remote:
+      path: Mozzaro.Domain/Entities/OrderItem.cs
+      branch: master
+      repo: https://github.com/eliseyvaassiinn/Mozzaro.git
+    id: Pizza
+    path: Mozzaro.Domain/Entities/OrderItem.cs
+    startLine: 13
+  assemblies:
+  - Mozzaro.Domain
+  namespace: Mozzaro.Domain.Entities
+  syntax:
+    content: public Pizza Pizza { get; set; }
+    parameters: []
+    return:
+      type: Mozzaro.Domain.Entities.Pizza
+    content.vb: Public Property Pizza As Pizza
+  overload: Mozzaro.Domain.Entities.OrderItem.Pizza*
+- uid: Mozzaro.Domain.Entities.OrderItem.Quantity
+  commentId: P:Mozzaro.Domain.Entities.OrderItem.Quantity
+  id: Quantity
+  parent: Mozzaro.Domain.Entities.OrderItem
+  langs:
+  - csharp
+  - vb
+  name: Quantity
+  nameWithType: OrderItem.Quantity
+  fullName: Mozzaro.Domain.Entities.OrderItem.Quantity
+  type: Property
+  source:
+    remote:
+      path: Mozzaro.Domain/Entities/OrderItem.cs
+      branch: master
+      repo: https://github.com/eliseyvaassiinn/Mozzaro.git
+    id: Quantity
+    path: Mozzaro.Domain/Entities/OrderItem.cs
+    startLine: 15
+  assemblies:
+  - Mozzaro.Domain
+  namespace: Mozzaro.Domain.Entities
+  syntax:
+    content: public int Quantity { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Quantity As Integer
+  overload: Mozzaro.Domain.Entities.OrderItem.Quantity*
+- uid: Mozzaro.Domain.Entities.OrderItem.Price
+  commentId: P:Mozzaro.Domain.Entities.OrderItem.Price
+  id: Price
+  parent: Mozzaro.Domain.Entities.OrderItem
+  langs:
+  - csharp
+  - vb
+  name: Price
+  nameWithType: OrderItem.Price
+  fullName: Mozzaro.Domain.Entities.OrderItem.Price
+  type: Property
+  source:
+    remote:
+      path: Mozzaro.Domain/Entities/OrderItem.cs
+      branch: master
+      repo: https://github.com/eliseyvaassiinn/Mozzaro.git
+    id: Price
+    path: Mozzaro.Domain/Entities/OrderItem.cs
+    startLine: 16
+  assemblies:
+  - Mozzaro.Domain
+  namespace: Mozzaro.Domain.Entities
+  syntax:
+    content: public decimal Price { get; set; }
+    parameters: []
+    return:
+      type: System.Decimal
+    content.vb: Public Property Price As Decimal
+  overload: Mozzaro.Domain.Entities.OrderItem.Price*
+references:
+- uid: Mozzaro.Domain.Entities
+  commentId: N:Mozzaro.Domain.Entities
+  name: Mozzaro.Domain.Entities
+  nameWithType: Mozzaro.Domain.Entities
+  fullName: Mozzaro.Domain.Entities
+  spec.csharp:
+  - uid: Mozzaro
+    name: Mozzaro
+  - name: .
+  - uid: Mozzaro.Domain
+    name: Domain
+  - name: .
+  - uid: Mozzaro.Domain.Entities
+    name: Entities
+  spec.vb:
+  - uid: Mozzaro
+    name: Mozzaro
+  - name: .
+  - uid: Mozzaro.Domain
+    name: Domain
+  - name: .
+  - uid: Mozzaro.Domain.Entities
+    name: Entities
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Mozzaro.Domain.Entities.OrderItem.Id*
+  commentId: Overload:Mozzaro.Domain.Entities.OrderItem.Id
+  href: Mozzaro.Domain.Entities.OrderItem.html#Mozzaro_Domain_Entities_OrderItem_Id
+  name: Id
+  nameWithType: OrderItem.Id
+  fullName: Mozzaro.Domain.Entities.OrderItem.Id
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Mozzaro.Domain.Entities.OrderItem.OrderId*
+  commentId: Overload:Mozzaro.Domain.Entities.OrderItem.OrderId
+  href: Mozzaro.Domain.Entities.OrderItem.html#Mozzaro_Domain_Entities_OrderItem_OrderId
+  name: OrderId
+  nameWithType: OrderItem.OrderId
+  fullName: Mozzaro.Domain.Entities.OrderItem.OrderId
+- uid: Mozzaro.Domain.Entities.OrderItem.Order*
+  commentId: Overload:Mozzaro.Domain.Entities.OrderItem.Order
+  href: Mozzaro.Domain.Entities.OrderItem.html#Mozzaro_Domain_Entities_OrderItem_Order
+  name: Order
+  nameWithType: OrderItem.Order
+  fullName: Mozzaro.Domain.Entities.OrderItem.Order
+- uid: Mozzaro.Domain.Entities.Order
+  commentId: T:Mozzaro.Domain.Entities.Order
+  parent: Mozzaro.Domain.Entities
+  href: Mozzaro.Domain.Entities.Order.html
+  name: Order
+  nameWithType: Order
+  fullName: Mozzaro.Domain.Entities.Order
+- uid: Mozzaro.Domain.Entities.OrderItem.PizzaId*
+  commentId: Overload:Mozzaro.Domain.Entities.OrderItem.PizzaId
+  href: Mozzaro.Domain.Entities.OrderItem.html#Mozzaro_Domain_Entities_OrderItem_PizzaId
+  name: PizzaId
+  nameWithType: OrderItem.PizzaId
+  fullName: Mozzaro.Domain.Entities.OrderItem.PizzaId
+- uid: Mozzaro.Domain.Entities.OrderItem.Pizza*
+  commentId: Overload:Mozzaro.Domain.Entities.OrderItem.Pizza
+  href: Mozzaro.Domain.Entities.OrderItem.html#Mozzaro_Domain_Entities_OrderItem_Pizza
+  name: Pizza
+  nameWithType: OrderItem.Pizza
+  fullName: Mozzaro.Domain.Entities.OrderItem.Pizza
+- uid: Mozzaro.Domain.Entities.Pizza
+  commentId: T:Mozzaro.Domain.Entities.Pizza
+  parent: Mozzaro.Domain.Entities
+  href: Mozzaro.Domain.Entities.Pizza.html
+  name: Pizza
+  nameWithType: Pizza
+  fullName: Mozzaro.Domain.Entities.Pizza
+- uid: Mozzaro.Domain.Entities.OrderItem.Quantity*
+  commentId: Overload:Mozzaro.Domain.Entities.OrderItem.Quantity
+  href: Mozzaro.Domain.Entities.OrderItem.html#Mozzaro_Domain_Entities_OrderItem_Quantity
+  name: Quantity
+  nameWithType: OrderItem.Quantity
+  fullName: Mozzaro.Domain.Entities.OrderItem.Quantity
+- uid: Mozzaro.Domain.Entities.OrderItem.Price*
+  commentId: Overload:Mozzaro.Domain.Entities.OrderItem.Price
+  href: Mozzaro.Domain.Entities.OrderItem.html#Mozzaro_Domain_Entities_OrderItem_Price
+  name: Price
+  nameWithType: OrderItem.Price
+  fullName: Mozzaro.Domain.Entities.OrderItem.Price
+- uid: System.Decimal
+  commentId: T:System.Decimal
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.decimal
+  name: decimal
+  nameWithType: decimal
+  fullName: decimal
+  nameWithType.vb: Decimal
+  fullName.vb: Decimal
+  name.vb: Decimal

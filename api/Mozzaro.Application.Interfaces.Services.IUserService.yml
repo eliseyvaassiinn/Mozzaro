@@ -1,0 +1,333 @@
+### YamlMime:ManagedReference
+items:
+- uid: Mozzaro.Application.Interfaces.Services.IUserService
+  commentId: T:Mozzaro.Application.Interfaces.Services.IUserService
+  id: IUserService
+  parent: Mozzaro.Application.Interfaces.Services
+  children:
+  - Mozzaro.Application.Interfaces.Services.IUserService.GetByIdAsync(System.Int32)
+  - Mozzaro.Application.Interfaces.Services.IUserService.LoginAsync(System.String,System.String)
+  - Mozzaro.Application.Interfaces.Services.IUserService.RegisterAsync(System.String,System.String,System.String)
+  langs:
+  - csharp
+  - vb
+  name: IUserService
+  nameWithType: IUserService
+  fullName: Mozzaro.Application.Interfaces.Services.IUserService
+  type: Interface
+  source:
+    remote:
+      path: Mozzaro.Application/Interfaces/Services/IUserService.cs
+      branch: master
+      repo: https://github.com/eliseyvaassiinn/Mozzaro.git
+    id: IUserService
+    path: Mozzaro.Application/Interfaces/Services/IUserService.cs
+    startLine: 7
+  assemblies:
+  - Mozzaro.Application
+  namespace: Mozzaro.Application.Interfaces.Services
+  summary: defines operations for managing users and authentication.
+  example: []
+  syntax:
+    content: public interface IUserService
+    content.vb: Public Interface IUserService
+  derivedClasses:
+  - Mozzaro.Application.Services.UserService
+- uid: Mozzaro.Application.Interfaces.Services.IUserService.RegisterAsync(System.String,System.String,System.String)
+  commentId: M:Mozzaro.Application.Interfaces.Services.IUserService.RegisterAsync(System.String,System.String,System.String)
+  id: RegisterAsync(System.String,System.String,System.String)
+  parent: Mozzaro.Application.Interfaces.Services.IUserService
+  langs:
+  - csharp
+  - vb
+  name: RegisterAsync(string, string, string)
+  nameWithType: IUserService.RegisterAsync(string, string, string)
+  fullName: Mozzaro.Application.Interfaces.Services.IUserService.RegisterAsync(string, string, string)
+  type: Method
+  source:
+    remote:
+      path: Mozzaro.Application/Interfaces/Services/IUserService.cs
+      branch: master
+      repo: https://github.com/eliseyvaassiinn/Mozzaro.git
+    id: RegisterAsync
+    path: Mozzaro.Application/Interfaces/Services/IUserService.cs
+    startLine: 16
+  assemblies:
+  - Mozzaro.Application
+  namespace: Mozzaro.Application.Interfaces.Services
+  summary: registers a new user.
+  example: []
+  syntax:
+    content: Task<User?> RegisterAsync(string name, string email, string password)
+    parameters:
+    - id: name
+      type: System.String
+      description: the user's name.
+    - id: email
+      type: System.String
+      description: the user's email address.
+    - id: password
+      type: System.String
+      description: the user's password.
+    return:
+      type: System.Threading.Tasks.Task{Mozzaro.Domain.Entities.User}
+      description: the registered user if successful; otherwise, null.
+    content.vb: Function RegisterAsync(name As String, email As String, password As String) As Task(Of User)
+  overload: Mozzaro.Application.Interfaces.Services.IUserService.RegisterAsync*
+  nameWithType.vb: IUserService.RegisterAsync(String, String, String)
+  fullName.vb: Mozzaro.Application.Interfaces.Services.IUserService.RegisterAsync(String, String, String)
+  name.vb: RegisterAsync(String, String, String)
+- uid: Mozzaro.Application.Interfaces.Services.IUserService.LoginAsync(System.String,System.String)
+  commentId: M:Mozzaro.Application.Interfaces.Services.IUserService.LoginAsync(System.String,System.String)
+  id: LoginAsync(System.String,System.String)
+  parent: Mozzaro.Application.Interfaces.Services.IUserService
+  langs:
+  - csharp
+  - vb
+  name: LoginAsync(string, string)
+  nameWithType: IUserService.LoginAsync(string, string)
+  fullName: Mozzaro.Application.Interfaces.Services.IUserService.LoginAsync(string, string)
+  type: Method
+  source:
+    remote:
+      path: Mozzaro.Application/Interfaces/Services/IUserService.cs
+      branch: master
+      repo: https://github.com/eliseyvaassiinn/Mozzaro.git
+    id: LoginAsync
+    path: Mozzaro.Application/Interfaces/Services/IUserService.cs
+    startLine: 27
+  assemblies:
+  - Mozzaro.Application
+  namespace: Mozzaro.Application.Interfaces.Services
+  summary: authenticates a user with email and password.
+  example: []
+  syntax:
+    content: Task<User?> LoginAsync(string email, string password)
+    parameters:
+    - id: email
+      type: System.String
+      description: the user's email address.
+    - id: password
+      type: System.String
+      description: the user's password.
+    return:
+      type: System.Threading.Tasks.Task{Mozzaro.Domain.Entities.User}
+      description: the authenticated user if credentials are valid; otherwise, null.
+    content.vb: Function LoginAsync(email As String, password As String) As Task(Of User)
+  overload: Mozzaro.Application.Interfaces.Services.IUserService.LoginAsync*
+  nameWithType.vb: IUserService.LoginAsync(String, String)
+  fullName.vb: Mozzaro.Application.Interfaces.Services.IUserService.LoginAsync(String, String)
+  name.vb: LoginAsync(String, String)
+- uid: Mozzaro.Application.Interfaces.Services.IUserService.GetByIdAsync(System.Int32)
+  commentId: M:Mozzaro.Application.Interfaces.Services.IUserService.GetByIdAsync(System.Int32)
+  id: GetByIdAsync(System.Int32)
+  parent: Mozzaro.Application.Interfaces.Services.IUserService
+  langs:
+  - csharp
+  - vb
+  name: GetByIdAsync(int)
+  nameWithType: IUserService.GetByIdAsync(int)
+  fullName: Mozzaro.Application.Interfaces.Services.IUserService.GetByIdAsync(int)
+  type: Method
+  source:
+    remote:
+      path: Mozzaro.Application/Interfaces/Services/IUserService.cs
+      branch: master
+      repo: https://github.com/eliseyvaassiinn/Mozzaro.git
+    id: GetByIdAsync
+    path: Mozzaro.Application/Interfaces/Services/IUserService.cs
+    startLine: 36
+  assemblies:
+  - Mozzaro.Application
+  namespace: Mozzaro.Application.Interfaces.Services
+  summary: gets a user by their identifier.
+  example: []
+  syntax:
+    content: Task<User?> GetByIdAsync(int id)
+    parameters:
+    - id: id
+      type: System.Int32
+      description: the user identifier.
+    return:
+      type: System.Threading.Tasks.Task{Mozzaro.Domain.Entities.User}
+      description: the user if found; otherwise, null.
+    content.vb: Function GetByIdAsync(id As Integer) As Task(Of User)
+  overload: Mozzaro.Application.Interfaces.Services.IUserService.GetByIdAsync*
+  nameWithType.vb: IUserService.GetByIdAsync(Integer)
+  fullName.vb: Mozzaro.Application.Interfaces.Services.IUserService.GetByIdAsync(Integer)
+  name.vb: GetByIdAsync(Integer)
+references:
+- uid: Mozzaro.Application.Interfaces.Services
+  commentId: N:Mozzaro.Application.Interfaces.Services
+  name: Mozzaro.Application.Interfaces.Services
+  nameWithType: Mozzaro.Application.Interfaces.Services
+  fullName: Mozzaro.Application.Interfaces.Services
+  spec.csharp:
+  - uid: Mozzaro
+    name: Mozzaro
+  - name: .
+  - uid: Mozzaro.Application
+    name: Application
+  - name: .
+  - uid: Mozzaro.Application.Interfaces
+    name: Interfaces
+  - name: .
+  - uid: Mozzaro.Application.Interfaces.Services
+    name: Services
+  spec.vb:
+  - uid: Mozzaro
+    name: Mozzaro
+  - name: .
+  - uid: Mozzaro.Application
+    name: Application
+  - name: .
+  - uid: Mozzaro.Application.Interfaces
+    name: Interfaces
+  - name: .
+  - uid: Mozzaro.Application.Interfaces.Services
+    name: Services
+- uid: Mozzaro.Application.Interfaces.Services.IUserService.RegisterAsync*
+  commentId: Overload:Mozzaro.Application.Interfaces.Services.IUserService.RegisterAsync
+  href: Mozzaro.Application.Interfaces.Services.IUserService.html#Mozzaro_Application_Interfaces_Services_IUserService_RegisterAsync_System_String_System_String_System_String_
+  name: RegisterAsync
+  nameWithType: IUserService.RegisterAsync
+  fullName: Mozzaro.Application.Interfaces.Services.IUserService.RegisterAsync
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Threading.Tasks.Task{Mozzaro.Domain.Entities.User}
+  commentId: T:System.Threading.Tasks.Task{Mozzaro.Domain.Entities.User}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<User>
+  nameWithType: Task<User>
+  fullName: System.Threading.Tasks.Task<Mozzaro.Domain.Entities.User>
+  nameWithType.vb: Task(Of User)
+  fullName.vb: System.Threading.Tasks.Task(Of Mozzaro.Domain.Entities.User)
+  name.vb: Task(Of User)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Mozzaro.Domain.Entities.User
+    name: User
+    href: Mozzaro.Domain.Entities.User.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Mozzaro.Domain.Entities.User
+    name: User
+    href: Mozzaro.Domain.Entities.User.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: Mozzaro.Application.Interfaces.Services.IUserService.LoginAsync*
+  commentId: Overload:Mozzaro.Application.Interfaces.Services.IUserService.LoginAsync
+  href: Mozzaro.Application.Interfaces.Services.IUserService.html#Mozzaro_Application_Interfaces_Services_IUserService_LoginAsync_System_String_System_String_
+  name: LoginAsync
+  nameWithType: IUserService.LoginAsync
+  fullName: Mozzaro.Application.Interfaces.Services.IUserService.LoginAsync
+- uid: Mozzaro.Application.Interfaces.Services.IUserService.GetByIdAsync*
+  commentId: Overload:Mozzaro.Application.Interfaces.Services.IUserService.GetByIdAsync
+  href: Mozzaro.Application.Interfaces.Services.IUserService.html#Mozzaro_Application_Interfaces_Services_IUserService_GetByIdAsync_System_Int32_
+  name: GetByIdAsync
+  nameWithType: IUserService.GetByIdAsync
+  fullName: Mozzaro.Application.Interfaces.Services.IUserService.GetByIdAsync
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer

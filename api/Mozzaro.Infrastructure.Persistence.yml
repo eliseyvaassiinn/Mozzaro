@@ -1,0 +1,54 @@
+### YamlMime:ManagedReference
+items:
+- uid: Mozzaro.Infrastructure.Persistence
+  commentId: N:Mozzaro.Infrastructure.Persistence
+  id: Mozzaro.Infrastructure.Persistence
+  children:
+  - Mozzaro.Infrastructure.Persistence.DbSeeder
+  - Mozzaro.Infrastructure.Persistence.MozzaroDbContext
+  langs:
+  - csharp
+  - vb
+  name: Mozzaro.Infrastructure.Persistence
+  nameWithType: Mozzaro.Infrastructure.Persistence
+  fullName: Mozzaro.Infrastructure.Persistence
+  type: Namespace
+  assemblies:
+  - Mozzaro.Infrastructure
+references:
+- uid: Mozzaro.Infrastructure.Persistence.DbSeeder
+  commentId: T:Mozzaro.Infrastructure.Persistence.DbSeeder
+  href: Mozzaro.Infrastructure.Persistence.DbSeeder.html
+  name: DbSeeder
+  nameWithType: DbSeeder
+  fullName: Mozzaro.Infrastructure.Persistence.DbSeeder
+- uid: Mozzaro.Infrastructure.Persistence.MozzaroDbContext
+  commentId: T:Mozzaro.Infrastructure.Persistence.MozzaroDbContext
+  parent: Mozzaro.Infrastructure.Persistence
+  href: Mozzaro.Infrastructure.Persistence.MozzaroDbContext.html
+  name: MozzaroDbContext
+  nameWithType: MozzaroDbContext
+  fullName: Mozzaro.Infrastructure.Persistence.MozzaroDbContext
+- uid: Mozzaro.Infrastructure.Persistence
+  commentId: N:Mozzaro.Infrastructure.Persistence
+  name: Mozzaro.Infrastructure.Persistence
+  nameWithType: Mozzaro.Infrastructure.Persistence
+  fullName: Mozzaro.Infrastructure.Persistence
+  spec.csharp:
+  - uid: Mozzaro
+    name: Mozzaro
+  - name: .
+  - uid: Mozzaro.Infrastructure
+    name: Infrastructure
+  - name: .
+  - uid: Mozzaro.Infrastructure.Persistence
+    name: Persistence
+  spec.vb:
+  - uid: Mozzaro
+    name: Mozzaro
+  - name: .
+  - uid: Mozzaro.Infrastructure
+    name: Infrastructure
+  - name: .
+  - uid: Mozzaro.Infrastructure.Persistence
+    name: Persistence

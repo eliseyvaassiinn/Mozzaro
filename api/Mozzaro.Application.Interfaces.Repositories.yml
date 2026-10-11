@@ -1,0 +1,87 @@
+### YamlMime:ManagedReference
+items:
+- uid: Mozzaro.Application.Interfaces.Repositories
+  commentId: N:Mozzaro.Application.Interfaces.Repositories
+  id: Mozzaro.Application.Interfaces.Repositories
+  children:
+  - Mozzaro.Application.Interfaces.Repositories.IOrderRepository
+  - Mozzaro.Application.Interfaces.Repositories.IRepository`1
+  - Mozzaro.Application.Interfaces.Repositories.IUnitOfWork
+  langs:
+  - csharp
+  - vb
+  name: Mozzaro.Application.Interfaces.Repositories
+  nameWithType: Mozzaro.Application.Interfaces.Repositories
+  fullName: Mozzaro.Application.Interfaces.Repositories
+  type: Namespace
+  assemblies:
+  - Mozzaro.Application
+references:
+- uid: Mozzaro.Application.Interfaces.Repositories.IOrderRepository
+  commentId: T:Mozzaro.Application.Interfaces.Repositories.IOrderRepository
+  parent: Mozzaro.Application.Interfaces.Repositories
+  href: Mozzaro.Application.Interfaces.Repositories.IOrderRepository.html
+  name: IOrderRepository
+  nameWithType: IOrderRepository
+  fullName: Mozzaro.Application.Interfaces.Repositories.IOrderRepository
+- uid: Mozzaro.Application.Interfaces.Repositories.IRepository`1
+  commentId: T:Mozzaro.Application.Interfaces.Repositories.IRepository`1
+  href: Mozzaro.Application.Interfaces.Repositories.IRepository-1.html
+  name: IRepository<T>
+  nameWithType: IRepository<T>
+  fullName: Mozzaro.Application.Interfaces.Repositories.IRepository<T>
+  nameWithType.vb: IRepository(Of T)
+  fullName.vb: Mozzaro.Application.Interfaces.Repositories.IRepository(Of T)
+  name.vb: IRepository(Of T)
+  spec.csharp:
+  - uid: Mozzaro.Application.Interfaces.Repositories.IRepository`1
+    name: IRepository
+    href: Mozzaro.Application.Interfaces.Repositories.IRepository-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Mozzaro.Application.Interfaces.Repositories.IRepository`1
+    name: IRepository
+    href: Mozzaro.Application.Interfaces.Repositories.IRepository-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Mozzaro.Application.Interfaces.Repositories.IUnitOfWork
+  commentId: T:Mozzaro.Application.Interfaces.Repositories.IUnitOfWork
+  parent: Mozzaro.Application.Interfaces.Repositories
+  href: Mozzaro.Application.Interfaces.Repositories.IUnitOfWork.html
+  name: IUnitOfWork
+  nameWithType: IUnitOfWork
+  fullName: Mozzaro.Application.Interfaces.Repositories.IUnitOfWork
+- uid: Mozzaro.Application.Interfaces.Repositories
+  commentId: N:Mozzaro.Application.Interfaces.Repositories
+  name: Mozzaro.Application.Interfaces.Repositories
+  nameWithType: Mozzaro.Application.Interfaces.Repositories
+  fullName: Mozzaro.Application.Interfaces.Repositories
+  spec.csharp:
+  - uid: Mozzaro
+    name: Mozzaro
+  - name: .
+  - uid: Mozzaro.Application
+    name: Application
+  - name: .
+  - uid: Mozzaro.Application.Interfaces
+    name: Interfaces
+  - name: .
+  - uid: Mozzaro.Application.Interfaces.Repositories
+    name: Repositories
+  spec.vb:
+  - uid: Mozzaro
+    name: Mozzaro
+  - name: .
+  - uid: Mozzaro.Application
+    name: Application
+  - name: .
+  - uid: Mozzaro.Application.Interfaces
+    name: Interfaces
+  - name: .
+  - uid: Mozzaro.Application.Interfaces.Repositories
+    name: Repositories

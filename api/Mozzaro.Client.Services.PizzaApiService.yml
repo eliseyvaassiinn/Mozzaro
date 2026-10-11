@@ -1,0 +1,696 @@
+### YamlMime:ManagedReference
+items:
+- uid: Mozzaro.Client.Services.PizzaApiService
+  commentId: T:Mozzaro.Client.Services.PizzaApiService
+  id: PizzaApiService
+  parent: Mozzaro.Client.Services
+  children:
+  - Mozzaro.Client.Services.PizzaApiService.#ctor(System.Net.Http.HttpClient)
+  - Mozzaro.Client.Services.PizzaApiService.GetCategoriesAsync
+  - Mozzaro.Client.Services.PizzaApiService.GetPizzaByIdAsync(System.Int32)
+  - Mozzaro.Client.Services.PizzaApiService.GetPizzasAsync
+  langs:
+  - csharp
+  - vb
+  name: PizzaApiService
+  nameWithType: PizzaApiService
+  fullName: Mozzaro.Client.Services.PizzaApiService
+  type: Class
+  source:
+    remote:
+      path: Mozzaro.Client/Components/PizzaApiService.cs
+      branch: master
+      repo: https://github.com/eliseyvaassiinn/Mozzaro.git
+    id: PizzaApiService
+    path: Mozzaro.Client/Components/PizzaApiService.cs
+    startLine: 5
+  assemblies:
+  - Mozzaro.Client
+  namespace: Mozzaro.Client.Services
+  syntax:
+    content: public class PizzaApiService
+    content.vb: Public Class PizzaApiService
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Mozzaro.Client.Services.PizzaApiService.#ctor(System.Net.Http.HttpClient)
+  commentId: M:Mozzaro.Client.Services.PizzaApiService.#ctor(System.Net.Http.HttpClient)
+  id: '#ctor(System.Net.Http.HttpClient)'
+  parent: Mozzaro.Client.Services.PizzaApiService
+  langs:
+  - csharp
+  - vb
+  name: PizzaApiService(HttpClient)
+  nameWithType: PizzaApiService.PizzaApiService(HttpClient)
+  fullName: Mozzaro.Client.Services.PizzaApiService.PizzaApiService(System.Net.Http.HttpClient)
+  type: Constructor
+  source:
+    remote:
+      path: Mozzaro.Client/Components/PizzaApiService.cs
+      branch: master
+      repo: https://github.com/eliseyvaassiinn/Mozzaro.git
+    id: .ctor
+    path: Mozzaro.Client/Components/PizzaApiService.cs
+    startLine: 9
+  assemblies:
+  - Mozzaro.Client
+  namespace: Mozzaro.Client.Services
+  syntax:
+    content: public PizzaApiService(HttpClient httpClient)
+    parameters:
+    - id: httpClient
+      type: System.Net.Http.HttpClient
+    content.vb: Public Sub New(httpClient As HttpClient)
+  overload: Mozzaro.Client.Services.PizzaApiService.#ctor*
+  nameWithType.vb: PizzaApiService.New(HttpClient)
+  fullName.vb: Mozzaro.Client.Services.PizzaApiService.New(System.Net.Http.HttpClient)
+  name.vb: New(HttpClient)
+- uid: Mozzaro.Client.Services.PizzaApiService.GetPizzasAsync
+  commentId: M:Mozzaro.Client.Services.PizzaApiService.GetPizzasAsync
+  id: GetPizzasAsync
+  parent: Mozzaro.Client.Services.PizzaApiService
+  langs:
+  - csharp
+  - vb
+  name: GetPizzasAsync()
+  nameWithType: PizzaApiService.GetPizzasAsync()
+  fullName: Mozzaro.Client.Services.PizzaApiService.GetPizzasAsync()
+  type: Method
+  source:
+    remote:
+      path: Mozzaro.Client/Components/PizzaApiService.cs
+      branch: master
+      repo: https://github.com/eliseyvaassiinn/Mozzaro.git
+    id: GetPizzasAsync
+    path: Mozzaro.Client/Components/PizzaApiService.cs
+    startLine: 14
+  assemblies:
+  - Mozzaro.Client
+  namespace: Mozzaro.Client.Services
+  syntax:
+    content: public Task<List<Pizza>> GetPizzasAsync()
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.List{Mozzaro.Domain.Entities.Pizza}}
+    content.vb: Public Function GetPizzasAsync() As Task(Of List(Of Pizza))
+  overload: Mozzaro.Client.Services.PizzaApiService.GetPizzasAsync*
+- uid: Mozzaro.Client.Services.PizzaApiService.GetPizzaByIdAsync(System.Int32)
+  commentId: M:Mozzaro.Client.Services.PizzaApiService.GetPizzaByIdAsync(System.Int32)
+  id: GetPizzaByIdAsync(System.Int32)
+  parent: Mozzaro.Client.Services.PizzaApiService
+  langs:
+  - csharp
+  - vb
+  name: GetPizzaByIdAsync(int)
+  nameWithType: PizzaApiService.GetPizzaByIdAsync(int)
+  fullName: Mozzaro.Client.Services.PizzaApiService.GetPizzaByIdAsync(int)
+  type: Method
+  source:
+    remote:
+      path: Mozzaro.Client/Components/PizzaApiService.cs
+      branch: master
+      repo: https://github.com/eliseyvaassiinn/Mozzaro.git
+    id: GetPizzaByIdAsync
+    path: Mozzaro.Client/Components/PizzaApiService.cs
+    startLine: 20
+  assemblies:
+  - Mozzaro.Client
+  namespace: Mozzaro.Client.Services
+  syntax:
+    content: public Task<Pizza?> GetPizzaByIdAsync(int id)
+    parameters:
+    - id: id
+      type: System.Int32
+    return:
+      type: System.Threading.Tasks.Task{Mozzaro.Domain.Entities.Pizza}
+    content.vb: Public Function GetPizzaByIdAsync(id As Integer) As Task(Of Pizza)
+  overload: Mozzaro.Client.Services.PizzaApiService.GetPizzaByIdAsync*
+  nameWithType.vb: PizzaApiService.GetPizzaByIdAsync(Integer)
+  fullName.vb: Mozzaro.Client.Services.PizzaApiService.GetPizzaByIdAsync(Integer)
+  name.vb: GetPizzaByIdAsync(Integer)
+- uid: Mozzaro.Client.Services.PizzaApiService.GetCategoriesAsync
+  commentId: M:Mozzaro.Client.Services.PizzaApiService.GetCategoriesAsync
+  id: GetCategoriesAsync
+  parent: Mozzaro.Client.Services.PizzaApiService
+  langs:
+  - csharp
+  - vb
+  name: GetCategoriesAsync()
+  nameWithType: PizzaApiService.GetCategoriesAsync()
+  fullName: Mozzaro.Client.Services.PizzaApiService.GetCategoriesAsync()
+  type: Method
+  source:
+    remote:
+      path: Mozzaro.Client/Components/PizzaApiService.cs
+      branch: master
+      repo: https://github.com/eliseyvaassiinn/Mozzaro.git
+    id: GetCategoriesAsync
+    path: Mozzaro.Client/Components/PizzaApiService.cs
+    startLine: 25
+  assemblies:
+  - Mozzaro.Client
+  namespace: Mozzaro.Client.Services
+  syntax:
+    content: public Task<List<Category>> GetCategoriesAsync()
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.List{Mozzaro.Domain.Entities.Category}}
+    content.vb: Public Function GetCategoriesAsync() As Task(Of List(Of Category))
+  overload: Mozzaro.Client.Services.PizzaApiService.GetCategoriesAsync*
+references:
+- uid: Mozzaro.Client.Services
+  commentId: N:Mozzaro.Client.Services
+  name: Mozzaro.Client.Services
+  nameWithType: Mozzaro.Client.Services
+  fullName: Mozzaro.Client.Services
+  spec.csharp:
+  - uid: Mozzaro
+    name: Mozzaro
+  - name: .
+  - uid: Mozzaro.Client
+    name: Client
+  - name: .
+  - uid: Mozzaro.Client.Services
+    name: Services
+  spec.vb:
+  - uid: Mozzaro
+    name: Mozzaro
+  - name: .
+  - uid: Mozzaro.Client
+    name: Client
+  - name: .
+  - uid: Mozzaro.Client.Services
+    name: Services
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Mozzaro.Client.Services.PizzaApiService.#ctor*
+  commentId: Overload:Mozzaro.Client.Services.PizzaApiService.#ctor
+  href: Mozzaro.Client.Services.PizzaApiService.html#Mozzaro_Client_Services_PizzaApiService__ctor_System_Net_Http_HttpClient_
+  name: PizzaApiService
+  nameWithType: PizzaApiService.PizzaApiService
+  fullName: Mozzaro.Client.Services.PizzaApiService.PizzaApiService
+  nameWithType.vb: PizzaApiService.New
+  fullName.vb: Mozzaro.Client.Services.PizzaApiService.New
+  name.vb: New
+- uid: System.Net.Http.HttpClient
+  commentId: T:System.Net.Http.HttpClient
+  parent: System.Net.Http
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.net.http.httpclient
+  name: HttpClient
+  nameWithType: HttpClient
+  fullName: System.Net.Http.HttpClient
+- uid: System.Net.Http
+  commentId: N:System.Net.Http
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Net.Http
+  nameWithType: System.Net.Http
+  fullName: System.Net.Http
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Net
+    name: Net
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.net
+  - name: .
+  - uid: System.Net.Http
+    name: Http
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.net.http
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Net
+    name: Net
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.net
+  - name: .
+  - uid: System.Net.Http
+    name: Http
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.net.http
+- uid: Mozzaro.Client.Services.PizzaApiService.GetPizzasAsync*
+  commentId: Overload:Mozzaro.Client.Services.PizzaApiService.GetPizzasAsync
+  href: Mozzaro.Client.Services.PizzaApiService.html#Mozzaro_Client_Services_PizzaApiService_GetPizzasAsync
+  name: GetPizzasAsync
+  nameWithType: PizzaApiService.GetPizzasAsync
+  fullName: Mozzaro.Client.Services.PizzaApiService.GetPizzasAsync
+- uid: System.Threading.Tasks.Task{System.Collections.Generic.List{Mozzaro.Domain.Entities.Pizza}}
+  commentId: T:System.Threading.Tasks.Task{System.Collections.Generic.List{Mozzaro.Domain.Entities.Pizza}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<List<Pizza>>
+  nameWithType: Task<List<Pizza>>
+  fullName: System.Threading.Tasks.Task<System.Collections.Generic.List<Mozzaro.Domain.Entities.Pizza>>
+  nameWithType.vb: Task(Of List(Of Pizza))
+  fullName.vb: System.Threading.Tasks.Task(Of System.Collections.Generic.List(Of Mozzaro.Domain.Entities.Pizza))
+  name.vb: Task(Of List(Of Pizza))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: Mozzaro.Domain.Entities.Pizza
+    name: Pizza
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Mozzaro.Domain.Entities.Pizza
+    name: Pizza
+  - name: )
+  - name: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: Mozzaro.Client.Services.PizzaApiService.GetPizzaByIdAsync*
+  commentId: Overload:Mozzaro.Client.Services.PizzaApiService.GetPizzaByIdAsync
+  href: Mozzaro.Client.Services.PizzaApiService.html#Mozzaro_Client_Services_PizzaApiService_GetPizzaByIdAsync_System_Int32_
+  name: GetPizzaByIdAsync
+  nameWithType: PizzaApiService.GetPizzaByIdAsync
+  fullName: Mozzaro.Client.Services.PizzaApiService.GetPizzaByIdAsync
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Threading.Tasks.Task{Mozzaro.Domain.Entities.Pizza}
+  commentId: T:System.Threading.Tasks.Task{Mozzaro.Domain.Entities.Pizza}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<Pizza>
+  nameWithType: Task<Pizza>
+  fullName: System.Threading.Tasks.Task<Mozzaro.Domain.Entities.Pizza>
+  nameWithType.vb: Task(Of Pizza)
+  fullName.vb: System.Threading.Tasks.Task(Of Mozzaro.Domain.Entities.Pizza)
+  name.vb: Task(Of Pizza)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Mozzaro.Domain.Entities.Pizza
+    name: Pizza
+    href: Mozzaro.Domain.Entities.Pizza.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Mozzaro.Domain.Entities.Pizza
+    name: Pizza
+    href: Mozzaro.Domain.Entities.Pizza.html
+  - name: )
+- uid: Mozzaro.Client.Services.PizzaApiService.GetCategoriesAsync*
+  commentId: Overload:Mozzaro.Client.Services.PizzaApiService.GetCategoriesAsync
+  href: Mozzaro.Client.Services.PizzaApiService.html#Mozzaro_Client_Services_PizzaApiService_GetCategoriesAsync
+  name: GetCategoriesAsync
+  nameWithType: PizzaApiService.GetCategoriesAsync
+  fullName: Mozzaro.Client.Services.PizzaApiService.GetCategoriesAsync
+- uid: System.Threading.Tasks.Task{System.Collections.Generic.List{Mozzaro.Domain.Entities.Category}}
+  commentId: T:System.Threading.Tasks.Task{System.Collections.Generic.List{Mozzaro.Domain.Entities.Category}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<List<Category>>
+  nameWithType: Task<List<Category>>
+  fullName: System.Threading.Tasks.Task<System.Collections.Generic.List<Mozzaro.Domain.Entities.Category>>
+  nameWithType.vb: Task(Of List(Of Category))
+  fullName.vb: System.Threading.Tasks.Task(Of System.Collections.Generic.List(Of Mozzaro.Domain.Entities.Category))
+  name.vb: Task(Of List(Of Category))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: Mozzaro.Domain.Entities.Category
+    name: Category
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Mozzaro.Domain.Entities.Category
+    name: Category
+  - name: )
+  - name: )

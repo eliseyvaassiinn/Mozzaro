@@ -1,0 +1,1009 @@
+### YamlMime:ManagedReference
+items:
+- uid: Mozzaro.Application.Services.OrderService
+  commentId: T:Mozzaro.Application.Services.OrderService
+  id: OrderService
+  parent: Mozzaro.Application.Services
+  children:
+  - Mozzaro.Application.Services.OrderService.#ctor(Mozzaro.Application.Interfaces.Repositories.IUnitOfWork,Mozzaro.Application.Interfaces.Repositories.IOrderRepository)
+  - Mozzaro.Application.Services.OrderService.CreateOrderAsync(System.Int32,System.String,System.Collections.Generic.IEnumerable{System.ValueTuple{System.Int32,System.Int32,System.Decimal}})
+  - Mozzaro.Application.Services.OrderService.GetUserOrdersAsync(System.Int32)
+  langs:
+  - csharp
+  - vb
+  name: OrderService
+  nameWithType: OrderService
+  fullName: Mozzaro.Application.Services.OrderService
+  type: Class
+  source:
+    remote:
+      path: Mozzaro.Application/Services/OrderService.cs
+      branch: master
+      repo: https://github.com/eliseyvaassiinn/Mozzaro.git
+    id: OrderService
+    path: Mozzaro.Application/Services/OrderService.cs
+    startLine: 9
+  assemblies:
+  - Mozzaro.Application
+  namespace: Mozzaro.Application.Services
+  summary: provides operations for creating and retrieving customer orders.
+  example: []
+  syntax:
+    content: 'public class OrderService : IOrderService'
+    content.vb: Public Class OrderService Implements IOrderService
+  inheritance:
+  - System.Object
+  implements:
+  - Mozzaro.Application.Interfaces.Services.IOrderService
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Mozzaro.Application.Services.OrderService.#ctor(Mozzaro.Application.Interfaces.Repositories.IUnitOfWork,Mozzaro.Application.Interfaces.Repositories.IOrderRepository)
+  commentId: M:Mozzaro.Application.Services.OrderService.#ctor(Mozzaro.Application.Interfaces.Repositories.IUnitOfWork,Mozzaro.Application.Interfaces.Repositories.IOrderRepository)
+  id: '#ctor(Mozzaro.Application.Interfaces.Repositories.IUnitOfWork,Mozzaro.Application.Interfaces.Repositories.IOrderRepository)'
+  parent: Mozzaro.Application.Services.OrderService
+  langs:
+  - csharp
+  - vb
+  name: OrderService(IUnitOfWork, IOrderRepository)
+  nameWithType: OrderService.OrderService(IUnitOfWork, IOrderRepository)
+  fullName: Mozzaro.Application.Services.OrderService.OrderService(Mozzaro.Application.Interfaces.Repositories.IUnitOfWork, Mozzaro.Application.Interfaces.Repositories.IOrderRepository)
+  type: Constructor
+  source:
+    remote:
+      path: Mozzaro.Application/Services/OrderService.cs
+      branch: master
+      repo: https://github.com/eliseyvaassiinn/Mozzaro.git
+    id: .ctor
+    path: Mozzaro.Application/Services/OrderService.cs
+    startLine: 14
+  assemblies:
+  - Mozzaro.Application
+  namespace: Mozzaro.Application.Services
+  syntax:
+    content: public OrderService(IUnitOfWork unitOfWork, IOrderRepository orderRepository)
+    parameters:
+    - id: unitOfWork
+      type: Mozzaro.Application.Interfaces.Repositories.IUnitOfWork
+    - id: orderRepository
+      type: Mozzaro.Application.Interfaces.Repositories.IOrderRepository
+    content.vb: Public Sub New(unitOfWork As IUnitOfWork, orderRepository As IOrderRepository)
+  overload: Mozzaro.Application.Services.OrderService.#ctor*
+  nameWithType.vb: OrderService.New(IUnitOfWork, IOrderRepository)
+  fullName.vb: Mozzaro.Application.Services.OrderService.New(Mozzaro.Application.Interfaces.Repositories.IUnitOfWork, Mozzaro.Application.Interfaces.Repositories.IOrderRepository)
+  name.vb: New(IUnitOfWork, IOrderRepository)
+- uid: Mozzaro.Application.Services.OrderService.CreateOrderAsync(System.Int32,System.String,System.Collections.Generic.IEnumerable{System.ValueTuple{System.Int32,System.Int32,System.Decimal}})
+  commentId: M:Mozzaro.Application.Services.OrderService.CreateOrderAsync(System.Int32,System.String,System.Collections.Generic.IEnumerable{System.ValueTuple{System.Int32,System.Int32,System.Decimal}})
+  id: CreateOrderAsync(System.Int32,System.String,System.Collections.Generic.IEnumerable{System.ValueTuple{System.Int32,System.Int32,System.Decimal}})
+  parent: Mozzaro.Application.Services.OrderService
+  langs:
+  - csharp
+  - vb
+  name: CreateOrderAsync(int, string, IEnumerable<(int PizzaId, int Quantity, decimal Price)>)
+  nameWithType: OrderService.CreateOrderAsync(int, string, IEnumerable<(int PizzaId, int Quantity, decimal Price)>)
+  fullName: Mozzaro.Application.Services.OrderService.CreateOrderAsync(int, string, System.Collections.Generic.IEnumerable<(int PizzaId, int Quantity, decimal Price)>)
+  type: Method
+  source:
+    remote:
+      path: Mozzaro.Application/Services/OrderService.cs
+      branch: master
+      repo: https://github.com/eliseyvaassiinn/Mozzaro.git
+    id: CreateOrderAsync
+    path: Mozzaro.Application/Services/OrderService.cs
+    startLine: 29
+  assemblies:
+  - Mozzaro.Application
+  namespace: Mozzaro.Application.Services
+  summary: creates a new customer order.
+  example: []
+  syntax:
+    content: public Task<Order> CreateOrderAsync(int userId, string deliveryAddress, IEnumerable<(int PizzaId, int Quantity, decimal Price)> items)
+    parameters:
+    - id: userId
+      type: System.Int32
+      description: the user identifier.
+    - id: deliveryAddress
+      type: System.String
+      description: the delivery address.
+    - id: items
+      type: System.Collections.Generic.IEnumerable{System.ValueTuple{System.Int32,System.Int32,System.Decimal}}
+      description: the pizzas and quantities included in the order.
+    return:
+      type: System.Threading.Tasks.Task{Mozzaro.Domain.Entities.Order}
+      description: the created order.
+    content.vb: Public Function CreateOrderAsync(userId As Integer, deliveryAddress As String, items As IEnumerable(Of (PizzaId As Integer, Quantity As Integer, Price As Decimal))) As Task(Of Order)
+  overload: Mozzaro.Application.Services.OrderService.CreateOrderAsync*
+  implements:
+  - Mozzaro.Application.Interfaces.Services.IOrderService.CreateOrderAsync(System.Int32,System.String,System.Collections.Generic.IEnumerable{System.ValueTuple{System.Int32,System.Int32,System.Decimal}})
+  nameWithType.vb: OrderService.CreateOrderAsync(Integer, String, IEnumerable(Of (PizzaId As Integer, Quantity As Integer, Price As Decimal)))
+  fullName.vb: Mozzaro.Application.Services.OrderService.CreateOrderAsync(Integer, String, System.Collections.Generic.IEnumerable(Of (PizzaId As Integer, Quantity As Integer, Price As Decimal)))
+  name.vb: CreateOrderAsync(Integer, String, IEnumerable(Of (PizzaId As Integer, Quantity As Integer, Price As Decimal)))
+- uid: Mozzaro.Application.Services.OrderService.GetUserOrdersAsync(System.Int32)
+  commentId: M:Mozzaro.Application.Services.OrderService.GetUserOrdersAsync(System.Int32)
+  id: GetUserOrdersAsync(System.Int32)
+  parent: Mozzaro.Application.Services.OrderService
+  langs:
+  - csharp
+  - vb
+  name: GetUserOrdersAsync(int)
+  nameWithType: OrderService.GetUserOrdersAsync(int)
+  fullName: Mozzaro.Application.Services.OrderService.GetUserOrdersAsync(int)
+  type: Method
+  source:
+    remote:
+      path: Mozzaro.Application/Services/OrderService.cs
+      branch: master
+      repo: https://github.com/eliseyvaassiinn/Mozzaro.git
+    id: GetUserOrdersAsync
+    path: Mozzaro.Application/Services/OrderService.cs
+    startLine: 69
+  assemblies:
+  - Mozzaro.Application
+  namespace: Mozzaro.Application.Services
+  summary: gets all orders belonging to a user.
+  example: []
+  syntax:
+    content: public Task<IEnumerable<Order>> GetUserOrdersAsync(int userId)
+    parameters:
+    - id: userId
+      type: System.Int32
+      description: the user identifier.
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.IEnumerable{Mozzaro.Domain.Entities.Order}}
+      description: the user's orders.
+    content.vb: Public Function GetUserOrdersAsync(userId As Integer) As Task(Of IEnumerable(Of Order))
+  overload: Mozzaro.Application.Services.OrderService.GetUserOrdersAsync*
+  implements:
+  - Mozzaro.Application.Interfaces.Services.IOrderService.GetUserOrdersAsync(System.Int32)
+  nameWithType.vb: OrderService.GetUserOrdersAsync(Integer)
+  fullName.vb: Mozzaro.Application.Services.OrderService.GetUserOrdersAsync(Integer)
+  name.vb: GetUserOrdersAsync(Integer)
+references:
+- uid: Mozzaro.Application.Services
+  commentId: N:Mozzaro.Application.Services
+  name: Mozzaro.Application.Services
+  nameWithType: Mozzaro.Application.Services
+  fullName: Mozzaro.Application.Services
+  spec.csharp:
+  - uid: Mozzaro
+    name: Mozzaro
+  - name: .
+  - uid: Mozzaro.Application
+    name: Application
+  - name: .
+  - uid: Mozzaro.Application.Services
+    name: Services
+  spec.vb:
+  - uid: Mozzaro
+    name: Mozzaro
+  - name: .
+  - uid: Mozzaro.Application
+    name: Application
+  - name: .
+  - uid: Mozzaro.Application.Services
+    name: Services
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Mozzaro.Application.Interfaces.Services.IOrderService
+  commentId: T:Mozzaro.Application.Interfaces.Services.IOrderService
+  parent: Mozzaro.Application.Interfaces.Services
+  href: Mozzaro.Application.Interfaces.Services.IOrderService.html
+  name: IOrderService
+  nameWithType: IOrderService
+  fullName: Mozzaro.Application.Interfaces.Services.IOrderService
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Mozzaro.Application.Interfaces.Services
+  commentId: N:Mozzaro.Application.Interfaces.Services
+  name: Mozzaro.Application.Interfaces.Services
+  nameWithType: Mozzaro.Application.Interfaces.Services
+  fullName: Mozzaro.Application.Interfaces.Services
+  spec.csharp:
+  - uid: Mozzaro
+    name: Mozzaro
+  - name: .
+  - uid: Mozzaro.Application
+    name: Application
+  - name: .
+  - uid: Mozzaro.Application.Interfaces
+    name: Interfaces
+  - name: .
+  - uid: Mozzaro.Application.Interfaces.Services
+    name: Services
+  spec.vb:
+  - uid: Mozzaro
+    name: Mozzaro
+  - name: .
+  - uid: Mozzaro.Application
+    name: Application
+  - name: .
+  - uid: Mozzaro.Application.Interfaces
+    name: Interfaces
+  - name: .
+  - uid: Mozzaro.Application.Interfaces.Services
+    name: Services
+- uid: Mozzaro.Application.Services.OrderService.#ctor*
+  commentId: Overload:Mozzaro.Application.Services.OrderService.#ctor
+  href: Mozzaro.Application.Services.OrderService.html#Mozzaro_Application_Services_OrderService__ctor_Mozzaro_Application_Interfaces_Repositories_IUnitOfWork_Mozzaro_Application_Interfaces_Repositories_IOrderRepository_
+  name: OrderService
+  nameWithType: OrderService.OrderService
+  fullName: Mozzaro.Application.Services.OrderService.OrderService
+  nameWithType.vb: OrderService.New
+  fullName.vb: Mozzaro.Application.Services.OrderService.New
+  name.vb: New
+- uid: Mozzaro.Application.Interfaces.Repositories.IUnitOfWork
+  commentId: T:Mozzaro.Application.Interfaces.Repositories.IUnitOfWork
+  parent: Mozzaro.Application.Interfaces.Repositories
+  href: Mozzaro.Application.Interfaces.Repositories.IUnitOfWork.html
+  name: IUnitOfWork
+  nameWithType: IUnitOfWork
+  fullName: Mozzaro.Application.Interfaces.Repositories.IUnitOfWork
+- uid: Mozzaro.Application.Interfaces.Repositories.IOrderRepository
+  commentId: T:Mozzaro.Application.Interfaces.Repositories.IOrderRepository
+  parent: Mozzaro.Application.Interfaces.Repositories
+  href: Mozzaro.Application.Interfaces.Repositories.IOrderRepository.html
+  name: IOrderRepository
+  nameWithType: IOrderRepository
+  fullName: Mozzaro.Application.Interfaces.Repositories.IOrderRepository
+- uid: Mozzaro.Application.Interfaces.Repositories
+  commentId: N:Mozzaro.Application.Interfaces.Repositories
+  name: Mozzaro.Application.Interfaces.Repositories
+  nameWithType: Mozzaro.Application.Interfaces.Repositories
+  fullName: Mozzaro.Application.Interfaces.Repositories
+  spec.csharp:
+  - uid: Mozzaro
+    name: Mozzaro
+  - name: .
+  - uid: Mozzaro.Application
+    name: Application
+  - name: .
+  - uid: Mozzaro.Application.Interfaces
+    name: Interfaces
+  - name: .
+  - uid: Mozzaro.Application.Interfaces.Repositories
+    name: Repositories
+  spec.vb:
+  - uid: Mozzaro
+    name: Mozzaro
+  - name: .
+  - uid: Mozzaro.Application
+    name: Application
+  - name: .
+  - uid: Mozzaro.Application.Interfaces
+    name: Interfaces
+  - name: .
+  - uid: Mozzaro.Application.Interfaces.Repositories
+    name: Repositories
+- uid: Mozzaro.Application.Services.OrderService.CreateOrderAsync*
+  commentId: Overload:Mozzaro.Application.Services.OrderService.CreateOrderAsync
+  href: Mozzaro.Application.Services.OrderService.html#Mozzaro_Application_Services_OrderService_CreateOrderAsync_System_Int32_System_String_System_Collections_Generic_IEnumerable_System_ValueTuple_System_Int32_System_Int32_System_Decimal___
+  name: CreateOrderAsync
+  nameWithType: OrderService.CreateOrderAsync
+  fullName: Mozzaro.Application.Services.OrderService.CreateOrderAsync
+- uid: Mozzaro.Application.Interfaces.Services.IOrderService.CreateOrderAsync(System.Int32,System.String,System.Collections.Generic.IEnumerable{System.ValueTuple{System.Int32,System.Int32,System.Decimal}})
+  commentId: M:Mozzaro.Application.Interfaces.Services.IOrderService.CreateOrderAsync(System.Int32,System.String,System.Collections.Generic.IEnumerable{System.ValueTuple{System.Int32,System.Int32,System.Decimal}})
+  parent: Mozzaro.Application.Interfaces.Services.IOrderService
+  isExternal: true
+  href: Mozzaro.Application.Interfaces.Services.IOrderService.html#Mozzaro_Application_Interfaces_Services_IOrderService_CreateOrderAsync_System_Int32_System_String_System_Collections_Generic_IEnumerable_System_ValueTuple_System_Int32_System_Int32_System_Decimal___
+  name: CreateOrderAsync(int, string, IEnumerable<(int PizzaId, int Quantity, decimal Price)>)
+  nameWithType: IOrderService.CreateOrderAsync(int, string, IEnumerable<(int PizzaId, int Quantity, decimal Price)>)
+  fullName: Mozzaro.Application.Interfaces.Services.IOrderService.CreateOrderAsync(int, string, System.Collections.Generic.IEnumerable<(int PizzaId, int Quantity, decimal Price)>)
+  nameWithType.vb: IOrderService.CreateOrderAsync(Integer, String, IEnumerable(Of (PizzaId As Integer, Quantity As Integer, Price As Decimal)))
+  fullName.vb: Mozzaro.Application.Interfaces.Services.IOrderService.CreateOrderAsync(Integer, String, System.Collections.Generic.IEnumerable(Of (PizzaId As Integer, Quantity As Integer, Price As Decimal)))
+  name.vb: CreateOrderAsync(Integer, String, IEnumerable(Of (PizzaId As Integer, Quantity As Integer, Price As Decimal)))
+  spec.csharp:
+  - uid: Mozzaro.Application.Interfaces.Services.IOrderService.CreateOrderAsync(System.Int32,System.String,System.Collections.Generic.IEnumerable{System.ValueTuple{System.Int32,System.Int32,System.Decimal}})
+    name: CreateOrderAsync
+    href: Mozzaro.Application.Interfaces.Services.IOrderService.html#Mozzaro_Application_Interfaces_Services_IOrderService_CreateOrderAsync_System_Int32_System_String_System_Collections_Generic_IEnumerable_System_ValueTuple_System_Int32_System_Int32_System_Decimal___
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: " "
+  - uid: System.ValueTuple{System.Int32,System.Int32,System.Decimal}.PizzaId
+    name: PizzaId
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.int32,system.int32,system.decimal-.pizzaid
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: " "
+  - uid: System.ValueTuple{System.Int32,System.Int32,System.Decimal}.Quantity
+    name: Quantity
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.int32,system.int32,system.decimal-.quantity
+  - name: ','
+  - name: " "
+  - uid: System.Decimal
+    name: decimal
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.decimal
+  - name: " "
+  - uid: System.ValueTuple{System.Int32,System.Int32,System.Decimal}.Price
+    name: Price
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.int32,system.int32,system.decimal-.price
+  - name: )
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Mozzaro.Application.Interfaces.Services.IOrderService.CreateOrderAsync(System.Int32,System.String,System.Collections.Generic.IEnumerable{System.ValueTuple{System.Int32,System.Int32,System.Decimal}})
+    name: CreateOrderAsync
+    href: Mozzaro.Application.Interfaces.Services.IOrderService.html#Mozzaro_Application_Interfaces_Services_IOrderService_CreateOrderAsync_System_Int32_System_String_System_Collections_Generic_IEnumerable_System_ValueTuple_System_Int32_System_Int32_System_Decimal___
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: (
+  - uid: System.ValueTuple{System.Int32,System.Int32,System.Decimal}.PizzaId
+    name: PizzaId
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.int32,system.int32,system.decimal-.pizzaid
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.ValueTuple{System.Int32,System.Int32,System.Decimal}.Quantity
+    name: Quantity
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.int32,system.int32,system.decimal-.quantity
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.ValueTuple{System.Int32,System.Int32,System.Decimal}.Price
+    name: Price
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.int32,system.int32,system.decimal-.price
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: System.Decimal
+    name: Decimal
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.decimal
+  - name: )
+  - name: )
+  - name: )
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Collections.Generic.IEnumerable{System.ValueTuple{System.Int32,System.Int32,System.Decimal}}
+  commentId: T:System.Collections.Generic.IEnumerable{System.ValueTuple{System.Int32,System.Int32,System.Decimal}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<(int PizzaId, int Quantity, decimal Price)>
+  nameWithType: IEnumerable<(int PizzaId, int Quantity, decimal Price)>
+  fullName: System.Collections.Generic.IEnumerable<(int PizzaId, int Quantity, decimal Price)>
+  nameWithType.vb: IEnumerable(Of (PizzaId As Integer, Quantity As Integer, Price As Decimal))
+  fullName.vb: System.Collections.Generic.IEnumerable(Of (PizzaId As Integer, Quantity As Integer, Price As Decimal))
+  name.vb: IEnumerable(Of (PizzaId As Integer, Quantity As Integer, Price As Decimal))
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: " "
+  - uid: System.ValueTuple{System.Int32,System.Int32,System.Decimal}.PizzaId
+    name: PizzaId
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.int32,system.int32,system.decimal-.pizzaid
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: " "
+  - uid: System.ValueTuple{System.Int32,System.Int32,System.Decimal}.Quantity
+    name: Quantity
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.int32,system.int32,system.decimal-.quantity
+  - name: ','
+  - name: " "
+  - uid: System.Decimal
+    name: decimal
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.decimal
+  - name: " "
+  - uid: System.ValueTuple{System.Int32,System.Int32,System.Decimal}.Price
+    name: Price
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.int32,system.int32,system.decimal-.price
+  - name: )
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: (
+  - uid: System.ValueTuple{System.Int32,System.Int32,System.Decimal}.PizzaId
+    name: PizzaId
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.int32,system.int32,system.decimal-.pizzaid
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.ValueTuple{System.Int32,System.Int32,System.Decimal}.Quantity
+    name: Quantity
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.int32,system.int32,system.decimal-.quantity
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.ValueTuple{System.Int32,System.Int32,System.Decimal}.Price
+    name: Price
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.int32,system.int32,system.decimal-.price
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: System.Decimal
+    name: Decimal
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.decimal
+  - name: )
+  - name: )
+- uid: System.Threading.Tasks.Task{Mozzaro.Domain.Entities.Order}
+  commentId: T:System.Threading.Tasks.Task{Mozzaro.Domain.Entities.Order}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<Order>
+  nameWithType: Task<Order>
+  fullName: System.Threading.Tasks.Task<Mozzaro.Domain.Entities.Order>
+  nameWithType.vb: Task(Of Order)
+  fullName.vb: System.Threading.Tasks.Task(Of Mozzaro.Domain.Entities.Order)
+  name.vb: Task(Of Order)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Mozzaro.Domain.Entities.Order
+    name: Order
+    href: Mozzaro.Domain.Entities.Order.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Mozzaro.Domain.Entities.Order
+    name: Order
+    href: Mozzaro.Domain.Entities.Order.html
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: Mozzaro.Application.Services.OrderService.GetUserOrdersAsync*
+  commentId: Overload:Mozzaro.Application.Services.OrderService.GetUserOrdersAsync
+  href: Mozzaro.Application.Services.OrderService.html#Mozzaro_Application_Services_OrderService_GetUserOrdersAsync_System_Int32_
+  name: GetUserOrdersAsync
+  nameWithType: OrderService.GetUserOrdersAsync
+  fullName: Mozzaro.Application.Services.OrderService.GetUserOrdersAsync
+- uid: Mozzaro.Application.Interfaces.Services.IOrderService.GetUserOrdersAsync(System.Int32)
+  commentId: M:Mozzaro.Application.Interfaces.Services.IOrderService.GetUserOrdersAsync(System.Int32)
+  parent: Mozzaro.Application.Interfaces.Services.IOrderService
+  isExternal: true
+  href: Mozzaro.Application.Interfaces.Services.IOrderService.html#Mozzaro_Application_Interfaces_Services_IOrderService_GetUserOrdersAsync_System_Int32_
+  name: GetUserOrdersAsync(int)
+  nameWithType: IOrderService.GetUserOrdersAsync(int)
+  fullName: Mozzaro.Application.Interfaces.Services.IOrderService.GetUserOrdersAsync(int)
+  nameWithType.vb: IOrderService.GetUserOrdersAsync(Integer)
+  fullName.vb: Mozzaro.Application.Interfaces.Services.IOrderService.GetUserOrdersAsync(Integer)
+  name.vb: GetUserOrdersAsync(Integer)
+  spec.csharp:
+  - uid: Mozzaro.Application.Interfaces.Services.IOrderService.GetUserOrdersAsync(System.Int32)
+    name: GetUserOrdersAsync
+    href: Mozzaro.Application.Interfaces.Services.IOrderService.html#Mozzaro_Application_Interfaces_Services_IOrderService_GetUserOrdersAsync_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: Mozzaro.Application.Interfaces.Services.IOrderService.GetUserOrdersAsync(System.Int32)
+    name: GetUserOrdersAsync
+    href: Mozzaro.Application.Interfaces.Services.IOrderService.html#Mozzaro_Application_Interfaces_Services_IOrderService_GetUserOrdersAsync_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: System.Threading.Tasks.Task{System.Collections.Generic.IEnumerable{Mozzaro.Domain.Entities.Order}}
+  commentId: T:System.Threading.Tasks.Task{System.Collections.Generic.IEnumerable{Mozzaro.Domain.Entities.Order}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<IEnumerable<Order>>
+  nameWithType: Task<IEnumerable<Order>>
+  fullName: System.Threading.Tasks.Task<System.Collections.Generic.IEnumerable<Mozzaro.Domain.Entities.Order>>
+  nameWithType.vb: Task(Of IEnumerable(Of Order))
+  fullName.vb: System.Threading.Tasks.Task(Of System.Collections.Generic.IEnumerable(Of Mozzaro.Domain.Entities.Order))
+  name.vb: Task(Of IEnumerable(Of Order))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: Mozzaro.Domain.Entities.Order
+    name: Order
+    href: Mozzaro.Domain.Entities.Order.html
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Mozzaro.Domain.Entities.Order
+    name: Order
+    href: Mozzaro.Domain.Entities.Order.html
+  - name: )
+  - name: )

@@ -6,6 +6,9 @@ using Mozzaro.Domain.Entities;
 
 namespace Mozzaro.Application.Services;
 
+/// <summary>
+/// provides operations for user registration and authentication.
+/// </summary>
 public class UserService : IUserService
 {
     private readonly IUnitOfWork _unitOfWork;
@@ -15,6 +18,13 @@ public class UserService : IUserService
         _unitOfWork = unitOfWork;
     }
 
+    /// <summary>
+    /// registers a new user.
+    /// </summary>
+    /// <param name="name">the user's name.</param>
+    /// <param name="email">the user's email address.</param>
+    /// <param name="password">the user's password.</param>
+    /// <returns>the registered user if successful; otherwise, null.</returns>
     public async Task<User?> RegisterAsync(
         string name,
         string email,
@@ -44,6 +54,12 @@ public class UserService : IUserService
         return user;
     }
 
+    /// <summary>
+    /// authenticates a user with email and password.
+    /// </summary>
+    /// <param name="email">the user's email address.</param>
+    /// <param name="password">the user's password.</param>
+    /// <returns>the authenticated user if credentials are valid; otherwise, null.</returns>
     public async Task<User?> LoginAsync(
         string email,
         string password)
@@ -58,6 +74,11 @@ public class UserService : IUserService
                 x.PasswordHash == passwordHash);
     }
 
+    /// <summary>
+    /// gets a user by their identifier.
+    /// </summary>
+    /// <param name="id">the user identifier.</param>
+    /// <returns>the user if found; otherwise, null.</returns>
     public async Task<User?> GetByIdAsync(int id)
     {
         return await _unitOfWork

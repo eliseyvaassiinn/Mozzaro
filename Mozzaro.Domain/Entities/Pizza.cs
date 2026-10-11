@@ -1,5 +1,8 @@
 namespace Mozzaro.Domain.Entities;
 
+/// <summary>
+/// represents a pizza in the pizzeria catalog.
+/// </summary>
 public class Pizza
 {
     public int Id { get; set; }

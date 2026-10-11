@@ -5,6 +5,9 @@ using Mozzaro.Infrastructure.Persistence;
 
 namespace Mozzaro.Infrastructure.Repositories;
 
+/// <summary>
+/// provides data access operations for customer orders.
+/// </summary>
 public class OrderRepository : Repository<Order>, IOrderRepository
 {
     private readonly MozzaroDbContext _context;
@@ -15,6 +18,11 @@ public class OrderRepository : Repository<Order>, IOrderRepository
         _context = context;
     }
 
+    /// <summary>
+    /// gets all orders belonging to a specific user.
+    /// </summary>
+    /// <param name="userId">the user identifier.</param>
+    /// <returns>the user's orders with their order items and pizzas.</returns>
     public async Task<IEnumerable<Order>> GetByUserIdAsync(int userId)
     {
         return await _context.Orders

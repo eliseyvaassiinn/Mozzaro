@@ -4,6 +4,9 @@ using Mozzaro.Domain.Entities;
 
 namespace Mozzaro.API.Controllers;
 
+/// <summary>
+/// provides API endpoints for managing pizza categories.
+/// </summary>
 [ApiController]
 [Route("api/[controller]")]
 public class CategoryController : ControllerBase
@@ -15,6 +18,10 @@ public class CategoryController : ControllerBase
         _categoryService = categoryService;
     }
 
+    /// <summary>
+    /// gets all pizza categories.
+    /// </summary>
+    /// <returns>a list of categories.</returns>
     [HttpGet]
     public async Task<ActionResult<IEnumerable<Category>>> GetAll()
     {
@@ -23,6 +30,11 @@ public class CategoryController : ControllerBase
         return Ok(categories);
     }
 
+    /// <summary>
+    /// gets a category by its identifier.
+    /// </summary>
+    /// <param name="id">the category identifier.</param>
+    /// <returns>the category if found; otherwise, a not found response.</returns>
     [HttpGet("{id:int}")]
     public async Task<ActionResult<Category>> GetById(int id)
     {
@@ -34,6 +46,11 @@ public class CategoryController : ControllerBase
         return Ok(category);
     }
 
+    /// <summary>
+    /// creates a new category.
+    /// </summary>
+    /// <param name="category">the category to create.</param>
+    /// <returns>the created category.</returns>
     [HttpPost]
     public async Task<ActionResult> Create(Category category)
     {
@@ -45,6 +62,12 @@ public class CategoryController : ControllerBase
             category);
     }
 
+    /// <summary>
+    /// updates an existing category.
+    /// </summary>
+    /// <param name="id">the category identifier.</param>
+    /// <param name="category">the updated category data.</param>
+    /// <returns>a no content response if successful.</returns>
     [HttpPut("{id:int}")]
     public async Task<ActionResult> Update(int id, Category category)
     {
@@ -61,6 +84,11 @@ public class CategoryController : ControllerBase
         return NoContent();
     }
 
+    /// <summary>
+    /// deletes a category by its identifier.
+    /// </summary>
+    /// <param name="id">the category identifier.</param>
+    /// <returns>a no content response if successful.</returns>
     [HttpDelete("{id:int}")]
     public async Task<ActionResult> Delete(int id)
     {

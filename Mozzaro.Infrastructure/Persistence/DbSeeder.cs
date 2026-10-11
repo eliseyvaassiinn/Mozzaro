@@ -3,8 +3,15 @@ using Mozzaro.Domain.Entities;
 
 namespace Mozzaro.Infrastructure.Persistence;
 
+/// <summary>
+/// provides initial data seeding for the Mozzaro database.
+/// </summary>
 public static class DbSeeder
 {
+    /// <summary>
+    /// applies pending migrations and seeds initial database data.
+    /// </summary>
+    /// <param name="context">the Mozzaro database context.</param>
     public static async Task SeedAsync(MozzaroDbContext context)
     {
         await context.Database.MigrateAsync();

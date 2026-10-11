@@ -3,6 +3,9 @@ using Mozzaro.Domain.Entities;
 
 namespace Mozzaro.Infrastructure.Persistence;
 
+/// <summary>
+/// represents the Entity Framework Core database context for Mozzaro.
+/// </summary>
 public class MozzaroDbContext : DbContext
 {
     public MozzaroDbContext(DbContextOptions<MozzaroDbContext> options)
@@ -20,6 +23,10 @@ public class MozzaroDbContext : DbContext
     public DbSet<Order> Orders => Set<Order>();
     public DbSet<OrderItem> OrderItems => Set<OrderItem>();
 
+    /// <summary>
+    /// configures the database model and applies entity configurations.
+    /// </summary>
+    /// <param name="modelBuilder">the model builder used to configure the database model.</param>
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.ApplyConfigurationsFromAssembly(

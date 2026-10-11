@@ -1,0 +1,52 @@
+{
+  "$schema": "https://raw.githubusercontent.com/dotnet/docfx/main/schemas/docfx.schema.json",
+  "metadata": [
+    {
+      "src": [
+        {
+          "src": ".",
+          "files": [
+            "Mozzaro.API/Mozzaro.API.csproj",
+            "Mozzaro.Application/Mozzaro.Application.csproj",
+            "Mozzaro.Client/Mozzaro.Client.csproj",
+            "Mozzaro.Domain/Mozzaro.Domain.csproj",
+            "Mozzaro.Infrastructure/Mozzaro.Infrastructure.csproj",
+            "Mozzaro.Tests/Mozzaro.Tests.csproj"
+          ]
+        }
+      ],
+      "dest": "api"
+    }
+  ],
+  "build": {
+    "content": [
+      {
+        "files": [
+          "**/*.md",
+          "api/**.yml"
+        ],
+        "exclude": [
+          "_site/**"
+        ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "images/**"
+        ]
+      }
+    ],
+    "output": "_site",
+    "template": [
+      "default",
+      "modern"
+    ],
+    "globalMetadata": {
+      "_appName": "Mozzaro",
+      "_appTitle": "Mozzaro",
+      "_enableSearch": true,
+      "pdf": true
+    }
+  }
+}

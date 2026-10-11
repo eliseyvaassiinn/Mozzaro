@@ -1,0 +1,698 @@
+### YamlMime:ManagedReference
+items:
+- uid: Mozzaro.Tests.OrderServiceTests
+  commentId: T:Mozzaro.Tests.OrderServiceTests
+  id: OrderServiceTests
+  parent: Mozzaro.Tests
+  children:
+  - Mozzaro.Tests.OrderServiceTests.CreateOrderAsync_CalculatesTotalForMultipleQuantities
+  - Mozzaro.Tests.OrderServiceTests.CreateOrderAsync_CreatesOrderItemsWithCorrectData
+  - Mozzaro.Tests.OrderServiceTests.CreateOrderAsync_CreatesOrderWithCorrectTotal
+  - Mozzaro.Tests.OrderServiceTests.CreateOrderAsync_CreatesOrderWithEmptyItems
+  - Mozzaro.Tests.OrderServiceTests.CreateOrderAsync_SavesOrderOnce
+  - Mozzaro.Tests.OrderServiceTests.GetUserOrdersAsync_RequestsOrdersForCorrectUser
+  - Mozzaro.Tests.OrderServiceTests.GetUserOrdersAsync_ReturnsEmptyList_WhenUserHasNoOrders
+  - Mozzaro.Tests.OrderServiceTests.GetUserOrdersAsync_ReturnsOrdersForUser
+  langs:
+  - csharp
+  - vb
+  name: OrderServiceTests
+  nameWithType: OrderServiceTests
+  fullName: Mozzaro.Tests.OrderServiceTests
+  type: Class
+  source:
+    remote:
+      path: Mozzaro.Tests/OrderServiceTests.cs
+      branch: master
+      repo: https://github.com/eliseyvaassiinn/Mozzaro.git
+    id: OrderServiceTests
+    path: Mozzaro.Tests/OrderServiceTests.cs
+    startLine: 7
+  assemblies:
+  - Mozzaro.Tests
+  namespace: Mozzaro.Tests
+  syntax:
+    content: public class OrderServiceTests
+    content.vb: Public Class OrderServiceTests
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Mozzaro.Tests.OrderServiceTests.CreateOrderAsync_CreatesOrderWithCorrectTotal
+  commentId: M:Mozzaro.Tests.OrderServiceTests.CreateOrderAsync_CreatesOrderWithCorrectTotal
+  id: CreateOrderAsync_CreatesOrderWithCorrectTotal
+  parent: Mozzaro.Tests.OrderServiceTests
+  langs:
+  - csharp
+  - vb
+  name: CreateOrderAsync_CreatesOrderWithCorrectTotal()
+  nameWithType: OrderServiceTests.CreateOrderAsync_CreatesOrderWithCorrectTotal()
+  fullName: Mozzaro.Tests.OrderServiceTests.CreateOrderAsync_CreatesOrderWithCorrectTotal()
+  type: Method
+  source:
+    remote:
+      path: Mozzaro.Tests/OrderServiceTests.cs
+      branch: master
+      repo: https://github.com/eliseyvaassiinn/Mozzaro.git
+    id: CreateOrderAsync_CreatesOrderWithCorrectTotal
+    path: Mozzaro.Tests/OrderServiceTests.cs
+    startLine: 9
+  assemblies:
+  - Mozzaro.Tests
+  namespace: Mozzaro.Tests
+  syntax:
+    content: >-
+      [Fact]
+
+      public Task CreateOrderAsync_CreatesOrderWithCorrectTotal()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Fact>
+
+      Public Function CreateOrderAsync_CreatesOrderWithCorrectTotal() As Task
+  overload: Mozzaro.Tests.OrderServiceTests.CreateOrderAsync_CreatesOrderWithCorrectTotal*
+  attributes:
+  - type: Xunit.FactAttribute
+    ctor: Xunit.FactAttribute.#ctor
+    arguments: []
+- uid: Mozzaro.Tests.OrderServiceTests.CreateOrderAsync_CreatesOrderItemsWithCorrectData
+  commentId: M:Mozzaro.Tests.OrderServiceTests.CreateOrderAsync_CreatesOrderItemsWithCorrectData
+  id: CreateOrderAsync_CreatesOrderItemsWithCorrectData
+  parent: Mozzaro.Tests.OrderServiceTests
+  langs:
+  - csharp
+  - vb
+  name: CreateOrderAsync_CreatesOrderItemsWithCorrectData()
+  nameWithType: OrderServiceTests.CreateOrderAsync_CreatesOrderItemsWithCorrectData()
+  fullName: Mozzaro.Tests.OrderServiceTests.CreateOrderAsync_CreatesOrderItemsWithCorrectData()
+  type: Method
+  source:
+    remote:
+      path: Mozzaro.Tests/OrderServiceTests.cs
+      branch: master
+      repo: https://github.com/eliseyvaassiinn/Mozzaro.git
+    id: CreateOrderAsync_CreatesOrderItemsWithCorrectData
+    path: Mozzaro.Tests/OrderServiceTests.cs
+    startLine: 64
+  assemblies:
+  - Mozzaro.Tests
+  namespace: Mozzaro.Tests
+  syntax:
+    content: >-
+      [Fact]
+
+      public Task CreateOrderAsync_CreatesOrderItemsWithCorrectData()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Fact>
+
+      Public Function CreateOrderAsync_CreatesOrderItemsWithCorrectData() As Task
+  overload: Mozzaro.Tests.OrderServiceTests.CreateOrderAsync_CreatesOrderItemsWithCorrectData*
+  attributes:
+  - type: Xunit.FactAttribute
+    ctor: Xunit.FactAttribute.#ctor
+    arguments: []
+- uid: Mozzaro.Tests.OrderServiceTests.CreateOrderAsync_CreatesOrderWithEmptyItems
+  commentId: M:Mozzaro.Tests.OrderServiceTests.CreateOrderAsync_CreatesOrderWithEmptyItems
+  id: CreateOrderAsync_CreatesOrderWithEmptyItems
+  parent: Mozzaro.Tests.OrderServiceTests
+  langs:
+  - csharp
+  - vb
+  name: CreateOrderAsync_CreatesOrderWithEmptyItems()
+  nameWithType: OrderServiceTests.CreateOrderAsync_CreatesOrderWithEmptyItems()
+  fullName: Mozzaro.Tests.OrderServiceTests.CreateOrderAsync_CreatesOrderWithEmptyItems()
+  type: Method
+  source:
+    remote:
+      path: Mozzaro.Tests/OrderServiceTests.cs
+      branch: master
+      repo: https://github.com/eliseyvaassiinn/Mozzaro.git
+    id: CreateOrderAsync_CreatesOrderWithEmptyItems
+    path: Mozzaro.Tests/OrderServiceTests.cs
+    startLine: 107
+  assemblies:
+  - Mozzaro.Tests
+  namespace: Mozzaro.Tests
+  syntax:
+    content: >-
+      [Fact]
+
+      public Task CreateOrderAsync_CreatesOrderWithEmptyItems()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Fact>
+
+      Public Function CreateOrderAsync_CreatesOrderWithEmptyItems() As Task
+  overload: Mozzaro.Tests.OrderServiceTests.CreateOrderAsync_CreatesOrderWithEmptyItems*
+  attributes:
+  - type: Xunit.FactAttribute
+    ctor: Xunit.FactAttribute.#ctor
+    arguments: []
+- uid: Mozzaro.Tests.OrderServiceTests.CreateOrderAsync_CalculatesTotalForMultipleQuantities
+  commentId: M:Mozzaro.Tests.OrderServiceTests.CreateOrderAsync_CalculatesTotalForMultipleQuantities
+  id: CreateOrderAsync_CalculatesTotalForMultipleQuantities
+  parent: Mozzaro.Tests.OrderServiceTests
+  langs:
+  - csharp
+  - vb
+  name: CreateOrderAsync_CalculatesTotalForMultipleQuantities()
+  nameWithType: OrderServiceTests.CreateOrderAsync_CalculatesTotalForMultipleQuantities()
+  fullName: Mozzaro.Tests.OrderServiceTests.CreateOrderAsync_CalculatesTotalForMultipleQuantities()
+  type: Method
+  source:
+    remote:
+      path: Mozzaro.Tests/OrderServiceTests.cs
+      branch: master
+      repo: https://github.com/eliseyvaassiinn/Mozzaro.git
+    id: CreateOrderAsync_CalculatesTotalForMultipleQuantities
+    path: Mozzaro.Tests/OrderServiceTests.cs
+    startLine: 137
+  assemblies:
+  - Mozzaro.Tests
+  namespace: Mozzaro.Tests
+  syntax:
+    content: >-
+      [Fact]
+
+      public Task CreateOrderAsync_CalculatesTotalForMultipleQuantities()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Fact>
+
+      Public Function CreateOrderAsync_CalculatesTotalForMultipleQuantities() As Task
+  overload: Mozzaro.Tests.OrderServiceTests.CreateOrderAsync_CalculatesTotalForMultipleQuantities*
+  attributes:
+  - type: Xunit.FactAttribute
+    ctor: Xunit.FactAttribute.#ctor
+    arguments: []
+- uid: Mozzaro.Tests.OrderServiceTests.CreateOrderAsync_SavesOrderOnce
+  commentId: M:Mozzaro.Tests.OrderServiceTests.CreateOrderAsync_SavesOrderOnce
+  id: CreateOrderAsync_SavesOrderOnce
+  parent: Mozzaro.Tests.OrderServiceTests
+  langs:
+  - csharp
+  - vb
+  name: CreateOrderAsync_SavesOrderOnce()
+  nameWithType: OrderServiceTests.CreateOrderAsync_SavesOrderOnce()
+  fullName: Mozzaro.Tests.OrderServiceTests.CreateOrderAsync_SavesOrderOnce()
+  type: Method
+  source:
+    remote:
+      path: Mozzaro.Tests/OrderServiceTests.cs
+      branch: master
+      repo: https://github.com/eliseyvaassiinn/Mozzaro.git
+    id: CreateOrderAsync_SavesOrderOnce
+    path: Mozzaro.Tests/OrderServiceTests.cs
+    startLine: 171
+  assemblies:
+  - Mozzaro.Tests
+  namespace: Mozzaro.Tests
+  syntax:
+    content: >-
+      [Fact]
+
+      public Task CreateOrderAsync_SavesOrderOnce()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Fact>
+
+      Public Function CreateOrderAsync_SavesOrderOnce() As Task
+  overload: Mozzaro.Tests.OrderServiceTests.CreateOrderAsync_SavesOrderOnce*
+  attributes:
+  - type: Xunit.FactAttribute
+    ctor: Xunit.FactAttribute.#ctor
+    arguments: []
+- uid: Mozzaro.Tests.OrderServiceTests.GetUserOrdersAsync_ReturnsEmptyList_WhenUserHasNoOrders
+  commentId: M:Mozzaro.Tests.OrderServiceTests.GetUserOrdersAsync_ReturnsEmptyList_WhenUserHasNoOrders
+  id: GetUserOrdersAsync_ReturnsEmptyList_WhenUserHasNoOrders
+  parent: Mozzaro.Tests.OrderServiceTests
+  langs:
+  - csharp
+  - vb
+  name: GetUserOrdersAsync_ReturnsEmptyList_WhenUserHasNoOrders()
+  nameWithType: OrderServiceTests.GetUserOrdersAsync_ReturnsEmptyList_WhenUserHasNoOrders()
+  fullName: Mozzaro.Tests.OrderServiceTests.GetUserOrdersAsync_ReturnsEmptyList_WhenUserHasNoOrders()
+  type: Method
+  source:
+    remote:
+      path: Mozzaro.Tests/OrderServiceTests.cs
+      branch: master
+      repo: https://github.com/eliseyvaassiinn/Mozzaro.git
+    id: GetUserOrdersAsync_ReturnsEmptyList_WhenUserHasNoOrders
+    path: Mozzaro.Tests/OrderServiceTests.cs
+    startLine: 208
+  assemblies:
+  - Mozzaro.Tests
+  namespace: Mozzaro.Tests
+  syntax:
+    content: >-
+      [Fact]
+
+      public Task GetUserOrdersAsync_ReturnsEmptyList_WhenUserHasNoOrders()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Fact>
+
+      Public Function GetUserOrdersAsync_ReturnsEmptyList_WhenUserHasNoOrders() As Task
+  overload: Mozzaro.Tests.OrderServiceTests.GetUserOrdersAsync_ReturnsEmptyList_WhenUserHasNoOrders*
+  attributes:
+  - type: Xunit.FactAttribute
+    ctor: Xunit.FactAttribute.#ctor
+    arguments: []
+- uid: Mozzaro.Tests.OrderServiceTests.GetUserOrdersAsync_RequestsOrdersForCorrectUser
+  commentId: M:Mozzaro.Tests.OrderServiceTests.GetUserOrdersAsync_RequestsOrdersForCorrectUser
+  id: GetUserOrdersAsync_RequestsOrdersForCorrectUser
+  parent: Mozzaro.Tests.OrderServiceTests
+  langs:
+  - csharp
+  - vb
+  name: GetUserOrdersAsync_RequestsOrdersForCorrectUser()
+  nameWithType: OrderServiceTests.GetUserOrdersAsync_RequestsOrdersForCorrectUser()
+  fullName: Mozzaro.Tests.OrderServiceTests.GetUserOrdersAsync_RequestsOrdersForCorrectUser()
+  type: Method
+  source:
+    remote:
+      path: Mozzaro.Tests/OrderServiceTests.cs
+      branch: master
+      repo: https://github.com/eliseyvaassiinn/Mozzaro.git
+    id: GetUserOrdersAsync_RequestsOrdersForCorrectUser
+    path: Mozzaro.Tests/OrderServiceTests.cs
+    startLine: 231
+  assemblies:
+  - Mozzaro.Tests
+  namespace: Mozzaro.Tests
+  syntax:
+    content: >-
+      [Fact]
+
+      public Task GetUserOrdersAsync_RequestsOrdersForCorrectUser()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Fact>
+
+      Public Function GetUserOrdersAsync_RequestsOrdersForCorrectUser() As Task
+  overload: Mozzaro.Tests.OrderServiceTests.GetUserOrdersAsync_RequestsOrdersForCorrectUser*
+  attributes:
+  - type: Xunit.FactAttribute
+    ctor: Xunit.FactAttribute.#ctor
+    arguments: []
+- uid: Mozzaro.Tests.OrderServiceTests.GetUserOrdersAsync_ReturnsOrdersForUser
+  commentId: M:Mozzaro.Tests.OrderServiceTests.GetUserOrdersAsync_ReturnsOrdersForUser
+  id: GetUserOrdersAsync_ReturnsOrdersForUser
+  parent: Mozzaro.Tests.OrderServiceTests
+  langs:
+  - csharp
+  - vb
+  name: GetUserOrdersAsync_ReturnsOrdersForUser()
+  nameWithType: OrderServiceTests.GetUserOrdersAsync_ReturnsOrdersForUser()
+  fullName: Mozzaro.Tests.OrderServiceTests.GetUserOrdersAsync_ReturnsOrdersForUser()
+  type: Method
+  source:
+    remote:
+      path: Mozzaro.Tests/OrderServiceTests.cs
+      branch: master
+      repo: https://github.com/eliseyvaassiinn/Mozzaro.git
+    id: GetUserOrdersAsync_ReturnsOrdersForUser
+    path: Mozzaro.Tests/OrderServiceTests.cs
+    startLine: 252
+  assemblies:
+  - Mozzaro.Tests
+  namespace: Mozzaro.Tests
+  syntax:
+    content: >-
+      [Fact]
+
+      public Task GetUserOrdersAsync_ReturnsOrdersForUser()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Fact>
+
+      Public Function GetUserOrdersAsync_ReturnsOrdersForUser() As Task
+  overload: Mozzaro.Tests.OrderServiceTests.GetUserOrdersAsync_ReturnsOrdersForUser*
+  attributes:
+  - type: Xunit.FactAttribute
+    ctor: Xunit.FactAttribute.#ctor
+    arguments: []
+references:
+- uid: Mozzaro.Tests
+  commentId: N:Mozzaro.Tests
+  name: Mozzaro.Tests
+  nameWithType: Mozzaro.Tests
+  fullName: Mozzaro.Tests
+  spec.csharp:
+  - uid: Mozzaro
+    name: Mozzaro
+  - name: .
+  - uid: Mozzaro.Tests
+    name: Tests
+  spec.vb:
+  - uid: Mozzaro
+    name: Mozzaro
+  - name: .
+  - uid: Mozzaro.Tests
+    name: Tests
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Mozzaro.Tests.OrderServiceTests.CreateOrderAsync_CreatesOrderWithCorrectTotal*
+  commentId: Overload:Mozzaro.Tests.OrderServiceTests.CreateOrderAsync_CreatesOrderWithCorrectTotal
+  href: Mozzaro.Tests.OrderServiceTests.html#Mozzaro_Tests_OrderServiceTests_CreateOrderAsync_CreatesOrderWithCorrectTotal
+  name: CreateOrderAsync_CreatesOrderWithCorrectTotal
+  nameWithType: OrderServiceTests.CreateOrderAsync_CreatesOrderWithCorrectTotal
+  fullName: Mozzaro.Tests.OrderServiceTests.CreateOrderAsync_CreatesOrderWithCorrectTotal
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: Mozzaro.Tests.OrderServiceTests.CreateOrderAsync_CreatesOrderItemsWithCorrectData*
+  commentId: Overload:Mozzaro.Tests.OrderServiceTests.CreateOrderAsync_CreatesOrderItemsWithCorrectData
+  href: Mozzaro.Tests.OrderServiceTests.html#Mozzaro_Tests_OrderServiceTests_CreateOrderAsync_CreatesOrderItemsWithCorrectData
+  name: CreateOrderAsync_CreatesOrderItemsWithCorrectData
+  nameWithType: OrderServiceTests.CreateOrderAsync_CreatesOrderItemsWithCorrectData
+  fullName: Mozzaro.Tests.OrderServiceTests.CreateOrderAsync_CreatesOrderItemsWithCorrectData
+- uid: Mozzaro.Tests.OrderServiceTests.CreateOrderAsync_CreatesOrderWithEmptyItems*
+  commentId: Overload:Mozzaro.Tests.OrderServiceTests.CreateOrderAsync_CreatesOrderWithEmptyItems
+  href: Mozzaro.Tests.OrderServiceTests.html#Mozzaro_Tests_OrderServiceTests_CreateOrderAsync_CreatesOrderWithEmptyItems
+  name: CreateOrderAsync_CreatesOrderWithEmptyItems
+  nameWithType: OrderServiceTests.CreateOrderAsync_CreatesOrderWithEmptyItems
+  fullName: Mozzaro.Tests.OrderServiceTests.CreateOrderAsync_CreatesOrderWithEmptyItems
+- uid: Mozzaro.Tests.OrderServiceTests.CreateOrderAsync_CalculatesTotalForMultipleQuantities*
+  commentId: Overload:Mozzaro.Tests.OrderServiceTests.CreateOrderAsync_CalculatesTotalForMultipleQuantities
+  href: Mozzaro.Tests.OrderServiceTests.html#Mozzaro_Tests_OrderServiceTests_CreateOrderAsync_CalculatesTotalForMultipleQuantities
+  name: CreateOrderAsync_CalculatesTotalForMultipleQuantities
+  nameWithType: OrderServiceTests.CreateOrderAsync_CalculatesTotalForMultipleQuantities
+  fullName: Mozzaro.Tests.OrderServiceTests.CreateOrderAsync_CalculatesTotalForMultipleQuantities
+- uid: Mozzaro.Tests.OrderServiceTests.CreateOrderAsync_SavesOrderOnce*
+  commentId: Overload:Mozzaro.Tests.OrderServiceTests.CreateOrderAsync_SavesOrderOnce
+  href: Mozzaro.Tests.OrderServiceTests.html#Mozzaro_Tests_OrderServiceTests_CreateOrderAsync_SavesOrderOnce
+  name: CreateOrderAsync_SavesOrderOnce
+  nameWithType: OrderServiceTests.CreateOrderAsync_SavesOrderOnce
+  fullName: Mozzaro.Tests.OrderServiceTests.CreateOrderAsync_SavesOrderOnce
+- uid: Mozzaro.Tests.OrderServiceTests.GetUserOrdersAsync_ReturnsEmptyList_WhenUserHasNoOrders*
+  commentId: Overload:Mozzaro.Tests.OrderServiceTests.GetUserOrdersAsync_ReturnsEmptyList_WhenUserHasNoOrders
+  href: Mozzaro.Tests.OrderServiceTests.html#Mozzaro_Tests_OrderServiceTests_GetUserOrdersAsync_ReturnsEmptyList_WhenUserHasNoOrders
+  name: GetUserOrdersAsync_ReturnsEmptyList_WhenUserHasNoOrders
+  nameWithType: OrderServiceTests.GetUserOrdersAsync_ReturnsEmptyList_WhenUserHasNoOrders
+  fullName: Mozzaro.Tests.OrderServiceTests.GetUserOrdersAsync_ReturnsEmptyList_WhenUserHasNoOrders
+- uid: Mozzaro.Tests.OrderServiceTests.GetUserOrdersAsync_RequestsOrdersForCorrectUser*
+  commentId: Overload:Mozzaro.Tests.OrderServiceTests.GetUserOrdersAsync_RequestsOrdersForCorrectUser
+  href: Mozzaro.Tests.OrderServiceTests.html#Mozzaro_Tests_OrderServiceTests_GetUserOrdersAsync_RequestsOrdersForCorrectUser
+  name: GetUserOrdersAsync_RequestsOrdersForCorrectUser
+  nameWithType: OrderServiceTests.GetUserOrdersAsync_RequestsOrdersForCorrectUser
+  fullName: Mozzaro.Tests.OrderServiceTests.GetUserOrdersAsync_RequestsOrdersForCorrectUser
+- uid: Mozzaro.Tests.OrderServiceTests.GetUserOrdersAsync_ReturnsOrdersForUser*
+  commentId: Overload:Mozzaro.Tests.OrderServiceTests.GetUserOrdersAsync_ReturnsOrdersForUser
+  href: Mozzaro.Tests.OrderServiceTests.html#Mozzaro_Tests_OrderServiceTests_GetUserOrdersAsync_ReturnsOrdersForUser
+  name: GetUserOrdersAsync_ReturnsOrdersForUser
+  nameWithType: OrderServiceTests.GetUserOrdersAsync_ReturnsOrdersForUser
+  fullName: Mozzaro.Tests.OrderServiceTests.GetUserOrdersAsync_ReturnsOrdersForUser

@@ -1,0 +1,108 @@
+### YamlMime:ManagedReference
+items:
+- uid: Mozzaro.Domain.Entities
+  commentId: N:Mozzaro.Domain.Entities
+  id: Mozzaro.Domain.Entities
+  children:
+  - Mozzaro.Domain.Entities.Cart
+  - Mozzaro.Domain.Entities.CartItem
+  - Mozzaro.Domain.Entities.Category
+  - Mozzaro.Domain.Entities.Ingredient
+  - Mozzaro.Domain.Entities.Order
+  - Mozzaro.Domain.Entities.OrderItem
+  - Mozzaro.Domain.Entities.Pizza
+  - Mozzaro.Domain.Entities.PizzaIngredient
+  - Mozzaro.Domain.Entities.User
+  langs:
+  - csharp
+  - vb
+  name: Mozzaro.Domain.Entities
+  nameWithType: Mozzaro.Domain.Entities
+  fullName: Mozzaro.Domain.Entities
+  type: Namespace
+  assemblies:
+  - Mozzaro.Domain
+references:
+- uid: Mozzaro.Domain.Entities.Cart
+  commentId: T:Mozzaro.Domain.Entities.Cart
+  parent: Mozzaro.Domain.Entities
+  href: Mozzaro.Domain.Entities.Cart.html
+  name: Cart
+  nameWithType: Cart
+  fullName: Mozzaro.Domain.Entities.Cart
+- uid: Mozzaro.Domain.Entities.CartItem
+  commentId: T:Mozzaro.Domain.Entities.CartItem
+  href: Mozzaro.Domain.Entities.CartItem.html
+  name: CartItem
+  nameWithType: CartItem
+  fullName: Mozzaro.Domain.Entities.CartItem
+- uid: Mozzaro.Domain.Entities.Category
+  commentId: T:Mozzaro.Domain.Entities.Category
+  parent: Mozzaro.Domain.Entities
+  href: Mozzaro.Domain.Entities.Category.html
+  name: Category
+  nameWithType: Category
+  fullName: Mozzaro.Domain.Entities.Category
+- uid: Mozzaro.Domain.Entities.Ingredient
+  commentId: T:Mozzaro.Domain.Entities.Ingredient
+  parent: Mozzaro.Domain.Entities
+  href: Mozzaro.Domain.Entities.Ingredient.html
+  name: Ingredient
+  nameWithType: Ingredient
+  fullName: Mozzaro.Domain.Entities.Ingredient
+- uid: Mozzaro.Domain.Entities.Order
+  commentId: T:Mozzaro.Domain.Entities.Order
+  parent: Mozzaro.Domain.Entities
+  href: Mozzaro.Domain.Entities.Order.html
+  name: Order
+  nameWithType: Order
+  fullName: Mozzaro.Domain.Entities.Order
+- uid: Mozzaro.Domain.Entities.OrderItem
+  commentId: T:Mozzaro.Domain.Entities.OrderItem
+  href: Mozzaro.Domain.Entities.OrderItem.html
+  name: OrderItem
+  nameWithType: OrderItem
+  fullName: Mozzaro.Domain.Entities.OrderItem
+- uid: Mozzaro.Domain.Entities.Pizza
+  commentId: T:Mozzaro.Domain.Entities.Pizza
+  parent: Mozzaro.Domain.Entities
+  href: Mozzaro.Domain.Entities.Pizza.html
+  name: Pizza
+  nameWithType: Pizza
+  fullName: Mozzaro.Domain.Entities.Pizza
+- uid: Mozzaro.Domain.Entities.PizzaIngredient
+  commentId: T:Mozzaro.Domain.Entities.PizzaIngredient
+  href: Mozzaro.Domain.Entities.PizzaIngredient.html
+  name: PizzaIngredient
+  nameWithType: PizzaIngredient
+  fullName: Mozzaro.Domain.Entities.PizzaIngredient
+- uid: Mozzaro.Domain.Entities.User
+  commentId: T:Mozzaro.Domain.Entities.User
+  parent: Mozzaro.Domain.Entities
+  href: Mozzaro.Domain.Entities.User.html
+  name: User
+  nameWithType: User
+  fullName: Mozzaro.Domain.Entities.User
+- uid: Mozzaro.Domain.Entities
+  commentId: N:Mozzaro.Domain.Entities
+  name: Mozzaro.Domain.Entities
+  nameWithType: Mozzaro.Domain.Entities
+  fullName: Mozzaro.Domain.Entities
+  spec.csharp:
+  - uid: Mozzaro
+    name: Mozzaro
+  - name: .
+  - uid: Mozzaro.Domain
+    name: Domain
+  - name: .
+  - uid: Mozzaro.Domain.Entities
+    name: Entities
+  spec.vb:
+  - uid: Mozzaro
+    name: Mozzaro
+  - name: .
+  - uid: Mozzaro.Domain
+    name: Domain
+  - name: .
+  - uid: Mozzaro.Domain.Entities
+    name: Entities

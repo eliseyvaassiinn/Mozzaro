@@ -1,0 +1,37 @@
+### YamlMime:ManagedReference
+items:
+- uid: Mozzaro.Tests
+  commentId: N:Mozzaro.Tests
+  id: Mozzaro.Tests
+  children:
+  - Mozzaro.Tests.ApiIntegrationTests
+  - Mozzaro.Tests.OrderServiceTests
+  - Mozzaro.Tests.UserServiceTests
+  langs:
+  - csharp
+  - vb
+  name: Mozzaro.Tests
+  nameWithType: Mozzaro.Tests
+  fullName: Mozzaro.Tests
+  type: Namespace
+  assemblies:
+  - Mozzaro.Tests
+references:
+- uid: Mozzaro.Tests.ApiIntegrationTests
+  commentId: T:Mozzaro.Tests.ApiIntegrationTests
+  href: Mozzaro.Tests.ApiIntegrationTests.html
+  name: ApiIntegrationTests
+  nameWithType: ApiIntegrationTests
+  fullName: Mozzaro.Tests.ApiIntegrationTests
+- uid: Mozzaro.Tests.OrderServiceTests
+  commentId: T:Mozzaro.Tests.OrderServiceTests
+  href: Mozzaro.Tests.OrderServiceTests.html
+  name: OrderServiceTests
+  nameWithType: OrderServiceTests
+  fullName: Mozzaro.Tests.OrderServiceTests
+- uid: Mozzaro.Tests.UserServiceTests
+  commentId: T:Mozzaro.Tests.UserServiceTests
+  href: Mozzaro.Tests.UserServiceTests.html
+  name: UserServiceTests
+  nameWithType: UserServiceTests
+  fullName: Mozzaro.Tests.UserServiceTests

@@ -3,6 +3,9 @@ using Mozzaro.Application.Interfaces.Services;
 
 namespace Mozzaro.API.Controllers;
 
+/// <summary>
+/// provides API endpoints for creating and retrieving customer orders.
+/// </summary>
 [ApiController]
 [Route("api/[controller]")]
 public class OrderController : ControllerBase
@@ -14,6 +17,11 @@ public class OrderController : ControllerBase
         _orderService = orderService;
     }
 
+    /// <summary>
+    /// creates a new customer order.
+    /// </summary>
+    /// <param name="request">the order creation request.</param>
+    /// <returns>the identifier of the created order.</returns>
     [HttpPost]
     public async Task<IActionResult> CreateOrder(
         [FromBody] CreateOrderRequest request)
@@ -45,6 +53,11 @@ public class OrderController : ControllerBase
         });
     }
 
+    /// <summary>
+    /// gets all orders belonging to a specific user.
+    /// </summary>
+    /// <param name="userId">the user identifier.</param>
+    /// <returns>the user's orders with their items.</returns>
     [HttpGet("user/{userId:int}")]
     public async Task<IActionResult> GetUserOrders(int userId)
     {
@@ -77,20 +90,44 @@ public class OrderController : ControllerBase
     }
 }
 
+/// <summary>
+/// represents the data required to create a customer order.
+/// </summary>
 public class CreateOrderRequest
 {
+    /// <summary>
+    /// gets or sets the identifier of the user placing the order.
+    /// </summary>
     public int UserId { get; set; }
 
+    /// <summary>
+    /// gets or sets the delivery address.
+    /// </summary>
     public string DeliveryAddress { get; set; } = string.Empty;
 
+    /// <summary>
+    /// gets or sets the items included in the order.
+    /// </summary>
     public List<CreateOrderItemRequest> Items { get; set; } = new();
 }
 
+/// <summary>
+/// represents a pizza item in an order creation request.
+/// </summary>
 public class CreateOrderItemRequest
 {
+    /// <summary>
+    /// gets or sets the pizza identifier.
+    /// </summary>
     public int PizzaId { get; set; }
 
+    /// <summary>
+    /// gets or sets the quantity of pizzas.
+    /// </summary>
     public int Quantity { get; set; }
 
+    /// <summary>
+    /// gets or sets the price of one pizza.
+    /// </summary>
     public decimal Price { get; set; }
 }

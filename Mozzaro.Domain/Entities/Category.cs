@@ -1,5 +1,8 @@
 namespace Mozzaro.Domain.Entities;
 
+/// <summary>
+/// represents a pizza category.
+/// </summary>
 public class Category
 {
     public int Id { get; set; }
