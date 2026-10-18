@@ -29,36 +29,45 @@
             <DataAnnotationsValidator />
 
             <div class="form-group">
-                <label for="name">имя</label>
+                <div class="floating-field">
+                    <InputText id="name"
+                               @bind-Value="Model.Name"
+                               class="form-input"
+                               placeholder=" "
+                               autocomplete="name" />
 
-                <InputText id="name"
-                           @bind-Value="Model.Name"
-                           class="form-input"
-                           placeholder="введите имя" />
+                    <label for="name">Имя</label>
+                </div>
 
                 <ValidationMessage For="@(() => Model.Name)" />
             </div>
 
             <div class="form-group">
-                <label for="email">email</label>
+                <div class="floating-field">
+                    <InputText id="email"
+                               @bind-Value="Model.Email"
+                               type="email"
+                               class="form-input"
+                               placeholder=" "
+                               autocomplete="email" />
 
-                <InputText id="email"
-                           @bind-Value="Model.Email"
-                           type="email"
-                           class="form-input"
-                           placeholder="введите email" />
+                    <label for="email">Email</label>
+                </div>
 
                 <ValidationMessage For="@(() => Model.Email)" />
             </div>
 
             <div class="form-group">
-                <label for="password">пароль</label>
+                <div class="floating-field">
+                    <InputText id="password"
+                               @bind-Value="Model.Password"
+                               type="password"
+                               class="form-input"
+                               placeholder=" "
+                               autocomplete="new-password" />
 
-                <InputText id="password"
-                           @bind-Value="Model.Password"
-                           type="password"
-                           class="form-input"
-                           placeholder="минимум 6 символов" />
+                    <label for="password">Пароль</label>
+                </div>
 
                 <ValidationMessage For="@(() => Model.Password)" />
             </div>

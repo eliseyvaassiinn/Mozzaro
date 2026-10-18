@@ -19,9 +19,7 @@
 
             <h1>вход в аккаунт</h1>
 
-            <p>
-                войдите, чтобы продолжить
-            </p>
+            <p>войдите, чтобы продолжить</p>
         </div>
 
         <EditForm Model="Model"
@@ -31,43 +29,47 @@
             <DataAnnotationsValidator />
 
             <div class="form-group">
-                <label for="email">email</label>
+                <div class="floating-field">
+                    <InputText id="email"
+                               @bind-Value="Model.Email"
+                               type="email"
+                               class="form-input"
+                               placeholder=" "
+                               autocomplete="email" />
 
-                <InputText id="email"
-                           @bind-Value="Model.Email"
-                           type="email"
-                           class="form-input"
-                           placeholder="введите email" />
+                    <label for="email">Email</label>
+                </div>
 
                 <ValidationMessage For="@(() => Model.Email)" />
             </div>
 
             <div class="form-group">
-                <label for="password">пароль</label>
+                <div class="floating-field">
+                    <InputText id="password"
+                               @bind-Value="Model.Password"
+                               type="password"
+                               class="form-input"
+                               placeholder=" "
+                               autocomplete="current-password" />
 
-                <InputText id="password"
-                           @bind-Value="Model.Password"
-                           type="password"
-                           class="form-input"
-                           placeholder="введите пароль" />
+                    <label for="password">Пароль</label>
+                </div>
 
                 <ValidationMessage For="@(() => Model.Password)" />
             </div>
 
             @if (!string.IsNullOrWhiteSpace(ErrorMessage))
             {
-            <div class="error-message">
-                @ErrorMessage
-            </div>
+                <div class="error-message">
+                    @ErrorMessage
+                </div>
             }
 
             <button type="submit"
                     class="login-button"
                     disabled="@IsLoading">
 
-                @(IsLoading
-                ? "вход..."
-                : "войти")
+                @(IsLoading ? "вход..." : "войти")
             </button>
 
         </EditForm>
@@ -82,76 +84,76 @@
 
 @code {
 
-private LoginModel Model { get; set; } = new();
+    private LoginModel Model { get; set; } = new();
 
-private string ErrorMessage { get; set; } = string.Empty;
+    private string ErrorMessage { get; set; } = string.Empty;
 
-private bool IsLoading { get; set; }
+    private bool IsLoading { get; set; }
 
-private async Task LoginAsync()
-{
-ErrorMessage = string.Empty;
-IsLoading = true;
+    private async Task LoginAsync()
+    {
+        ErrorMessage = string.Empty;
+        IsLoading = true;
 
-try
-{
-var response = await HttpClient.PostAsJsonAsync(
-"api/User/login",
-Model);
+        try
+        {
+            var response = await HttpClient.PostAsJsonAsync(
+                "api/User/login",
+                Model);
 
-if (!response.IsSuccessStatusCode)
-{
-var error = await response.Content.ReadAsStringAsync();
+            if (!response.IsSuccessStatusCode)
+            {
+                var error = await response.Content.ReadAsStringAsync();
 
-ErrorMessage = string.IsNullOrWhiteSpace(error)
-? "неверный email или пароль."
-: error;
+                ErrorMessage = string.IsNullOrWhiteSpace(error)
+                    ? "неверный email или пароль."
+                    : error;
 
-return;
-}
+                return;
+            }
 
-var user = await response.Content
-.ReadFromJsonAsync<LoginResponse>();
+            var user = await response.Content
+                .ReadFromJsonAsync<LoginResponse>();
 
-if (user == null)
-{
-ErrorMessage = "не удалось получить данные пользователя.";
-return;
-}
+            if (user == null)
+            {
+                ErrorMessage = "не удалось получить данные пользователя.";
+                return;
+            }
 
-UserSession.Login(
-user.Id,
-user.Name,
-user.Email);
+            UserSession.Login(
+                user.Id,
+                user.Name,
+                user.Email);
 
-Navigation.NavigateTo("/");
-}
-catch
-{
-ErrorMessage = "не удалось подключиться к серверу.";
-}
-finally
-{
-IsLoading = false;
-}
-}
+            Navigation.NavigateTo("/");
+        }
+        catch
+        {
+            ErrorMessage = "не удалось подключиться к серверу.";
+        }
+        finally
+        {
+            IsLoading = false;
+        }
+    }
 
-private class LoginModel
-{
-[Required(ErrorMessage = "введите email.")]
-[EmailAddress(ErrorMessage = "введите корректный email.")]
-public string Email { get; set; } = string.Empty;
+    private class LoginModel
+    {
+        [Required(ErrorMessage = "введите email.")]
+        [EmailAddress(ErrorMessage = "введите корректный email.")]
+        public string Email { get; set; } = string.Empty;
 
-[Required(ErrorMessage = "введите пароль.")]
-public string Password { get; set; } = string.Empty;
-}
+        [Required(ErrorMessage = "введите пароль.")]
+        public string Password { get; set; } = string.Empty;
+    }
 
-private class LoginResponse
-{
-public int Id { get; set; }
+    private class LoginResponse
+    {
+        public int Id { get; set; }
 
-public string Name { get; set; } = string.Empty;
+        public string Name { get; set; } = string.Empty;
 
-public string Email { get; set; } = string.Empty;
-}
+        public string Email { get; set; } = string.Empty;
+    }
 }
